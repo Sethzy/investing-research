@@ -1,5 +1,7 @@
 # Investing Research
 
+[![Tests](https://github.com/Sethzy/investing-research/actions/workflows/ci.yml/badge.svg)](https://github.com/Sethzy/investing-research/actions/workflows/ci.yml)
+
 A standalone investing research workspace for your existing Codex or Claude subscription. It searches authenticated X, preserves public reports, calculates financial scenarios locally, and produces readable Markdown and editable Excel. No financial-data, search, X developer, or model API keys are required.
 
 **The agent operates the research; the CLI supplies collection, evidence storage and calculations.** Running `collect` alone does not assess the investment thesis. Open this checkout in your subscribed agent host and ask it to read and follow the local [investing workflow](.agents/skills/investing/SKILL.md). The skill ships in this repository; no separate skill installation is required. Autonomous research runs only while that host session or its supported automation is executing.
@@ -20,12 +22,25 @@ The workflow supports watchlists, finite-life mining models, explicit annual cas
 
 ## Install
 
-The initial supported platform is macOS. Other platforms are unverified. Install **Python 3.12**, **uv**, and **Node.js 22 or newer**, then obtain a clean checkout and run these commands from its root:
+**Give your Codex or Claude coding agent this:**
+
+> Install https://github.com/Sethzy/investing-research as a standalone local workspace. Read its AGENTS.md and follow its bundled setup skill. Interview me about my investing preferences, watchlist and monitoring schedule. Help me connect my own X browser login and test it. Keep anything unfinished clearly marked. Do not ask me for API keys or session cookies.
+
+The agent installs dependencies, asks a short preference interview, resolves your requested companies, checks X, and guides the first research session. You still need to answer the interview and sign in to your own X account. Your agent needs local terminal access; pasting the link into an ordinary chat without local tools cannot install software.
+
+**Or install from a terminal:**
+
+The validated browser-auth platform is **macOS**. Start with Git, **uv**, and **Node.js 22+**. On a Mac with Homebrew, `brew install git uv node` supplies those prerequisites. The installer provisions Python 3.12 and locked dependencies into this checkout.
 
 ```sh
-uv sync --locked
-uv run invest --help
+git clone https://github.com/Sethzy/investing-research.git
+cd investing-research
+bash scripts/install.sh
 ```
+
+The interactive installer starts `invest setup`: host, currency, horizon, research focus, watchlist, timezone, monitoring time, optional risk limits and X browser profile. Answers stay in ignored local files. Pause with Ctrl-C and resume with `uv run invest setup`; revise with `uv run invest setup --edit`.
+
+Read the **[full setup guide](docs/setup.md)** and **[X login troubleshooting](docs/x-auth.md)**. Linux gets offline CI checks, but live browser authentication on Linux/Windows remains unverified. A saved daily time does not enable monitoring; the agent must configure a supported host scheduler and verify its first run.
 
 For structured PDF/table extraction with local Docling:
 
@@ -39,15 +54,13 @@ Exact Python dependency versions are in [uv.lock](uv.lock); the Bird source and 
 
 ## Configure your own X session
 
-Sign in to X in your own browser. Select the profile containing that login; `Profile 3` below is **an example**, not a required profile or a shared account. Chrome's `chrome://version` page shows its profile path. Then run:
+The setup interview covers this. Sign in to X in your own browser and select the profile containing that login. Chrome's `chrome://version` page shows its profile path. Verify it with:
 
 ```sh
-uv run invest init --browser chrome --profile 'Profile 3' --timezone Asia/Singapore
 uv run invest doctor --live-x
-uv run invest watch-add examples/company-mlx.json
 ```
 
-`init` writes ignored `config/local.json` and does not enable a schedule. Change its browser, profile, timezone and watchlist locally. A second `init` refuses to overwrite existing settings. `doctor --live-x` should return an X status of `ok`; bounded/capped coverage is expected and is never exhaustive. The OS may ask for browser-cookie/Keychain access. Each recipient authenticates independently and owns their local settings, captures and run receipts. Start a fresh recipient checkout with `init`; do not carry another person’s ignored configuration or state into it.
+`doctor --live-x` should return `x.status: ok`; bounded/capped coverage is expected and is never exhaustive. The OS may ask for browser-cookie/Keychain access. Each recipient authenticates independently and owns their local settings, captures and run receipts. If access fails, follow the [authentication recovery guide](docs/x-auth.md). Never copy another person's ignored configuration or state into a recipient checkout.
 
 Bird uses X's web endpoints and can break when X changes. Its standalone live keyword, date-filtered and exact-post checks are recorded in [X adapter verification](docs/upstream-bird.md). Successful local tests do not establish unattended access in another user's host.
 
@@ -60,6 +73,7 @@ In Codex or Claude opened at this repo, ask:
 For a direct collection check:
 
 ```sh
+uv run invest watch-add examples/company-mlx.json  # only if you want ASX:MLX
 uv run invest collect --company asx-mlx
 uv run invest status
 ```
@@ -102,7 +116,7 @@ Use the printed instruction in your subscribed agent host's supported scheduler,
 |---|---|
 | `src/investing_research/` | Small Python application and vendored Bird subset |
 | `examples/` | Public company configurations and synthetic model/portfolio inputs |
-| `.agents/skills/investing/` | Portable host-agent workflow |
+| `.agents/skills/setup/`, `.agents/skills/investing/` | Portable setup interview and research workflows |
 | `config/local.json`, `private/` | Your ignored settings, portfolio, policy and working inputs |
 | `data/sources/`, `data/extracted/` | Ignored immutable captures and derived text |
 | `state/` | Ignored source registry, decisions, facts and run receipts |
@@ -127,3 +141,5 @@ uv run ruff check src/investing_research --exclude vendor
 Read the [implementation specification](docs/superpowers/specs/2026-09-20-investing-research-design.md) for the intended acceptance criteria. Live provider availability, scheduled host execution and another user's browser authentication are separate from deterministic test results.
 
 See the [implementation review and validation record](docs/validation/2026-09-20-implementation-review.md) for live checks, resolved review findings and operational limits.
+
+Project code is MIT licensed; see [third-party notices](THIRD_PARTY_NOTICES.md) for retained upstream attribution. Public CI tests the offline workflows; it has no X account and does not establish live X availability. The MLX example has exercised collection and illustrative modelling, but a completed, decision-grade MLX valuation remains subject to the evidence gaps in the validation record.

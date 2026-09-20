@@ -41,6 +41,14 @@ def init(ctx: typer.Context, browser: str = "chrome", profile: str | None = None
 
 
 @app.command()
+def setup(ctx: typer.Context, edit: bool = False, skip_x: bool = False, answers: Path | None = None):
+    """Interview for local preferences and X access; rerun to resume, --edit to revise."""
+    from .onboarding import setup as setup_workspace
+
+    emit(setup_workspace(ctx.obj, edit=edit, skip_x=skip_x, answers=answers))
+
+
+@app.command()
 def doctor(ctx: typer.Context, live_x: bool = False):
     """Check installed capabilities; optionally run one real read-only X search."""
     settings = ctx.obj.settings()
