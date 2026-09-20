@@ -93,7 +93,7 @@ def update(workspace, company_id):
 
     # Keep dated artifact inventories and readable narratives as immutable snapshots.
     paths = set(folder.glob("models/*/*")) | set(folder.glob("updates/*/*")) | set(folder.glob("funding/*/*"))
-    paths |= {folder / name for name in ("thesis.md", "research.md")}
+    paths |= {folder / name for name in ("thesis.md", "research.md", "investment-review.md")}
     if company_id == "asx-mlx":
         paths |= set((workspace.root / "examples/mlx").glob("*"))
     artifacts = []

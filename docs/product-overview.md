@@ -2,6 +2,12 @@
 
 A standalone Codex workspace for company research, public-source monitoring and inspectable financial modelling. Open the repo in Codex and ask for a company investigation or update. Codex reasons about evidence; local tools capture sources, track review work, calculate scenarios and publish Markdown linked to Excel. A clone alone does not run unattended research.
 
+## What the reader receives
+
+The default delivery is an investment story written for a nontechnical reader: what the company does, what changed, why it matters, the case for and against investing, financial implications and the next developments to watch. It includes readable tables, source links and an optional detailed Excel model. Financial terms and uncertainties are explained plainly.
+
+Code, commands, technical checks, run logs and internal file structures stay out of the main report. The full dated evidence archive remains available separately. New editions preserve previous views and explain changes without making readers work through the research machinery.
+
 ![Research workflow](assets/research-flow.svg)
 
 Export the diagram: [SVG](assets/research-flow.svg) · [PNG](assets/research-flow.png) · [PDF](assets/research-flow.pdf). SVG stays sharp when resized; PNG is convenient for slides; PDF is ready to share or print.

@@ -8,6 +8,16 @@ An initiation explains the business and develops a complete investment case. An 
 
 The recommendation record is an executive summary. The substantive memo belongs in `companies/<id>/thesis.md`, with its as-of date, source cutoff, research horizon and matching model snapshot. Save it through the existing dossier/journal workflow before subsequent revisions so earlier analysis remains in the immutable journal. Preserve the full dated evidence appendix requested by the user. Its size is not evidence of analytical depth.
 
+## Reader-facing delivery
+
+The recipient is nontechnical. Deliver the actual investment story as the default Markdown and PDF: the current view, how the business earns money, what changed, the supporting and opposing cases, financial implications, and what to watch next. Use connected prose and selective readable exhibits. Explain unavoidable financial terms on first use. Keep material uncertainties and assumptions visible in plain language; presentation polish does not establish research completeness.
+
+Do not expose code blocks, commands, JSON, file paths, hashes, run IDs, schemas, model-version identifiers, validation logs, software architecture, installation instructions or internal research checklists in the main report. Do not discuss report production as investment analysis. Use descriptive links such as “Detailed financial model” and “Company half-year report”; never make the reader navigate an internal folder tree. Technical support files do not belong in the default reader download.
+
+Publish a clean companion at `companies/<id>/investment-review.md`. Preserve the technical journal separately; do not concatenate it onto the default PDF. New reader updates should have a date and explain what changed in the investment view. Retain earlier reader editions and original expectations. The complete evidence history remains available separately when requested. Relevant X discussion should include the post link, a permitted attributed excerpt and a short investment interpretation; retain existing full captured text in the evidence archive without placing machine metadata in the reading flow.
+
+Use `uv run python scripts/export-reader-report.py companies/<id>/investment-review.md --output <new-delivery-folder>/Investment-review.pdf` to reproduce the clean PDF. Copy any linked Excel into that delivery folder and use a relative descriptive link in the delivery Markdown. Inspect the rendered PDF before delivery. Keep the editable Excel optional for readers who want the detailed analysis; the main story must stand on its own.
+
 ## Framework selection
 
 | Framework | Use it to answer | Required analytical output |

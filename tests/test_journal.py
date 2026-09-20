@@ -67,6 +67,18 @@ def test_artifacts_and_tampering(workspace):
         update(workspace, "asx-mlx")
 
 
+def test_reader_editions_preserve_prior_story(workspace):
+    seed(workspace)
+    report = workspace.root / "companies/asx-mlx/investment-review.md"
+    report.parent.mkdir(parents=True, exist_ok=True)
+    report.write_text("# Metals X\nFirst reader assessment.")
+    update(workspace, "asx-mlx")
+    report.write_text("# Metals X\nRevised reader assessment.")
+    path = update(workspace, "asx-mlx")
+    assert "First reader assessment." in path.read_text()
+    assert "Revised reader assessment." in path.read_text()
+
+
 def test_pdf_preserves_exact_attachment(workspace):
     from pypdf import PdfReader
     seed(workspace)
