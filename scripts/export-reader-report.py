@@ -21,6 +21,9 @@ def export(source, output):
     styles = getSampleStyleSheet()
     styles.add(ParagraphStyle(name="Reader", fontName="Helvetica", fontSize=11, leading=16, spaceAfter=11))
     styles.add(ParagraphStyle(name="Cell", fontName="Helvetica", fontSize=9.3, leading=13))
+    styles.add(ParagraphStyle(name="Quote", parent=styles["Reader"], leftIndent=12,
+                              rightIndent=12, borderPadding=8, spaceBefore=5,
+                              backColor=colors.HexColor("#EDF4F6")))
     for name in ("Heading1", "Heading2", "Heading3"):
         styles[name].textColor = colors.HexColor("#17364D")
         styles[name].spaceAfter = 12
@@ -73,6 +76,8 @@ def export(source, output):
                 ("TOPPADDING", (0, 0), (-1, -1), 8), ("BOTTOMPADDING", (0, 0), (-1, -1), 8),
             ]))
             story.extend([table, Spacer(1, 12)])
+        elif line.startswith("> "):
+            story.append(paragraph(line[2:], "Quote"))
         elif line.startswith("#"):
             level = min(3, len(line) - len(line.lstrip("#")))
             story.append(paragraph(line.lstrip("# "), f"Heading{level}"))
