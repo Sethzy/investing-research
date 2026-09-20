@@ -19,3 +19,4 @@ For an install/setup request, first follow [.agents/skills/setup/SKILL.md](.agen
 - Before delivering a model, follow `docs/workbook-quality.md` for visual and financial audit; report any unverified presentation step.
 
 - Research updates append immutable revisions using `docs/research-updates.md`; retrieve the current revision before changing a pillar, catalyst or X plan. Keep original expectations and corrections.
+- Substantive investment research must meet `.agents/skills/investing/references/analyst-standard.md`. The structured recommendation is a summary; write the full causal thesis in `companies/<id>/thesis.md` and include it through the accumulating brief. Source archives and missing-input lists do not substitute for investment analysis.
