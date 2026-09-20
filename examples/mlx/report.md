@@ -8,7 +8,7 @@ The selected case produces **0.7871 AUD/share**. This is a model result, not an 
 
 **[Open the detailed Excel model](model.xlsx)** — historical evidence, editable assumptions, operating schedules, equity bridge, charts and live sensitivities.
 
-Excel recalculated and independently checked on 2026-09-20T02:59:26.928345+00:00. This memo describes snapshot `excel-ae52c6308dccbce6`; later workbook edits require `invest excel-sync` to create a new report.
+Excel recalculated and independently checked on 2026-09-20T03:06:52.785915+00:00. This memo describes snapshot `excel-bfe98df56462bbe7`; later workbook edits require `invest excel-sync` to create a new report.
 
 ## Scenario results
 
@@ -89,6 +89,6 @@ Base-case driver × discount rate; per-share results read from recalculated Exce
 
 No input overrides versus this workbook's recorded baseline.
 
-Snapshot workbook SHA-256: `bad30255da866b27ee20b606093bdbf7c1a911c5a32f81630aff08c7c4592022`.
+Snapshot workbook SHA-256: `ab74c5afd84ccee0ff9ee1ea797447f2cc415728f13b4b8edd7a45b158d8ce23`.
 
 [Accepted input and provenance snapshot](inputs.json) · [Calculation results and validation](model.json)

@@ -85,3 +85,5 @@ The model separates historical financial observations from forecast assumptions.
 Historical balance-sheet and cash reconciliations check the imported figures. They do not establish a complete forecast balance sheet or funding model. Independent Excel/Python parity checks the implementation, not the company's future performance.
 
 The design adapts pinned, attributed [financial modelling references](upstream-excel.md). The detailed upstream guidance ships with this repository; no personal skills repository is needed.
+
+Before delivery, complete the mandatory [workbook financial and visual audit](workbook-quality.md) and record its outcome.

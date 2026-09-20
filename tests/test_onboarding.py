@@ -9,7 +9,6 @@ def answers():
     return (
         "\n".join(
             [
-                "codex",
                 "AUD",
                 "3–5 years",
                 "fundamental mining",
@@ -30,6 +29,9 @@ def test_interview_saves_preferences_without_inventing_watchlist(tmp_path):
     result = CliRunner().invoke(app, ["--root", str(tmp_path), "setup", "--skip-x"], input=answers())
     assert result.exit_code == 0, result.output
     preferences = read_json(tmp_path / "private/preferences.json")
+    assert preferences["host"] == "codex"
+    assert "claude" not in result.output.lower()
+    assert "Subscribed agent host" not in result.output
     assert preferences["watchlist_requests"] == ["ASX:MLX"]
     assert preferences["max_position_weight"] == 0.1
     assert preferences["minimum_cash_weight"] == 0.15
@@ -52,16 +54,16 @@ def test_interrupt_resume_preserves_existing_companies(tmp_path):
     )
     write_json(ws.settings_path, Settings(companies=[company], budget_minutes=42).model_dump(mode="json"))
     runner = CliRunner()
-    interrupted = runner.invoke(app, ["--root", str(tmp_path), "setup"], input="claude\nSGD\n")
+    interrupted = runner.invoke(app, ["--root", str(tmp_path), "setup"], input="SGD\n")
     assert interrupted.exit_code != 0
     assert read_json(tmp_path / "private/preferences.json")["base_currency"] == "SGD"
-    remaining = "\n".join(answers().splitlines()[2:]) + "\n"
+    remaining = "\n".join(answers().splitlines()[1:]) + "\n"
     resumed = runner.invoke(app, ["--root", str(tmp_path), "setup", "--skip-x"], input=remaining)
     assert resumed.exit_code == 0, resumed.output
     assert "Portfolio base currency" not in resumed.output
     assert ws.settings().companies == [company]
     assert ws.settings().budget_minutes == 42
-    assert read_json(tmp_path / "private/preferences.json")["host"] == "claude"
+    assert read_json(tmp_path / "private/preferences.json")["host"] == "codex"
 
 
 def test_x_retry_and_no_secret_output(tmp_path, monkeypatch):
@@ -179,7 +181,7 @@ def test_invalid_answers_no_writes(tmp_path):
     assert not (tmp_path / "config/local.json").exists()
     payload = read_json(path)
     del payload["password"]
-    del payload["host"]
+    del payload["horizon"]
     write_json(path, payload)
     result = CliRunner().invoke(app, ["--root", str(tmp_path), "setup", "--answers", str(path)])
     assert result.exit_code != 0
@@ -219,3 +221,13 @@ def test_declining_recheck_does_not_reuse_previous_success(tmp_path, monkeypatch
     prefs = read_json(tmp_path / "private/preferences.json")
     assert prefs["setup_status"] == "x_setup_pending"
     assert prefs["x_check"]["status"] == "deferred"
+
+
+def test_setup_answers_default_to_codex(tmp_path):
+    path = answer_json(tmp_path)
+    payload = read_json(path)
+    payload.pop("host")
+    write_json(path, payload)
+    result = CliRunner().invoke(app, ["--root", str(tmp_path), "setup", "--skip-x", "--answers", str(path)])
+    assert result.exit_code == 0, result.output
+    assert read_json(tmp_path / "private/preferences.json")["host"] == "codex"

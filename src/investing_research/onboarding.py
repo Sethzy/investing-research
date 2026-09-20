@@ -70,7 +70,7 @@ class SetupAnswers(BaseModel):
     """Agent-authored interview answers. All keys explicit, optional answers nullable."""
 
     model_config = ConfigDict(extra="forbid", allow_inf_nan=False, strict=True)
-    host: Literal["codex", "claude"]
+    host: Literal["codex"] = "codex"
     base_currency: str = Field(pattern=r"^[A-Z]{3}$")
     horizon: str = Field(min_length=1)
     research_style: str = Field(min_length=1)
@@ -170,12 +170,9 @@ def setup(ws: Workspace, *, edit: bool = False, skip_x: bool = False, answers: P
         typer.echo("Enter keeps a displayed default; type - to clear an optional answer.")
         preferences["setup_status"] = "interview_in_progress"
         save()
-        ask(
-            "host",
-            "Subscribed agent host (codex/claude)",
-            preferences.get("host"),
-            _choice(("codex", "claude")),
-        )
+        preferences["host"] = "codex"
+        completed.add("host")
+        save()
         ask(
             "base_currency",
             "Portfolio base currency, three letters (for example AUD)",

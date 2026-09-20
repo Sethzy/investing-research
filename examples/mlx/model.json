@@ -366,9 +366,9 @@
   ],
   "authority": "excel",
   "active_case": "base",
-  "synchronized_at": "2026-09-20T02:59:26.928345+00:00",
-  "source_workbook_sha256": "ae52c6308dccbce6af18a3efa926852095517d5676455069e587e00a9e7ec449",
-  "workbook_sha256": "bad30255da866b27ee20b606093bdbf7c1a911c5a32f81630aff08c7c4592022",
+  "synchronized_at": "2026-09-20T03:06:52.785915+00:00",
+  "source_workbook_sha256": "bfe98df56462bbe79d6d6381afb298b978d1ac9572c1c0ed2596ce94da87c5b5",
+  "workbook_sha256": "ab74c5afd84ccee0ff9ee1ea797447f2cc415728f13b4b8edd7a45b158d8ce23",
   "source_workbook": "private/mlx-working.xlsx",
   "input_changes": [],
   "workbook_validation": {
@@ -376,6 +376,6 @@
     "engine": "LibreOffice",
     "checks": "Excel operating, valuation and sensitivity outputs matched independent Python calculations in all three cases"
   },
-  "run_id": "excel-ae52c6308dccbce6",
+  "run_id": "excel-bfe98df56462bbe7",
   "output_dir": "examples/mlx"
 }

@@ -1,6 +1,6 @@
 # Setup: from a Git link to your own research workspace
 
-You need a local coding agent with terminal access (Codex or Claude), its existing subscription, and your own X browser login. No developer API keys are required. The repository includes the agent instructions and Bird adapter; there is no second-brain, wiki or personal-skills dependency.
+You need a local coding agent with terminal access (Codex), its existing subscription, and your own X browser login. No developer API keys are required. The repository includes the agent instructions and Bird adapter; there is no second-brain, wiki or personal-skills dependency.
 
 ## Easiest route: ask your agent to install
 
@@ -54,7 +54,7 @@ Use `--edit` to change previous answers. Use `--skip-x` to explicitly defer the 
 
 | Question | How it is used |
 |---|---|
-| Codex or Claude | Host-specific research and scheduling guidance |
+| Codex | Automatically selected; no agent-host question |
 | Base currency | Portfolio reporting preference; never a silent currency conversion |
 | Investment horizon | Frame thesis, catalysts and model assumptions |
 | Research style and priorities | Focus the agent's investigation, for example fundamental value and mining |
@@ -95,7 +95,7 @@ All eleven keys below are required. This is a **schema example**, not a recipien
 }
 ```
 
-`host` accepts `codex` or `claude`; currencies are three uppercase letters; `timezone` is an IANA name; `daily_time` is `HH:MM` or null; risk weights are between zero and one or null. Browser accepts `chrome`, `brave`, `edge`, or `firefox`. Profile is a string or null; an explicit Firefox profile must be an absolute directory path. Existing companies and collection budgets are preserved. Providing `--answers` explicitly replaces the saved interview answers, so load existing preferences and ask only for requested changes when helping a returning user.
+`host` defaults to `codex` and needs no interview question; currencies are three uppercase letters; `timezone` is an IANA name; `daily_time` is `HH:MM` or null; risk weights are between zero and one or null. Browser accepts `chrome`, `brave`, `edge`, or `firefox`. Profile is a string or null; an explicit Firefox profile must be an absolute directory path. Existing companies and collection budgets are preserved. Providing `--answers` explicitly replaces the saved interview answers, so load existing preferences and ask only for requested changes when helping a returning user.
 
 ## X login
 

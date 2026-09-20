@@ -1,5 +1,7 @@
 # Investing Research agent instructions
 
+Use Codex as the host. Never ask the user to choose an agent host.
+
 For an install/setup request, first follow [.agents/skills/setup/SKILL.md](.agents/skills/setup/SKILL.md) and interview the recipient. Read [.agents/skills/investing/SKILL.md](.agents/skills/investing/SKILL.md) for research and monitoring tasks, and [docs/workflows.md](docs/workflows.md) for executable contracts.
 
 - Use the existing subscribed agent session, public web and the user's authenticated X session. No model/data/search/X developer API keys, paid services, external messages or trading.
@@ -13,3 +15,5 @@ For an install/setup request, first follow [.agents/skills/setup/SKILL.md](.agen
 - Ask only for genuinely missing user inputs (identity ambiguity, login access, risk limits). Continue independent research when a model or sizing input is unavailable.
 - Read `private/preferences.json` when present. Apply the user's research horizon and priorities; saved watchlist wishes require identity confirmation, saved schedule times require actual host setup, and risk preferences alone do not authorize sizing without a complete portfolio/policy.
 - Before changing code, read relevant tests and upstream notices. Keep adopted upstream components attributed and avoid introducing duplicate frameworks. Run meaningful tests for changes and record limitations honestly.
+
+- Before delivering a model, follow `docs/workbook-quality.md` for visual and financial audit; report any unverified presentation step.

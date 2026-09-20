@@ -120,7 +120,7 @@ uv run invest scenario examples/model-mine.json --price-multiplier 0.8 --cost-mu
 uv run invest model private/scenario-mine.json
 ```
 
-Each run snapshots inputs and calculation version. Its output contains Markdown, a formula workbook, machine-readable results and a chart. Retain the returned output path for recommendations. Do not overwrite generated inputs to alter a prior run.
+Each run snapshots inputs and calculation version. With LibreOffice, its output contains Markdown linked to a formula workbook and machine-readable results; charts are inside Excel. Without LibreOffice, creation stops at an unverified working workbook. Retain the returned output path for recommendations. Do not overwrite generated inputs to alter a prior run.
 
 The input uses complete `bear`, `base`, `bull` scenarios and annual forecast years beginning after the valuation year. Every scalar financial input has a provenance entry keyed by its JSON path, with `unit`, `rationale`, `author` and `source`. Use imported fact IDs and original report/page in `source` for reported inputs; name and justify analyst assumptions. Model `historical` rows use `publication_date` and `source` (distinct from the import-facts boundary's `published_at` and `source_id`). See the example file for the complete model schema.
 
@@ -128,7 +128,7 @@ Normalize amounts to currency units rather than silently passing millions, and s
 
 Scenario multipliers change **only the base scenario's commodity price and unit operating cost**, across all forecast years. They do not change every cost category or overwrite the baseline. Workbook parity is checked through LibreOffice when available; inspect `workbook_validation` and do not claim a pass from an unrecalculated sheet.
 
-If LibreOffice was unavailable initially, install it and run `uv run invest validate-workbook <path-to-model.json>`. The command recomputes expected results from the input snapshot and writes a dated validation record. The original model report remains a historical record; rebuild the dossier to link the latest check. Editing Excel inputs away from the baseline will correctly fail baseline parity; create a separate model input scenario for a new reproducible baseline.
+If LibreOffice was unavailable initially, install it and run `uv run invest validate-workbook <path-to-model.json>`. The command recomputes expected results from the input snapshot and writes a dated validation record. The original model report remains a historical record; rebuild the dossier to link the latest check. For the current editable workflow, use `excel-sync` after supported Excel assumption edits; it publishes a new accepted baseline and report. `validate-workbook` rechecks an existing immutable snapshot. See [Excel workflow](excel-models.md).
 
 ## Record a view
 
@@ -175,3 +175,5 @@ The calculator checks the whole portfolio and blocks missing/stale inputs or unr
 ## Excel detail and Markdown reports
 
 The current model workflow uses editable Excel assumptions, independent recalculation and immutable Markdown/workbook snapshots. See [the executable workflow](excel-models.md) and [pinned upstream references](upstream-excel.md). Earlier Python-generated snapshots remain readable, but new `model` runs use this workflow.
+
+Before delivering workbook results, complete the [financial and visual quality audit](workbook-quality.md). For research coverage and distinct time horizons, use the [product overview](product-overview.md).

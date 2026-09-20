@@ -8,7 +8,7 @@
 
 ## 1. Product contract
 
-An agent-operated investing workspace that researches companies, monitors changes, builds inspectable financial models, and proposes reasoned investment decisions. The user operates it through their own existing Codex/Claude sessions and reads the results as clear, standalone Markdown.
+An agent-operated investing workspace that researches companies, monitors changes, builds inspectable financial models, and proposes reasoned investment decisions. The user operates it through their own existing Codex sessions and reads the results as clear, standalone Markdown.
 
 The system uses public websites, downloadable company reports, authenticated X browsing, local project files. **No API keys**, including financial-data, search-provider, X API, or model API keys. Existing agent subscriptions and authenticated browser sessions supply research and reasoning capabilities. Ordinary public HTTP downloads and local numerical packages are allowed.
 
@@ -85,7 +85,7 @@ Find conflicting evidence and sensitive assumptions. Trace a financial figure to
 
 ```mermaid
 flowchart TD
-    User[Seth in Codex or Claude] --> Agent[Existing subscribed agent session]
+    User[Seth in Codex] --> Agent[Existing subscribed agent session]
     Schedule[Host-supported daily task] --> Agent
     Agent --> Collect[Existing browser and capture tools]
     Collect --> Evidence[Immutable source evidence]
@@ -105,7 +105,7 @@ The agent host owns reasoning, browser tools, and scheduling. The repository own
 
 | Component | Adoption | Integration boundary and acceptance gate |
 |---|---|---|
-| Agent runtime | Existing Codex/Claude | Use supported host sessions; no separate model SDK runtime requiring keys |
+| Agent runtime | Existing Codex | Use supported host sessions; no separate model SDK runtime requiring keys |
 | X collection | Pinned Bird search subset from Last30Days and browser control | Package dependencies with this project or install them reproducibly; verify keyword searches, date coverage, and the receiving user’s session |
 | Exact X captures | Reusable Bird detail/capture components | Bring the required code and licence notices into this project; remove wiki/source-map/QMD coupling and personal path lookups |
 | Public filings | Existing browser/download capabilities | Small exchange/company discovery adapters; preserve original PDFs and URLs |
@@ -348,3 +348,8 @@ Bird keyword search passed a live local smoke test on 2026-09-20; see the [valid
 ## Implemented amendment: Markdown report with Excel detail
 
 The primary reading surface is Markdown. Each accepted model report links its matching detailed Excel workbook, rather than duplicating every schedule in prose. Excel contains source history, editable supported assumptions, active bear/base/bull operating schedules, valuation, sensitivities, checks and charts. `excel-sync` independently recalculates all cases before publishing immutable workbook/results/Markdown snapshots. Unsynchronized edits are explicitly stale. `excel-refresh` merges new source inputs while preserving analyst overrides and recording conflicts. Formula/structure changes require a reviewed model revision. See [the current workflow](../../excel-models.md) and [public MLX example](../../../examples/mlx/report.md). The example is an illustrative finite-life sensitivity, not a complete three-statement forecast or investment recommendation.
+
+
+## Codex and presentation amendment
+
+Codex is the setup and research host; do not ask recipients to choose an agent host. Before delivering a workbook, the bundled workflow requires financial validation plus visual review of every visible sheet, documented according to [workbook quality](../../workbook-quality.md). Publish a source coverage table and keep investment horizon, historical periods, X lookback and forecast years distinct; see the [product overview](../../product-overview.md). The workflow diagram is exportable as SVG, PNG and PDF.

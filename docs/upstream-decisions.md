@@ -13,7 +13,7 @@ This project reuses working components and keeps a small amount of integration c
 | [Dexter](https://github.com/virattt/dexter) | Research-workflow reference | No Dexter runtime or token-based X tool adopted |
 | [AI Hedge Fund](https://github.com/virattt/ai-hedge-fund) | Analyst/valuation-workflow reference | No analyst modules or complete runtime represented as integrated |
 
-The existing subscribed Codex/Claude session provides orchestration, reasoning and semantic source review. There is no model daemon or custom dashboard. FinanceToolkit supplies an offline primitive; the explicit mine/FCF assumptions and portfolio policy logic are purpose-built project code, not a claim that a complete upstream valuation engine was adopted wholesale.
+The existing subscribed Codex session provides orchestration, reasoning and semantic source review. There is no model daemon or custom dashboard. FinanceToolkit supplies an offline primitive; the explicit mine/FCF assumptions and portfolio policy logic are purpose-built project code, not a claim that a complete upstream valuation engine was adopted wholesale.
 
 ## Pins and licences
 

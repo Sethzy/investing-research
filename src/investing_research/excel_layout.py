@@ -48,6 +48,11 @@ def write_excel_model(data: dict, path: Path) -> None:
             {"bold": True, "font_size": 15, "font_color": "#008000", "num_format": "0.0000"}
         ),
     }
+    styles["total"] = wb.add_format({"bold": True, "font_color": "#202020", "bg_color": "#EAF2F5", "top": 1, "top_color": "#AEC5CE", "num_format": '#,##0.00;(#,##0.00);"–"'})
+    styles["pass"] = wb.add_format({"bold": True, "font_color": "#176443", "bg_color": "#E6F4EC"})
+    styles["fail"] = wb.add_format({"bold": True, "font_color": "#A12232", "bg_color": "#FCE9EC"})
+    for fmt in styles.values():
+        fmt.set_font_name("Aptos")
     names = (
         "Summary",
         "Assumptions",
@@ -78,6 +83,8 @@ def write_excel_model(data: dict, path: Path) -> None:
 
     def formula(sheet, row, col, value, style="formula", output=None):
         cell = address(row, col)
+        if sheet == "Operating" and output and output.rsplit("/", 1)[-1] in ("fcf", "present_value", "illustrative_cash"):
+            style = "total"
         sheets[sheet].write_formula(row, col, value, styles[style])
         manifest["formula_cells"][f"{sheet}!{cell}"] = value
         if output:
@@ -95,10 +102,12 @@ def write_excel_model(data: dict, path: Path) -> None:
 
     for name, ws in sheets.items():
         ws.hide_gridlines(2)
-        ws.set_column("A:A", 35)
-        ws.set_column("B:B", 23)
+        ws.set_column("A:A", 43)
+        ws.set_column("B:B", 25)
         ws.set_column(2, max(8, n + 1), 17)
-        ws.set_default_row(20)
+        ws.set_default_row(23)
+        ws.set_zoom(90)
+        ws.set_tab_color("#287F8E" if name in ("Summary", "Assumptions") else "#142D43")
         ws.freeze_panes(6, 2)
         ws.set_landscape()
         ws.set_paper(9)
@@ -186,6 +195,7 @@ def write_excel_model(data: dict, path: Path) -> None:
                     ar = ref("Assumptions", r, i + 2)
                 annual_refs[name][field].append(ar)
         row += 8 + len(fields)
+    a.set_portrait()
     a.print_area(0, 0, row - 2, max(5, n + 1))
     a.set_h_pagebreaks([18 + (8 + len(fields)), 18 + 2 * (8 + len(fields))])
 
@@ -292,6 +302,7 @@ def write_excel_model(data: dict, path: Path) -> None:
         styles["note"],
     )
     o.print_area(0, 0, calc_rows["illustrative_cash"] + 4, max(5, n + 1))
+    o.fit_to_pages(1, 1)
 
     v = sheets["Valuation"]
     end = address(calc_rows["present_value"], n + 1)
@@ -398,7 +409,7 @@ def write_excel_model(data: dict, path: Path) -> None:
         )
         for col, value in enumerate(values):
             h.write(r, col, value, styles["formula"] if col == 2 else styles["text"])
-        h.set_row(r, 45)
+        h.set_row(r, 42)
         if str(fact["source"]).startswith(("https://", "http://")):
             h.write_url(r, 7, fact["source"], string="Open source report")
     h.merge_range(
@@ -406,6 +417,9 @@ def write_excel_model(data: dict, path: Path) -> None:
         "Source-linked reported facts. Historical coverage may be incomplete; no integrated statements are inferred.",
         styles["note"],
     )
+    h.set_column("A:A", 48)
+    h.set_column("B:B", 18)
+    h.set_column("F:F", 26)
     h.set_column("H:H", 24)
     h.repeat_rows(0, 5)
     h.autofilter(5, 0, max(6, len(data["historical"]) + 5), 8)
@@ -435,6 +449,8 @@ def write_excel_model(data: dict, path: Path) -> None:
     for r, (label, expression) in enumerate(checks, 4):
         ch.write(r, 0, label)
         formula("Checks", r, 1, expression, output=f"checks/{r - 4}")
+    ch.conditional_format("B5:B10", {"type": "text", "criteria": "containing", "value": "PASS", "format": styles["pass"]})
+    ch.conditional_format("B5:B10", {"type": "text", "criteria": "containing", "value": "FAIL", "format": styles["fail"]})
     ch.merge_range(
         "A13:F15",
         "Workbook checks are structural, not evidence approval. Import validates all scenarios, declared units, formula integrity and financial constraints independently. Any formula changes require a new model design review.",
@@ -497,11 +513,14 @@ def write_excel_model(data: dict, path: Path) -> None:
         )
         chart.set_y_axis({"name": currency, "num_format": '#,##0,,"m"'})
         chart.set_legend({"none": True})
-        chart.set_size({"width": 580, "height": 285})
-        s.insert_chart(21 + chart_index * 15, 0, chart)
-    s.print_area(0, 0, 51, 7)
+        chart.set_size({"width": 540, "height": 300})
+        chart.set_chartarea({"border": {"none": True}, "fill": {"color": "#F6F9FB"}})
+        chart.set_title({"name": "Attributable free cash flow" if chart_index == 0 else "Illustrative cash — excludes financing", "name_font": {"size": 12, "color": "#142D43"}})
+        s.insert_chart(21, chart_index * 4, chart)
+    s.print_area(0, 0, 35, 8)
     s.fit_to_pages(1, 1)
     readme = sheets["Readme"]
+    readme.set_portrait()
     paragraphs = [
         "WORKFLOW | Read the Markdown memo first. Excel is the editable detailed model. Change blue assumptions, recalculate, save and import to create a new validated research snapshot. Existing snapshots remain immutable.",
         "MODEL | One active scenario drives all formulas. Select bear/base/bull in Assumptions!B4. Forecast horizons are fixed by the source model; shorter cases have zero inputs after their final period.",

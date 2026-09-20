@@ -40,3 +40,12 @@ Use `size` only with the user's explicit current portfolio and risk policy. Requ
 ## Report standard
 
 Lead with as-of date, view and coverage. Separate reported facts, assumptions, interpretations and open questions. Cite each material claim near the text and link model outputs to their input snapshots. Use Mermaid for meaningful company/evidence diagrams and generated charts for numbers, with a plain-language takeaway. Keep saved links repository-relative. Explain model simplifications, unsupported sectors and unavailable history. No decorative or invented numbers.
+
+
+## Required coverage and presentation gates
+
+Before calling an investigation complete, follow `docs/product-overview.md`: publish a source coverage table covering company/exchange filings, management commentary, industry/commodity drivers, competitors, independent news/counterevidence and X; add regulatory/geographic risks where material. Record periods, URLs, dates, capture completeness, reviewed status and gaps. Search configured sources AND follow relevant public-web discoveries. Never equate a successful collector run with exhaustive research coverage.
+
+State the user's investment horizon separately from historical coverage, X lookback, catalysts and model forecast years. No saved horizon means it is still a setup question; do not present an example answer or an illustrative mine life as the user's preference.
+
+For every created or materially updated workbook, follow `docs/workbook-quality.md`: independently recalculate, render/open every visible sheet, fix clipping, formats, charts and print layout, and record the visual audit method and outcome. Keep blue inputs, green links, black calculations, source provenance and readable totals. Deliver Markdown with the matching detailed Excel link. A numerical PASS is not a visual-review PASS.

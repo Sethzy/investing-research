@@ -2,7 +2,7 @@
 
 [![Tests](https://github.com/Sethzy/investing-research/actions/workflows/ci.yml/badge.svg)](https://github.com/Sethzy/investing-research/actions/workflows/ci.yml)
 
-A standalone investing research workspace for your existing Codex or Claude subscription. It searches authenticated X, preserves public reports, calculates financial scenarios locally, and produces readable Markdown and editable Excel. No financial-data, search, X developer, or model API keys are required.
+A standalone investing research workspace for your existing Codex subscription. It searches authenticated X, preserves public reports, calculates financial scenarios locally, and produces readable Markdown and editable Excel. No financial-data, search, X developer, or model API keys are required.
 
 **The agent operates the research; the CLI supplies collection, evidence storage and calculations.** Running `collect` alone does not assess the investment thesis. Open this checkout in your subscribed agent host and ask it to read and follow the local [investing workflow](.agents/skills/investing/SKILL.md). The skill ships in this repository; no separate skill installation is required. Autonomous research runs only while that host session or its supported automation is executing.
 
@@ -20,9 +20,13 @@ flowchart LR
 
 The workflow supports watchlists, finite-life mining models, explicit annual cash-flow models, bear/base/bull cases, sensitivities, reverse valuation and portfolio constraints. It does not trade. Metals X (ASX:MLX) is the first research example. Read the **[worked MLX Markdown analysis](examples/mlx/report.md)**, then open its **[detailed Excel workbook](examples/mlx/model.xlsx)** to inspect history, assumptions, formulas and sensitivities. It combines cited issuer history with explicitly illustrative forecasts; it is not a completed valuation or live price target. Other demo model files are synthetic.
 
+Read the [product overview and user journeys](docs/product-overview.md). Download the flow diagram as [SVG](docs/assets/research-flow.svg), [PNG](docs/assets/research-flow.png) or [PDF](docs/assets/research-flow.pdf).
+
+![Codex research workflow](docs/assets/research-flow.svg)
+
 ## Install
 
-**Give your Codex or Claude coding agent this:**
+**Give your Codex coding agent this:**
 
 > Install https://github.com/Sethzy/investing-research as a standalone local workspace. Read its AGENTS.md and follow its bundled setup skill. Interview me about my investing preferences, watchlist and monitoring schedule. Help me connect my own X browser login and test it. Keep anything unfinished clearly marked. Do not ask me for API keys or session cookies.
 
@@ -38,7 +42,7 @@ cd investing-research
 bash scripts/install.sh
 ```
 
-The interactive installer starts `invest setup`: host, currency, horizon, research focus, watchlist, timezone, monitoring time, optional risk limits and X browser profile. Answers stay in ignored local files. Pause with Ctrl-C and resume with `uv run invest setup`; revise with `uv run invest setup --edit`.
+The interactive installer starts `invest setup`: currency, horizon, research focus, watchlist, timezone, monitoring time, optional risk limits and X browser profile. Answers stay in ignored local files. Pause with Ctrl-C and resume with `uv run invest setup`; revise with `uv run invest setup --edit`.
 
 Read the **[full setup guide](docs/setup.md)** and **[X login troubleshooting](docs/x-auth.md)**. Linux gets offline CI checks, but live browser authentication on Linux/Windows remains unverified. A saved daily time does not enable monitoring; the agent must configure a supported host scheduler and verify its first run.
 
@@ -66,7 +70,7 @@ Bird uses X's web endpoints and can break when X changes. Its standalone live ke
 
 ## Run your first research session
 
-In Codex or Claude opened at this repo, ask:
+In Codex opened at this repo, ask:
 
 > Follow the investing skill. Research ASX:MLX from current public reports and X, attempt three annual and eight quarterly periods, verify ownership and reporting units, and produce a cited dossier. Build a model only from supported inputs and explicit assumptions. Show gaps and pending work.
 
