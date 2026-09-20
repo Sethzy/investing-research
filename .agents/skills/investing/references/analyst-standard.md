@@ -18,7 +18,7 @@ Include a selective “What investors are discussing on X” section when useful
 
 Publish a clean companion at `companies/<id>/investment-review.md`. Preserve the technical journal separately; do not concatenate it onto the default PDF. New reader updates should have a date and explain what changed in the investment view. Retain earlier reader editions and original expectations. The complete evidence history remains available separately when requested. Relevant X discussion should include the post link, a permitted attributed excerpt and a short investment interpretation; retain existing full captured text in the evidence archive without placing machine metadata in the reading flow.
 
-Use `uv run python scripts/export-reader-report.py companies/<id>/investment-review.md --output <new-delivery-folder>/Investment-review.pdf` to reproduce the clean PDF. Copy any linked Excel into that delivery folder and use a relative descriptive link in the delivery Markdown. Inspect the rendered PDF before delivery. Keep the editable Excel optional for readers who want the detailed analysis; the main story must stand on its own.
+Prepare a dated edition with its matching report, synchronized Excel/model/inputs, saved evidence review and `release.json`, following [reader publication checks](../../../../docs/reader-releases.md). Run `uv run python scripts/export-reader-report.py <edition>/investment-review.md --output <edition>/Investment-review.pdf`. Relative Excel links must resolve to that edition's reviewed workbook. Inspect every PDF page before delivery. The story must stand on its own; Excel supplies optional detail.
 
 ## Framework selection
 
@@ -103,8 +103,6 @@ Review as a skeptical investment committee member. Record pass / partial / fail 
 
 An incomplete report can still contain strong supported analysis. Say precisely which conclusions are supported and which remain blocked. Do not fill gaps with invented research, interviews, access, probabilities or numbers.
 
-## Practical diagnosis of the existing MLX example
+## Worked example and further depth
 
-The current sparse summary fails the economics, causal-thesis and valuation-explanation criteria. Its “verify” bullets are research tasks. Preserve it as historical evidence of the previous view; replace the current thesis only through a newly dated, researched memo.
-
-An analytical use of the already retained scenario is to explain that reducing the base-case tin-price proxy by 20% and raising unit cost by 10% takes the illustrative output from approximately AUD0.7871 to AUD0.5253 per share. This exposes sensitivity to the commodity/cost spread under the model's assumptions. It does not establish downside against today's share price, a verified reserve life or a cash-value floor. A fuller report should explain the separate contribution of operations and the mixed-date cash/debt bridge, then investigate whether the assumptions are defensible. See the retained [current model memo](../../../../examples/mlx/report.md); the earlier stress run is private generated research.
+The original sparse MLX summary is retained as history. Use the [dated research index](../../../../examples/mlx/README.md) for the latest reader edition; its illustrative valuation and disclosed gaps remain substantive limits. Apply [earnings quality and capital allocation](analytical-depth.md) for results-driven updates. Historical scenario numbers must not become universal examples of current value.

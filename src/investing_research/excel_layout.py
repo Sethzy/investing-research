@@ -24,7 +24,7 @@ def write_excel_model(data: dict, path: Path, *, presentation_version: int = 2) 
     if presentation_version == 1:
         from .excel_layout_v1 import write_excel_model as legacy
         return legacy(data, path)
-    if presentation_version != 2:
+    if presentation_version not in (2, 3):
         raise ValueError("Unsupported workbook presentation version")
     validate_model(data)
     path = Path(path)
@@ -72,11 +72,13 @@ def write_excel_model(data: dict, path: Path, *, presentation_version: int = 2) 
         "Readme",
         "_Model",
     )
+    if presentation_version == 3:
+        names = names[:3] + ("Analysis",) + names[3:]
     sheets = {name: wb.add_worksheet(name) for name in names}
     n = max(len(s["years"]) for s in data["scenarios"].values())
     manifest = {
         "schema_version": 1,
-        "presentation_version": 2,
+        "presentation_version": presentation_version,
         "baseline": copy.deepcopy(data),
         "inputs": {},
         "outputs": {},
@@ -555,6 +557,9 @@ def write_excel_model(data: dict, path: Path, *, presentation_version: int = 2) 
         readme.merge_range(start + 2 + i * 4, 0, start + 4 + i * 4, 7, limitation, styles["text"])
     readme.print_area(0, 0, start + 4 + len(limitations) * 4, 7)
     readme.set_h_pagebreaks([start] + [start + 2 + i * 4 for i in range(8, len(limitations), 8)])
+    if presentation_version == 3:
+        from .excel_analysis import write_analysis
+        write_analysis(wb, sheets["Analysis"], data, styles, formula)
     metadata = sheets["_Model"]
     metadata.write_string(0, 0, MARKER)
     payload = json.dumps(manifest, ensure_ascii=False, allow_nan=False, separators=(",", ":"))

@@ -51,6 +51,13 @@ def audit(path, recalculate=False):
         for row in range(5, 11):
             if cached["Checks"].cell(row, 2).value != "PASS":
                 issues.append(f"Checks!B{row}: expected PASS")
+        if "Analysis" in cached:
+            for cell in ("B35", "B46"):
+                value = cached["Analysis"][cell].value
+                if not isinstance(value, (int, float)) or abs(value) > 1e-8:
+                    issues.append(f"Analysis!{cell}: bridge must reconcile to zero")
+            if len(book["Analysis"]._charts) != 2:
+                issues.append("Analysis: expected both historical bridge charts")
         if len(book["Summary"]._charts) != 2:
             issues.append("Summary: expected both model charts")
     finally:

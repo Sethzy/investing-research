@@ -1,0 +1,39 @@
+{
+  "workbook_sha256": "08f75063fc268b9b996763b4659bf5c360a7b8f55dfdd7bd694639cde50d1ab5",
+  "structural_status": "passed",
+  "presentation_version": 3,
+  "visible_sheets": [
+    "Summary",
+    "Assumptions",
+    "Historical",
+    "Analysis",
+    "Operating",
+    "Valuation",
+    "Sensitivities",
+    "Checks",
+    "Readme"
+  ],
+  "formulas": 308,
+  "historical_rows": 158,
+  "source_links_checked": 158,
+  "source_comments_checked": 180,
+  "live_recalculation": {
+    "status": "passed",
+    "engine": "LibreOffice",
+    "checks": "All scenarios, operating outputs and sensitivities independently recalculated"
+  },
+  "visual_status": "passed: all nine visible sheets inspected through LibreOffice PDF; new Analysis also rendered at ordinary size with ArtifactTool, final charts rechecked in LibreOffice; all 21 reader pages inspected, with affected pages rechecked after pagination corrections",
+  "source_accessibility": "not checked; preserved URLs compared only",
+  "issues": [],
+  "visual_limitations": "Native Microsoft Excel was not opened; renderer differences remain possible.",
+  "reader_pages": 21,
+  "reader_pdf_sha256": "75fbaa4cc841dbf476914cfca883d7e5461f769d445b2885f179bc2b349cfc3e",
+  "publication": {
+    "status": "passed",
+    "company_id": "asx-mlx",
+    "valuation_class": "illustrative_sensitivity",
+    "research_cutoff": "2026-09-20T05:46:20.056078Z",
+    "note": "Artifact consistency checked; source interpretation and economic assumptions require review."
+  },
+  "tests": "151 tests passed; 10 targeted tests repeated after final chart/export changes"
+}

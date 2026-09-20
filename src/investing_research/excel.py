@@ -411,7 +411,7 @@ def refresh(workbook: Path, inputs: Path, output: Path):
     output.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(dir=output.parent, prefix=".excel-refresh-") as temp:
         staged = Path(temp) / "model.xlsx"
-        write_excel_model(merged, staged)
+        write_excel_model(merged, staged, presentation_version=max(2, layout.get("presentation_version", 1)))
         book = _load(staged)
         location = manifest(book)["outputs"]["active_case"]
         book[location["sheet"]][location["cell"]] = case

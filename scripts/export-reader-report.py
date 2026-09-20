@@ -76,6 +76,8 @@ def export(source, output, manifest_path=None):
             weights = {2: [0.32, 0.68], 3: [0.46, 0.27, 0.27]}.get(count, [1 / count] * count)
             if count == 3 and "Producer and period" in rows[0]:
                 weights = [0.22, 0.36, 0.42]
+            if count == 2 and ("Bridge from" in rows[0] or "Cash bridge" in rows[0]):
+                weights = [0.72, 0.28]
             table = Table(data, colWidths=[width * w for w in weights], repeatRows=1)
             table.setStyle(TableStyle([
                 ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#DCE9EF")),

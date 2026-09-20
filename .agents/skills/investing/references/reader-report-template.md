@@ -5,7 +5,7 @@ Write a plain-language investment story with nearby original-source citations an
 Required substantive sections (equivalent clear wording is acceptable):
 
 1. Investment judgment and what changed since the previous review: prior/new view, research cutoff, actual web/X check dates, horizon and unchanged assumptions.
-2. Business and historical cash generation: comparable periods, operating mechanism, production-to-cash explanation and reconciliation.
+2. Business and historical cash generation: comparable periods, operating mechanism, earnings-quality analysis and cash reconciliation. For material results updates, include dedicated earnings-quality and capital-allocation subsections using [analytical-depth.md](analytical-depth.md); explain accounting effects, actual cash deployment and observable management outcomes.
 3. Existing-business valuation: included/excluded components, evidence-supported versus assumed inputs, sensitivities and opposing case.
 4. Material development projects and funding: for MLX, dedicated Rentails economics, permits, milestones and funding analysis.
 5. Industry and contrary evidence: for MLX, dedicated tin market and competing supply case.

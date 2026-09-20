@@ -7,7 +7,7 @@ Read this reference before creating, refreshing or delivering an investing workb
 - [Worked workbook](../../../../examples/mlx/model.xlsx): open this to inspect the actual formatting, editable cells, charts and sheet order. This is an illustrative MLX example, **not a blank template or a current recommendation**. Its financial inputs are deliberately separate from later private research editions.
 - [Summary preview](../../../../examples/mlx/template-summary.png): quick visual reference; inspect the other sheets in the workbook too.
 - [Reference audit](../../../../examples/mlx/presentation-audit.md): checked edition, hash, methods and limitations.
-- [Maintained generator](../../../../src/investing_research/excel_layout.py): authoritative reusable layout, currently presentation version 2. Generate with `excel-create` using the subject company's reviewed inputs. Do not copy MLX numbers, sources or assumptions into another company.
+- [Maintained generator](../../../../src/investing_research/excel_layout.py): authoritative reusable layout, default presentation version 2, with optional version 3 for comparable historical analysis. Generate with `excel-create` using the subject company's reviewed inputs. Do not copy MLX numbers, sources or assumptions into another company.
 - [Calculation workflow](../../../../docs/excel-models.md) and [delivery checklist](../../../../docs/workbook-quality.md).
 
 The generator and versioned calculation contract own the file structure. Apply layout fixes there, then regenerate and synchronize a new snapshot. Do not hand-format just the delivered file and leave future exports broken. Preserve old snapshots and compatibility when changing labels or formulas. A new company, longer text or more forecast years still needs its own visual review.
@@ -25,6 +25,7 @@ Keep the Summary to a compact reading width (approximately 900 pixels at 100% zo
 | Summary | Correct company and selected case; headline values tie to Valuation; currency visible; notes wrap; both charts and their axes fit; shorter-case padding is explained in Readme. |
 | Assumptions | One functioning case selector; all three complete case blocks; editable cells and provenance comments retained; periods chronological; percentages and dates readable; no scenario split across printed pages. |
 | Historical | Every input fact retained with period, value, units, ownership basis, date, source URL and page; links match the recorded sources; filter and frozen identifiers work; printed headers repeat. |
+| Analysis (optional v3) | Comparable periods and reporting basis; source-linked history; profit and cash bridges reconcile; both charts and print pages readable; ratios do not imply normalized earnings. |
 | Operating | Selected drivers feed the formulas; all forecast periods, ownership, tax, closure and cash-flow rows inspected; totals readable; no clipped values or notes. |
 | Valuation | Enterprise-to-equity bridge, cash, debt, shares and per-share result tie; missing reference quote remains unavailable; units and limitations visible. |
 | Sensitivities | Every grid cell recalculates; central cell ties to the active valuation; row/column drivers understood; heatmap readable; calculation helpers retained and legible. |
@@ -51,3 +52,5 @@ It validates the snapshot, formula contract, source hyperlinks (including PDF pa
 4. Deliver the matching readable report and Excel snapshot, keeping older editions. Do not declare formatting guaranteed across applications: name the render/recalculation methods and say if native Microsoft Excel was not opened.
 
 No delivery approval solely because the generator ran, tests passed, a preview looked good, or the reference workbook previously passed. The actual new file is the release candidate.
+
+Presentation v3 adds the optional historical Analysis sheet. Use `write_excel_model(inputs, path, presentation_version=3)` when two complete comparable periods are available, then the ordinary `excel-sync` contract. Otherwise retain v2 and explain the missing comparison. This changes presentation and historical exhibits, not forecast assumptions.
