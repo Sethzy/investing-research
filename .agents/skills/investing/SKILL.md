@@ -7,6 +7,8 @@ description: Research and monitor watched companies using public reports, authen
 
 ## Analyst standard
 
+For substantive investigations and regenerated company reports, apply the [source playbook](references/source-playbook.md), [historical normalization](references/historical-normalization.md), [valuation readiness](references/valuation-readiness.md), [X evidence standard](references/x-evidence.md), and [reader report template](references/reader-report-template.md). Save the validated evidence-stage register through [evidence completion](../../../docs/evidence-completion.md). These are required deliverables, not optional headings. Research updates perform fresh checks; re-exports retain actual prior check dates. Material unknowns remain visible and cannot become completed analysis merely because a document was captured.
+
 For company initiation, investment views and substantive updates, first read [Analyst standard](references/analyst-standard.md). Use [Reference reports](references/reference-reports.md) to calibrate the depth and shape of the requested report. These references ship with this standalone repo.
 
 Work to the analytical standard of a senior institutional equity analyst: explain the economics, identify the disputed investment questions, test them against contrary evidence, and connect conclusions to explicit forecast and valuation consequences. Do not claim bank affiliation, analyst credentials or proven investment performance. A long capture archive, polished workbook, short company description or list of missing inputs does not satisfy the research task.

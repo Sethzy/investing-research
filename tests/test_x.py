@@ -59,6 +59,20 @@ def test_exact_full_post_normalization():
     assert result['thread_completeness'] == 'partial'
 
 
+def test_capture_storage_preserves_scope(tmp_path):
+    from investing_research.workspace import Workspace, read_json
+    ws = Workspace(tmp_path)
+    post = x._normalize({'id': '1', 'text': 'full text', 'textCompleteness': 'complete'})
+    record, created = ws.capture_x(post)
+    assert created
+    assert record['completeness_scope'] == 'post_text'
+    assert record['thread_completeness'] == 'partial'
+    assert record['media_completeness'] == 'not_verified'
+    raw = read_json(ws.inside(record['files'][0]))
+    assert raw['completeness_scope'] == 'post_text'
+    assert raw['completeness_reason']
+
+
 def test_javascript_completeness_and_transient_retry_policy():
     import subprocess
     from pathlib import Path

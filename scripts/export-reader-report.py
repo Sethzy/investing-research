@@ -9,11 +9,15 @@ from urllib.parse import urlsplit
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
-from reportlab.platypus import PageBreak, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
+from reportlab.platypus import KeepTogether, PageBreak, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 
 
 def export(source, output):
     text = source.read_text()
+    from investing_research.coverage import reader_gaps
+    missing = reader_gaps(text)
+    if missing:
+        raise ValueError("Missing reader sections: " + ", ".join(missing))
     if "```" in text:
         raise ValueError("Reader reports must contain finished prose, not code or diagram source.")
     if output.exists():
@@ -75,7 +79,7 @@ def export(source, output):
                 ("LEFTPADDING", (0, 0), (-1, -1), 8), ("RIGHTPADDING", (0, 0), (-1, -1), 8),
                 ("TOPPADDING", (0, 0), (-1, -1), 8), ("BOTTOMPADDING", (0, 0), (-1, -1), 8),
             ]))
-            story.extend([table, Spacer(1, 12)])
+            story.extend([KeepTogether([table]), Spacer(1, 12)])
         elif line.startswith("> "):
             story.append(paragraph(line[2:], "Quote"))
         elif line.startswith("#"):

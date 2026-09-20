@@ -249,7 +249,7 @@ def dossier(workspace: Workspace, company_id: str) -> Path:
         from .research import rebuild
         rebuild(workspace, company_id)
         lines += ["", "[Living thesis, catalysts, X plan and revision history](research.md)"]
-    for category in ("updates", "funding"):
+    for category in ("updates", "funding", "coverage"):
         reports = sorted((folder / category).glob("*/report.md"))
         if reports:
             lines += ["", f"## {category.title()} history", ""]

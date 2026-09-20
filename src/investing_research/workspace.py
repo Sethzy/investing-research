@@ -97,6 +97,12 @@ class Workspace:
                 "author",
                 "published_at",
                 "completeness",
+                "completeness_scope",
+                "thread_completeness",
+                "completeness_reason",
+                "text_source",
+                "source_truncated",
+                "media_completeness",
                 "article",
                 "conversation",
             )
@@ -115,6 +121,10 @@ class Workspace:
                 "text": post.get("text", ""),
                 "published_at": post.get("published_at"),
                 "completeness": post.get("completeness", "partial"),
+                "completeness_scope": post.get("completeness_scope", "unspecified"),
+                "thread_completeness": post.get("thread_completeness", "not_verified"),
+                "media_completeness": post.get("media_completeness", "not_verified"),
+                "completeness_reason": post.get("completeness_reason", "Not independently verified"),
                 "retrieved_at": now(),
             }
         )

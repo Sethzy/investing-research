@@ -1,0 +1,27 @@
+{
+  "workbook_sha256": "be9fb76b254477107b56d39a25cf0ecb2fc2a0edbd972a2888f645b44e84ee6d",
+  "structural_status": "passed",
+  "presentation_version": 2,
+  "visible_sheets": [
+    "Summary",
+    "Assumptions",
+    "Historical",
+    "Operating",
+    "Valuation",
+    "Sensitivities",
+    "Checks",
+    "Readme"
+  ],
+  "formulas": 254,
+  "historical_rows": 158,
+  "source_links_checked": 158,
+  "source_comments_checked": 178,
+  "live_recalculation": {
+    "status": "passed",
+    "engine": "LibreOffice",
+    "checks": "All scenarios, operating outputs and sensitivities independently recalculated"
+  },
+  "visual_status": "Reviewed all eight sheets via 23-page LibreOffice PDF; changed Historical/Readme and Summary also rendered at worksheet scale. Reader PDF inspected and table splits repaired. Native Microsoft Excel UI not opened.",
+  "source_accessibility": "not checked; preserved URLs compared only",
+  "issues": []
+}

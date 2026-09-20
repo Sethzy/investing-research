@@ -15,6 +15,15 @@ from .workspace import Workspace, read_json, write_json
 app = typer.Typer(no_args_is_help=True, pretty_exceptions_show_locals=False)
 
 
+@app.command()
+def coverage_review(ctx: typer.Context, request: Path):
+    """Save an immutable, validated category-by-category evidence review."""
+    from .coverage import CoverageReview, save
+    with ctx.obj.lock():
+        result = save(ctx.obj, CoverageReview.model_validate(read_json(request)))
+    emit(result)
+
+
 def emit(value):
     typer.echo(json.dumps(value, indent=2, ensure_ascii=False, default=str, allow_nan=False))
 

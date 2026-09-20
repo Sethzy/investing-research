@@ -169,3 +169,9 @@ Read the [implementation specification](docs/superpowers/specs/2026-09-20-invest
 See the [implementation review and validation record](docs/validation/2026-09-20-implementation-review.md) for live checks, resolved review findings and operational limits.
 
 Project code is MIT licensed; see [third-party notices](THIRD_PARTY_NOTICES.md) for retained upstream attribution. Public CI tests the offline workflows; it has no X account and does not establish live X availability. The MLX example has exercised collection and illustrative modelling, but a completed, decision-grade MLX valuation remains subject to the evidence gaps in the validation record.
+
+## Evidence and report completion
+
+See the [dated MLX evidence review](examples/mlx/editions/2026-09-20-evidence/README.md) for the readable PDF and matching Excel, including fresh X checks, selected historical normalization and explicit remaining gaps. The original workbook remains the formatting reference.
+
+Substantive reports distinguish collected sources from reconciled and analyzed evidence. The bundled skill requires dedicated history, valuation, development/funding, industry, X and unresolved-coverage sections. See [the completion workflow](docs/evidence-completion.md). Research refreshes perform new checks; re-exporting preserves the original research dates. Missing inputs remain visible rather than being filled with unsupported estimates.
