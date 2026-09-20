@@ -13,6 +13,7 @@ def answers():
                 "3–5 years",
                 "fundamental mining",
                 "ASX:MLX",
+                "@TinAnalyst, tinanalyst, @Mining_Notes",
                 "Asia/Singapore",
                 "08:00",
                 "10",
@@ -33,6 +34,7 @@ def test_interview_saves_preferences_without_inventing_watchlist(tmp_path):
     assert "claude" not in result.output.lower()
     assert "Subscribed agent host" not in result.output
     assert preferences["watchlist_requests"] == ["ASX:MLX"]
+    assert preferences["x_handles"] == ["tinanalyst", "mining_notes"]
     assert preferences["max_position_weight"] == 0.1
     assert preferences["minimum_cash_weight"] == 0.15
     assert preferences["setup_status"] == "x_setup_pending"
@@ -66,6 +68,18 @@ def test_interrupt_resume_preserves_existing_companies(tmp_path):
     assert read_json(tmp_path / "private/preferences.json")["host"] == "codex"
 
 
+def test_legacy_answers_leave_handle_question_pending(tmp_path):
+    path = answer_json(tmp_path)
+    runner = CliRunner()
+    result = runner.invoke(app, ["--root", str(tmp_path), "setup", "--skip-x", "--answers", str(path)])
+    assert result.exit_code == 0, result.output
+    assert "x_handles" not in read_json(tmp_path / "private/preferences.json")["completed_questions"]
+    resumed = runner.invoke(app, ["--root", str(tmp_path), "setup", "--skip-x"], input="@analyst\n")
+    assert resumed.exit_code == 0, resumed.output
+    assert "Which X poster handles" in resumed.output
+    assert read_json(tmp_path / "private/preferences.json")["x_handles"] == ["analyst"]
+
+
 def test_x_retry_and_no_secret_output(tmp_path, monkeypatch):
     calls = []
 
@@ -85,7 +99,7 @@ def test_x_retry_and_no_secret_output(tmp_path, monkeypatch):
 
 
 def test_invalid_values_reprompt_and_optional_limits_unset(tmp_path):
-    input_text = "codex\nAUD\nlong\nvalue\n\nBad/Zone\nUTC\n29:00\n\nnan\n\n\nchrome\n\n"
+    input_text = "codex\nAUD\nlong\nvalue\n\n\nBad/Zone\nUTC\n29:00\n\nnan\n\n\nchrome\n\n"
     result = CliRunner().invoke(app, ["--root", str(tmp_path), "setup", "--skip-x"], input=input_text)
     assert result.exit_code == 0, result.output
     prefs = read_json(tmp_path / "private/preferences.json")
@@ -93,6 +107,43 @@ def test_invalid_values_reprompt_and_optional_limits_unset(tmp_path):
     assert prefs["max_position_weight"] is None
     assert prefs["minimum_cash_weight"] is None
     assert prefs["watchlist_requests"] == []
+    assert prefs["x_handles"] == []
+
+
+def test_handle_answers_normalize_preserve_and_clear(tmp_path):
+    runner = CliRunner()
+    path = answer_json(tmp_path, x_handles=[" @TinAnalyst ", "tinanalyst", "Mining_Notes"])
+    command = ["--root", str(tmp_path), "setup", "--skip-x", "--answers", str(path)]
+    assert runner.invoke(app, command).exit_code == 0
+    assert read_json(tmp_path / "private/preferences.json")["x_handles"] == ["tinanalyst", "mining_notes"]
+    answer_json(tmp_path)  # Legacy answer files preserve the new preference.
+    assert runner.invoke(app, command).exit_code == 0
+    assert read_json(tmp_path / "private/preferences.json")["x_handles"] == ["tinanalyst", "mining_notes"]
+    answer_json(tmp_path, x_handles=[])
+    assert runner.invoke(app, command).exit_code == 0
+    assert read_json(tmp_path / "private/preferences.json")["x_handles"] == []
+
+
+def test_invalid_handle_query_rejected_before_writes(tmp_path):
+    path = answer_json(tmp_path, x_handles=["analyst OR from:someone"])
+    result = CliRunner().invoke(app, ["--root", str(tmp_path), "setup", "--skip-x", "--answers", str(path)])
+    assert result.exit_code != 0
+    assert not (tmp_path / "private/preferences.json").exists()
+
+
+def test_existing_install_asks_new_handle_question_on_resume(tmp_path):
+    runner = CliRunner()
+    runner.invoke(app, ["--root", str(tmp_path), "setup", "--skip-x"], input=answers())
+    path = tmp_path / "private/preferences.json"
+    prefs = read_json(path)
+    prefs.pop("x_handles")
+    prefs["completed_questions"].remove("x_handles")
+    write_json(path, prefs)
+    result = runner.invoke(app, ["--root", str(tmp_path), "setup", "--skip-x"], input="@new_source\n")
+    assert result.exit_code == 0, result.output
+    assert "Which X poster handles" in result.output
+    assert "Portfolio base currency" not in result.output
+    assert read_json(path)["x_handles"] == ["new_source"]
 
 
 def test_x_failure_deferred_is_not_success(tmp_path, monkeypatch):

@@ -59,6 +59,7 @@ Use `--edit` to change previous answers. Use `--skip-x` to explicitly defer the 
 | Investment horizon | Frame thesis, catalysts and model assumptions |
 | Research style and priorities | Focus the agent's investigation, for example fundamental value and mining |
 | Companies and exchanges | Requests for identity verification; an ambiguous ticker is not automatically added |
+| Preferred X poster handles | Ask which @usernames to prioritize; optional, saved locally and incorporated by Codex into relevant search plans |
 | Timezone and daily time | Scheduling preference; blank daily time means on-demand only |
 | Optional position/cash limits | Explicit preferences for later policy setup; missing limits remain unspecified |
 | X browser and profile | Select your own signed-in session for the live Bird check |
@@ -77,7 +78,7 @@ uv run invest setup --answers private/setup-answers.json
 
 This mode validates all answers before writing settings and makes one live X attempt without terminal prompts. Add `--skip-x` only when the user has deferred X. Check the returned status: exit success means the answers were saved; `x_setup_pending` still requires action. A successful live check does not imply that company identities or scheduling are complete.
 
-All eleven keys below are required. This is a **schema example**, not a recipient's preferences; use their answers. Nullable answers must be explicit `null`; a blank watchlist is `[]`. JSON risk weights are fractions (the terminal interview asks percentages). Unknown keys are rejected, including credential fields.
+All keys below except `host` and `x_handles` are required by the validator. New interviews must ask for preferred X handles and include `x_handles`, using `[]` when the user skips. Older answer files may omit it; omission preserves existing saved handles or defaults to an empty list. This is a **schema example**, not a recipient's preferences; use their answers. Nullable answers must be explicit `null`; a blank watchlist is `[]`. JSON risk weights are fractions (the terminal interview asks percentages). Unknown keys are rejected, including credential fields.
 
 ```json
 {
@@ -86,6 +87,7 @@ All eleven keys below are required. This is a **schema example**, not a recipien
   "horizon": "3–5 years",
   "research_style": "Fundamental value, mining",
   "watchlist_requests": ["ASX:MLX"],
+  "x_handles": [],
   "timezone": "Asia/Singapore",
   "daily_time": null,
   "max_position_weight": null,
@@ -96,6 +98,10 @@ All eleven keys below are required. This is a **schema example**, not a recipien
 ```
 
 `host` defaults to `codex` and needs no interview question; currencies are three uppercase letters; `timezone` is an IANA name; `daily_time` is `HH:MM` or null; risk weights are between zero and one or null. Browser accepts `chrome`, `brave`, `edge`, or `firefox`. Profile is a string or null; an explicit Firefox profile must be an absolute directory path. Existing companies and collection budgets are preserved. Providing `--answers` explicitly replaces the saved interview answers, so load existing preferences and ask only for requested changes when helping a returning user.
+
+The X question is: **“Which X poster handles would you like the research to prioritize? Share @usernames, or skip for now.”** The terminal accepts comma-separated usernames; JSON accepts a list. Use handles rather than profile URLs. An optional `@` is removed, case is normalized and duplicates are removed; usernames must contain 1–15 letters, digits or underscores. On an existing installation, `invest setup` asks this new question if it has not been answered. Use `--edit` to change it; enter `-` to clear a saved list, or provide `"x_handles": []` in JSON.
+
+Codex uses relevant saved handles in `from:username` searches when creating or revising the company's bounded X plan. It keeps broader company/topic searches and contrary evidence, and reports accounts deferred because of relevance or search limits. Saving the preference does not itself rewrite an existing query plan or follow anyone on X. Preferred accounts remain research leads, not automatically trusted sources.
 
 ## X login
 

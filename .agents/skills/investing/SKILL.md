@@ -19,6 +19,12 @@ Operate from the checkout root. Read `AGENTS.md`, `docs/workflows.md`, local con
 
 Read `private/preferences.json` when present and honor the user's horizon and research priorities. Resolve unconfirmed watchlist requests before adding companies. Saved risk preferences are not a complete sizing policy. If setup is missing, follow `../setup/SKILL.md` first. Keep pending X authentication or scheduling visible while doing independent research.
 
+### Preferred X accounts
+
+Read `x_handles` from the saved preferences before planning searches. These are the user's preferred posters, not their login handle or a verified-source whitelist. For accounts relevant to the company or sector, include bounded `from:username` searches combined with company/asset/topic terms, for example `(from:account_one OR from:account_two) ("Metals X" OR "Renison")`. Replace example names only with saved handles. Keep broad company discovery and at least one contrary-evidence search; preferred accounts must not become the entire evidence universe.
+
+Retrieve `research-history` and append the company-specific `queries` / `x-plan` revision before `collect`, preserving the current `previous` ID and the six-query budget. Record which preferred accounts were included or deferred when relevance or budget prevents covering them all. A saved preference by itself does not change the collector's stored plan. An empty list means ordinary company/topic searches continue. Capture access failures or no results honestly, and verify account identity if a handle appears renamed or unrelated. All posts retain the same corroboration requirements regardless of who suggested the account. This workflow reads posts; it does not follow accounts or send messages.
+
 ## First company investigation
 
 1. Confirm exchange, ticker, legal company, trading/reporting currencies, assets and ownership. Use the supplied MLX configuration only for ASX:MLX. Disambiguate unrelated Apple MLX posts by context. Add a reviewed configuration with `watch-add`.

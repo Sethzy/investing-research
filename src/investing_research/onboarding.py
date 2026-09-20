@@ -66,6 +66,17 @@ def _timezone(value):
     return value
 
 
+def _x_handles(values):
+    handles = []
+    for value in values:
+        handle = value.strip().removeprefix("@").lower()
+        if not re.fullmatch(r"[a-z0-9_]{1,15}", handle):
+            raise ValueError("Use X usernames, optionally prefixed with @")
+        if handle not in handles:
+            handles.append(handle)
+    return handles
+
+
 class SetupAnswers(BaseModel):
     """Agent-authored interview answers. All keys explicit, optional answers nullable."""
 
@@ -75,6 +86,7 @@ class SetupAnswers(BaseModel):
     horizon: str = Field(min_length=1)
     research_style: str = Field(min_length=1)
     watchlist_requests: list[str]
+    x_handles: list[str] = Field(default_factory=list)
     timezone: str
     daily_time: str | None
     max_position_weight: float | None = Field(ge=0, le=1)
@@ -110,6 +122,11 @@ class SetupAnswers(BaseModel):
     def watchlist(cls, value):
         return [_nonempty(item.strip()) for item in value]
 
+    @field_validator("x_handles")
+    @classmethod
+    def handles(cls, value):
+        return _x_handles(value)
+
     @model_validator(mode="after")
     def browser_profile(self):
         if self.browser == "firefox" and self.profile and not Path(self.profile).expanduser().is_absolute():
@@ -120,9 +137,12 @@ class SetupAnswers(BaseModel):
 def setup(ws: Workspace, *, edit: bool = False, skip_x: bool = False, answers: Path | None = None):
     """Interview without collecting secrets; save each answer so interruption is resumable."""
     supplied = None
+    handles_supplied = False
     if answers is not None:
         try:
-            supplied = SetupAnswers.model_validate(read_json(answers)).model_dump()
+            raw_answers = read_json(answers)
+            supplied = SetupAnswers.model_validate(raw_answers).model_dump()
+            handles_supplied = "x_handles" in raw_answers
         except (OSError, ValueError, ValidationError):
             raise typer.BadParameter(
                 "Invalid setup answers. Supply every documented field with the correct type; unknown fields are rejected. See docs/setup.md."
@@ -133,8 +153,12 @@ def setup(ws: Workspace, *, edit: bool = False, skip_x: bool = False, answers: P
         preferences = read_json(path, {})
         if not isinstance(preferences, dict):
             raise typer.BadParameter("private/preferences.json must be a JSON object")
+        if supplied is not None and not handles_supplied:
+            # Older answer files must not erase a recipient's saved account preferences.
+            supplied["x_handles"] = preferences.get("x_handles", [])
         settings = ws.settings() if ws.settings_path.exists() else Settings()
         completed = set(preferences.get("completed_questions", []))
+        handles_previously_answered = "x_handles" in completed
         if not ws.settings_path.exists():
             completed.difference_update({"browser", "profile", "timezone"})
         # An old successful probe is not evidence that this session still works.
@@ -194,6 +218,18 @@ def setup(ws: Workspace, *, edit: bool = False, skip_x: bool = False, answers: P
         )
         typer.echo(
             "Company requests require identity confirmation by your agent before watch-add. Existing confirmed companies are retained."
+        )
+        ask(
+            "x_handles",
+            "Which X poster handles should research prioritize? (comma-separated @usernames; blank to skip)",
+            ", ".join("@" + handle for handle in preferences.get("x_handles", [])),
+            lambda value: _x_handles([item.strip() for item in value.split(",") if item.strip()]),
+        )
+        if supplied is not None and not handles_supplied and not handles_previously_answered:
+            completed.discard("x_handles")  # Legacy omission is not an explicit skip.
+            save()
+        typer.echo(
+            "Your agent uses these accounts in relevant search plans alongside broader and contrary-evidence searches. Posts still need verification."
         )
         ask(
             "timezone",
