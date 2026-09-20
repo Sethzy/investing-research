@@ -337,7 +337,18 @@ def status(ctx: typer.Context):
                 for r in runs
                 if r["status"] in ("collecting", "pending_review")
             ],
-            "latest": runs[-1] if runs else None,
+            "latest": (
+                {
+                    **{
+                        key: runs[-1].get(key)
+                        for key in ("id", "status", "started_at", "finished_at", "reviewed_at", "errors")
+                    },
+                    "candidate_count": len(runs[-1]["candidates"]),
+                    "receipt": f"state/runs/{runs[-1]['id']}.json",
+                }
+                if runs
+                else None
+            ),
         }
     )
 

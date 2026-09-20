@@ -214,3 +214,48 @@ def test_workbook_rejects_duplicate_or_missing_scenario_labels(tmp_path, label):
     workbook.close()
     with pytest.raises(ValueError, match="scenario label"):
         verify_workbook(path, expected)
+
+
+@pytest.mark.parametrize("failure", [RuntimeError, KeyboardInterrupt])
+def test_model_failure_preserves_stage_and_retry_publishes_atomically(tmp_path, monkeypatch, failure):
+    from investing_research import workbook
+
+    def interrupt(*args):
+        raise failure("simulated interrupted workbook")
+
+    source = ROOT / "examples/model-mine.json"
+    with monkeypatch.context() as patch:
+        patch.setattr(workbook, "write_workbook", interrupt)
+        with pytest.raises(failure):
+            run_model(source, tmp_path)
+    assert [path.name for path in tmp_path.iterdir()] == [".incomplete"]
+    staged_inputs = list((tmp_path / ".incomplete").glob("*/inputs.json"))
+    assert len(staged_inputs) == 1
+    snapshot = staged_inputs[0].read_bytes()
+    result = run_model(source, tmp_path)
+    final = Path(result["output_dir"])
+    assert final.parent == tmp_path
+    assert final.name == result["run_id"]
+    assert (final / "model.json").is_file()
+    assert json.loads((final / "model.json").read_text())["output_dir"] == str(final)
+    assert staged_inputs[0].read_bytes() == snapshot
+
+
+def test_preexisting_incomplete_hash_run_preserved_and_retried(tmp_path):
+    import hashlib
+    from investing_research.models import VERSION
+
+    data = fixture()
+    canonical = json.dumps(data, sort_keys=True, ensure_ascii=False, allow_nan=False).encode()
+    digest = hashlib.sha256(canonical + VERSION.encode()).hexdigest()[:16]
+    legacy = tmp_path / digest
+    legacy.mkdir()
+    (legacy / "inputs.json").write_bytes(canonical)
+    (legacy / "interrupted.txt").write_text("keep this prior attempt")
+    result = run_model(ROOT / "examples/model-mine.json", tmp_path)
+    assert result["run_id"] == digest
+    preserved = list((tmp_path / ".incomplete").glob("*/interrupted.txt"))
+    assert len(preserved) == 1
+    assert preserved[0].read_text() == "keep this prior attempt"
+    assert (legacy / "model.json").is_file()
+    assert not (legacy / "interrupted.txt").exists()

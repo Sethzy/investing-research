@@ -125,3 +125,5 @@ uv run ruff check src/investing_research --exclude vendor
 ```
 
 Read the [implementation specification](docs/superpowers/specs/2026-09-20-investing-research-design.md) for the intended acceptance criteria. Live provider availability, scheduled host execution and another user's browser authentication are separate from deterministic test results.
+
+See the [implementation review and validation record](docs/validation/2026-09-20-implementation-review.md) for live checks, resolved review findings and operational limits.

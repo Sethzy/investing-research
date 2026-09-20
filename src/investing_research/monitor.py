@@ -47,6 +47,7 @@ def collect(
         raise ValueError("Watchlist is empty; add a company first.")
     checkpoints_path = workspace.root / "state/checkpoints.json"
     checkpoints = read_json(checkpoints_path, {})
+    coverage_at_start = dict(checkpoints)
     companies = sorted(companies, key=lambda c: (not c.holding, checkpoints.get(f"company:{c.id}", "")))
     run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ") + "-" + uuid.uuid4().hex[:8]
     path = workspace.root / "state/runs" / f"{run_id}.json"
@@ -76,7 +77,7 @@ def collect(
         company_ok = bool(specs)
         for kind, query in specs:
             key = digest({"kind": kind, "query": query})
-            checkpoint = checkpoints.get(key)
+            checkpoint = coverage_at_start.get(key)
             start = since or (
                 (datetime.fromisoformat(checkpoint) - timedelta(hours=48)).date()
                 if checkpoint

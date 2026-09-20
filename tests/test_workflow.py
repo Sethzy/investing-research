@@ -80,6 +80,23 @@ def test_collect_review_repeat_and_edit(ws, monkeypatch):
     assert len(ws.captures()) == 2
 
 
+def test_shared_query_is_collected_once_for_multiple_companies(ws, monkeypatch):
+    settings = ws.settings()
+    second = settings.companies[0].model_copy(update={"id": "asx-other", "name": "Other"})
+    settings.companies.append(second)
+    write_json(ws.settings_path, settings.model_dump(mode="json"))
+    calls = []
+
+    def search(query, **kwargs):
+        calls.append(query)
+        return search_result()
+
+    monkeypatch.setattr("investing_research.x.search", search)
+    run = collect(ws)
+    assert len(calls) == 1
+    assert {c["company_id"] for c in run["candidates"]} == {"asx-mlx", "asx-other"}
+
+
 def test_failed_source_does_not_advance_checkpoint(ws, monkeypatch):
     monkeypatch.setattr("investing_research.x.search", lambda *a, **k: search_result())
     collect(ws)

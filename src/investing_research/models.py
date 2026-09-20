@@ -7,6 +7,7 @@ import json
 import math
 from datetime import date
 from pathlib import Path
+from uuid import uuid4
 
 VERSION = "1.2.0"
 COMMON = ("cash", "debt", "other_assets", "diluted_shares")
@@ -395,26 +396,31 @@ def run_model(input_path: Path, output_dir: Path) -> dict:
     result = analyse(data)
     canonical = json.dumps(data, sort_keys=True, ensure_ascii=False, allow_nan=False).encode()
     digest = hashlib.sha256(canonical + VERSION.encode()).hexdigest()[:16]
-    destination = Path(output_dir) / digest
+    output_dir = Path(output_dir)
+    destination = output_dir / digest
+    required_files = ("inputs.json", "model.json", "model.xlsx", "report.md", "cash-flows.svg")
+    if destination.exists() and all((destination / name).is_file() for name in required_files):
+        return json.loads((destination / "model.json").read_text())
+    # Keep failed/interrupted work as evidence, one level below ordinary model
+    # discovery. Neither a partial legacy run nor a failed retry blocks the hash.
+    incomplete = output_dir / ".incomplete"
+    incomplete.mkdir(parents=True, exist_ok=True)
     if destination.exists():
-        existing = destination / "model.json"
-        if existing.exists():
-            return json.loads(existing.read_text())
-        raise ValueError(
-            f"Incomplete previous model run: {destination}; preserve it and choose another output directory"
-        )
-    destination.mkdir(parents=True)
-    (destination / "inputs.json").write_bytes(canonical)
+        destination.rename(incomplete / f"{digest}-legacy-{uuid4().hex}")
+    staging = incomplete / f"{digest}-{uuid4().hex}"
+    staging.mkdir()
+    (staging / "inputs.json").write_bytes(canonical)
     result["input_sha256"] = hashlib.sha256(canonical).hexdigest()
     result["run_id"] = digest
     result["output_dir"] = str(destination.resolve())
     from .workbook import write_workbook, verify_workbook
 
-    write_workbook(data, result, destination / "model.xlsx")
-    result["workbook_validation"] = verify_workbook(destination / "model.xlsx", result)
-    _chart(result, destination)
-    (destination / "report.md").write_text(_report(data, result))
-    (destination / "model.json").write_text(json.dumps(result, indent=2, allow_nan=False) + "\n")
+    write_workbook(data, result, staging / "model.xlsx")
+    result["workbook_validation"] = verify_workbook(staging / "model.xlsx", result)
+    _chart(result, staging)
+    (staging / "report.md").write_text(_report(data, result))
+    (staging / "model.json").write_text(json.dumps(result, indent=2, allow_nan=False) + "\n")
+    staging.rename(destination)
     return result
 
 
