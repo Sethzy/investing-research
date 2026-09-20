@@ -27,6 +27,8 @@ Complete the [setup guide](setup.md), including Python dependencies. Install Lib
 uv run invest excel-create examples/model-mlx.json --output private/mlx-working.xlsx
 ```
 
+For inputs supporting the historical Analysis and investment Decision exhibits, use `--presentation-version 4`. Version 3 includes Analysis alone; version 2 remains the default for other companies. Required facts and scope checks are described in the investing skill's [decision reference](../.agents/skills/investing/references/investment-decision.md). Missing facts fail explicitly instead of becoming zero-value assets.
+
 Open `private/mlx-working.xlsx` in Excel or LibreOffice. Read the workbook's instructions and limitations before editing. The [MLX model notes](../examples/MLX-MODEL-NOTES.md) explain which inputs are reported facts and which are illustrative assumptions. The historical comparison includes FY2024 and FY2025 issuer financials, alongside selected June 2026 operating observations. It is not a fully integrated three-statement forecast or a completed MLX price target.
 
 Edit the supported assumption cells, save and close the workbook, then synchronize:

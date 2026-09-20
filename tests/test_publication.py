@@ -4,7 +4,8 @@ from pathlib import Path
 
 import pytest
 
-from investing_research.publication import sha256, validate_release
+from investing_research.publication import sha256, validate_decision, validate_release
+from datetime import datetime
 from test_coverage import request
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -38,6 +39,35 @@ def edition(tmp_path):
 def test_partial_briefing_can_publish(edition):
     root, _ = edition
     assert validate_release(root / "review.md", root / "release.json")["status"] == "passed"
+
+
+@pytest.mark.parametrize('change', ['none', 'rating', 'hidden', 'late', 'blocker', 'date', 'trigger'])
+def test_decision_opinion_contract(change):
+    decision = dict(opinion='Not rated', as_of='2026-09-20', horizon='24 months',
+                    rationale='Project economics could reverse the assessment.',
+                    next_checkpoint='Next reserve update', previous_assessment='Previously unpriced',
+                    blocker='Funding unknown', change_triggers=['Publish capital schedule'])
+    text = '# Company\n## Executive summary and investment opinion\n**Opinion: Not rated**\n'
+    text += '\n'.join([decision[k] for k in ['horizon', 'rationale', 'next_checkpoint', 'previous_assessment', 'blocker']])
+    text += '\nPublish capital schedule\n## Business\n'
+    if change == 'rating':
+        decision['opinion'] = 'Hold'
+        text = text.replace('Not rated', 'Hold')
+    elif change == 'hidden':
+        text = text.replace('**Opinion: Not rated**', '')
+    elif change == 'late':
+        text = '## Background\n' + text
+    elif change == 'blocker':
+        decision.pop('blocker')
+    elif change == 'date':
+        decision['as_of'] = '2026-09-19'
+    elif change == 'trigger':
+        text = text.replace('Publish capital schedule', '')
+    if change == 'none':
+        validate_decision(text, decision, {'purpose': 'illustrative_sensitivity'}, datetime.fromisoformat('2026-09-20T08:00:00Z'))
+    else:
+        with pytest.raises(ValueError):
+            validate_decision(text, decision, {'purpose': 'illustrative_sensitivity'}, datetime.fromisoformat('2026-09-20T08:00:00Z'))
 
 
 @pytest.mark.parametrize("mutation", ["edited", "headline", "link", "company", "cutoff", "promotion", "escape"])

@@ -7,7 +7,7 @@ Read this reference before creating, refreshing or delivering an investing workb
 - [Worked workbook](../../../../examples/mlx/model.xlsx): open this to inspect the actual formatting, editable cells, charts and sheet order. This is an illustrative MLX example, **not a blank template or a current recommendation**. Its financial inputs are deliberately separate from later private research editions.
 - [Summary preview](../../../../examples/mlx/template-summary.png): quick visual reference; inspect the other sheets in the workbook too.
 - [Reference audit](../../../../examples/mlx/presentation-audit.md): checked edition, hash, methods and limitations.
-- [Maintained generator](../../../../src/investing_research/excel_layout.py): authoritative reusable layout, default presentation version 2, with optional version 3 for comparable historical analysis. Generate with `excel-create` using the subject company's reviewed inputs. Do not copy MLX numbers, sources or assumptions into another company.
+- [Maintained generator](../../../../src/investing_research/excel_layout.py): authoritative reusable layout, default presentation version 2, with optional version 3 for comparable historical analysis and version 4 for the decision diagnostic. Generate with `excel-create` using the subject company's reviewed inputs. Do not copy MLX numbers, sources or assumptions into another company.
 - [Calculation workflow](../../../../docs/excel-models.md) and [delivery checklist](../../../../docs/workbook-quality.md).
 
 The generator and versioned calculation contract own the file structure. Apply layout fixes there, then regenerate and synchronize a new snapshot. Do not hand-format just the delivered file and leave future exports broken. Preserve old snapshots and compatibility when changing labels or formulas. A new company, longer text or more forecast years still needs its own visual review.
@@ -23,6 +23,7 @@ Keep the Summary to a compact reading width (approximately 900 pixels at 100% zo
 | Sheet | Required inspection |
 |---|---|
 | Summary | Correct company and selected case; headline values tie to Valuation; currency visible; notes wrap; both charts and their axes fit; shorter-case padding is explained in Readme. |
+| Decision (optional v4) | Dated quote/share proxy; market-to-model bridge; separately sourced investment carrying amounts; residual never called project value; no double subtraction of other assets; matched annual cash periods and guarded yields/multiples; both printed pages readable. |
 | Assumptions | One functioning case selector; all three complete case blocks; editable cells and provenance comments retained; periods chronological; percentages and dates readable; no scenario split across printed pages. |
 | Historical | Every input fact retained with period, value, units, ownership basis, date, source URL and page; links match the recorded sources; filter and frozen identifiers work; printed headers repeat. |
 | Analysis (optional v3) | Comparable periods and reporting basis; source-linked history; profit and cash bridges reconcile; both charts and print pages readable; ratios do not imply normalized earnings. |
@@ -54,3 +55,5 @@ It validates the snapshot, formula contract, source hyperlinks (including PDF pa
 No delivery approval solely because the generator ran, tests passed, a preview looked good, or the reference workbook previously passed. The actual new file is the release candidate.
 
 Presentation v3 adds the optional historical Analysis sheet. Use `write_excel_model(inputs, path, presentation_version=3)` when two complete comparable periods are available, then the ordinary `excel-sync` contract. Otherwise retain v2 and explain the missing comparison. This changes presentation and historical exhibits, not forecast assumptions.
+
+Presentation v4 retains Analysis and adds the Decision sheet using `write_excel_model(inputs, path, presentation_version=4)`. Read [investment-decision.md](investment-decision.md) for required historical metrics and exclusions. The [decision edition](../../../../examples/mlx/editions/2026-09-20-decision/model.xlsx) is the worked reference for this optional exhibit. The original layout versions stay reproducible; refresh preserves the selected version.

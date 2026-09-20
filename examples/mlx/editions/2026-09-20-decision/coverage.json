@@ -1,0 +1,587 @@
+{
+  "company_id": "asx-mlx",
+  "researched_at": "2026-09-20T06:04:28.556034Z",
+  "mode": "research_update",
+  "web_checked_at": "2026-09-20T05:58:29.157423Z",
+  "x_checked_at": "2026-09-20T05:59:07.121963Z",
+  "x_status": "searched",
+  "x_scope": "Broad company/asset query: 15 unrelated records, capped; exact company-name refinement: seven records, four relevant and three unrelated; contrary Man Maw/tin: six records. September 1-20; 15 requested each. Partial post-text captures, no full-thread/media verification; no saved preferred handles.",
+  "items": [
+    {
+      "category": "filings",
+      "question": "Do reported operating results convert into cash?",
+      "period": "As of 20 September 2026",
+      "source_ids": [
+        "7d5f39d55d61520323042564726b09468c646a20f8263a01555ee9873e24cf49",
+        "23b68b441ddbd0bca508d1b8bdf0a91f8db32d7e7f1ccfbc149ac8bcf536534f",
+        "02e93165b3fcdb88bf9ddc87f12642b404d64f7949b560cf755f0c3d1894e577",
+        "d0186eff6253c87bad2060c240e1a4c1d16725699f0584865fa5c5c1153df82b",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "FY2023-FY2025 annual cash bridges reconcile with zero residual at A$1,000 precision. H1 accounts and quarterly corporate cash-call bridge have distinct scopes.",
+      "model_implication": "Dated quote added; explicit 6/5/4-week first-year shutdown sensitivity, annual operating costs fixed; remains illustrative.",
+      "gap": "Payable-sales forecast, full normalization and all-period quarterly cash classification unresolved.",
+      "next_step": "Build a sourced payable-sales and consolidated cash-flow reconciliation.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-decision/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-decision/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "management",
+      "question": "Are project promises and capital allocation supported?",
+      "period": "As of 20 September 2026",
+      "source_ids": [
+        "02e93165b3fcdb88bf9ddc87f12642b404d64f7949b560cf755f0c3d1894e577",
+        "6d8ee5206de2910811aaa48b91caae6f227b8347e600e80a186ea9a2df5410e1"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "not_applicable",
+        "reconciled": "not_applicable",
+        "analyzed": "done",
+        "model_used": "not_applicable"
+      },
+      "conclusion": "January versus August project timetable compared; later investment decision remains conditional.",
+      "model_implication": "No forecast input change; maintain illustrative sensitivity.",
+      "gap": "Longer-term capital allocation outcomes and current project economics incomplete.",
+      "next_step": "Review current FEED economics and compare past reinvestment commitments with outcomes.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-decision/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-decision/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "regulatory",
+      "question": "Does permitting support the project timetable?",
+      "period": "As of 20 September 2026",
+      "source_ids": [
+        "a639994e6c51389af37fa2e9134e179dfe2cff27c0dde42ce72df1f28743c2a9"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "not_applicable",
+        "reconciled": "not_applicable",
+        "analyzed": "done",
+        "model_used": "not_applicable"
+      },
+      "conclusion": "EPA page records closed draft consultation and issued final EIS guidelines; this is not final approval.",
+      "model_implication": "No forecast input change; maintain illustrative sensitivity.",
+      "gap": "Final approval, permit conditions and publication date of displayed stage not established.",
+      "next_step": "Check subsequent EPA decisions and West Coast Council records.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-decision/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-decision/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "industry",
+      "question": "Does supply support an enduring shortage?",
+      "period": "As of 20 September 2026",
+      "source_ids": [
+        "6eb86a68b370d3abac97f4b0a5a293aaf2b88f0c57d437bc4362c27ca70d5a15",
+        "3306e6a3368b14a15657c9a1d9b3592bb4dd1ee7eb23f20f437b0f37598433fb"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "not_applicable",
+        "reconciled": "not_applicable",
+        "analyzed": "done",
+        "model_used": "not_applicable"
+      },
+      "conclusion": "Dated June issuer-reported inventory context challenges timeless shortage claims; direct current exchange series remains unverified.",
+      "model_implication": "No forecast input change; maintain illustrative sensitivity.",
+      "gap": "Current inventories, demand balance and refined supply volumes incomplete.",
+      "next_step": "Obtain dated LME stock/price series and government/customs contained-metal data.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-decision/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-decision/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "counterevidence",
+      "question": "What could undermine the bullish thesis?",
+      "period": "As of 20 September 2026",
+      "source_ids": [
+        "7d5f39d55d61520323042564726b09468c646a20f8263a01555ee9873e24cf49",
+        "6eb86a68b370d3abac97f4b0a5a293aaf2b88f0c57d437bc4362c27ca70d5a15"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "not_applicable",
+        "reconciled": "not_applicable",
+        "analyzed": "done",
+        "model_used": "not_applicable"
+      },
+      "conclusion": "Potential supply return and June operating deterioration challenge extrapolation of high margins.",
+      "model_implication": "No forecast input change; maintain illustrative sensitivity.",
+      "gap": "Independent current supply data and demand/substitution challenge not fully tested.",
+      "next_step": "Test actual restart volumes and weaker-price operating cash sensitivity.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-decision/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-decision/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "peers",
+      "question": "Is MLX attractive relative to comparable producers?",
+      "period": "As of 20 September 2026",
+      "source_ids": [
+        "a6134808d45f4ff64f5c3e2b5276ed38303ca1606db2d09720e8a766b1ad28b6",
+        "3306e6a3368b14a15657c9a1d9b3592bb4dd1ee7eb23f20f437b0f37598433fb",
+        "e7fb45c39e51b7f00d12a4fc19117d5bf60ee7e85df834c6747f7e1700da1bfc"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "not_applicable"
+      },
+      "conclusion": "Later Alphamin Q2 MD&A replaces guidance with EBITDA167.280mUSD and AISC19042USD/t; reviewed distributions, minority interests, price-linked charges and possible additional profit tax. Timah retained.",
+      "model_implication": "No forecast input change; maintain illustrative sensitivity.",
+      "gap": "Matched market valuations/FX and normalized peer cash flows not completed; Alphamin accompanying statements not independently reconciled.",
+      "next_step": "Review latest final statements and dated market values before ranking peers.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-decision/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-decision/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "x",
+      "question": "What material investor claims need corroboration?",
+      "period": "As of 20 September 2026",
+      "source_ids": [
+        "b586f4789cdf06b6f74c3b399dc732f94074a53cd5dd493e18d6edab1a7cc21f",
+        "976dc1b95c6f7f1fe02329ad07fb4ab99cb8593df8fc1f4160320a69c52afa7a",
+        "5372fa9a38a336fd70c2b11e4282bc0f3f5f2b84d1587e7cf5abea34c692920b",
+        "bac2b6b03807b3d67c6556dba133b6181cf753ccd71eee91455f2dc96ea376e4",
+        "1e46328998d28f2b98ab700bf391372c3d2fd783d11d3f7a855d5662872dbf4f",
+        "4e8be23505f316081950cbfce98f0e13a451e57efd053114c7a86a400475147d",
+        "661a026f12f9d64b415025063b912169a68d0636b28a323854e99d8224b3fe27",
+        "39fbaed10a31fbb076802ce6289ec7fe2f40019524dc984924472dc75e00ad75",
+        "c1aad2157980bbb9bc02ab2c4759a499861c7d534bcd2770646a8091fd733e9f",
+        "40d3f95e434c30318cc7697e970e9988b700b1235ed79b3a0a72db44ec112be2",
+        "c8602786f80da3fbc9e47f3989afe8138c09165c96fabe161b33b684dfb674b2",
+        "4b1e2882de504cc6f061c2009eea7c82bce1f9b267e32f8f8b95f85fc002546f",
+        "833b8d651561def147cb2d57f6b19395869344cff46bbf92d73cd93f1e75cfd4",
+        "4916241a08d589a0870fdef2293154204af67480d44de76a5c122993e320b9b4",
+        "140ff9e0de08021e504fa98ea9e244f987b6a9a3f59ce0d9a3c31b8c49ea89f4",
+        "92000479a624be44adfbc9b76ec14c8624a97ebca9666b1c072fab765e246ee8",
+        "c6304ef9e99f49b0951fdf956139716d838169768995c9c33ea0d26566d5d515",
+        "6920df90c955b9052eecc538274915a427f8d2844dd00db9b714dd6a406ca60b",
+        "02d5e419ff45731e473b457ad1bc4207ea386df552c6b3baa3af299a8d974659",
+        "67f77f70e0210a58138cf30627bfb193d1731cb08db934e4d44e4f965986d16b",
+        "05096510c465e0fc6874995231f3a47fe36e9f3f7833613b98df168028e16b60",
+        "c21d82702f1eb00ffed19b5dbe7824550cb8b93cedb0742d4e6f6016afc41069",
+        "7f3c203f58f0c30cddc467ee67b9b4f5f8db791e3cd6a8c68c5dc874dfd6fcc9",
+        "e76e329baa0a87a233ac16642e179bc79aba56457ecb52ab56f2202fbcc6f20a",
+        "ada060e4c2554e1b108ed920d7d45731a0d524cba1bbcac135bdc5feaa4e1075",
+        "f871e89c8cc82270bb23ac593a6bd077e63295d4c0200a83b33bac22170e0bcd",
+        "6bd842791de271433399754f8ba8b48de4a6e30569566af97f6abdf6f6c5cc45",
+        "7b147d54b0e3acd16ad446887ea9dc3cdafd310daf67dbe7059ee2ec50896222",
+        "f09816aa70f47f4d0d7652b3f3dc19a001d24078328889e9dcead2751d4ed780",
+        "be012f93bddae1528a02ce574f47f3bc42e6e484ada2e8bdc6e2b255970678d6"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "not_applicable",
+        "reconciled": "not_applicable",
+        "analyzed": "done",
+        "model_used": "not_applicable"
+      },
+      "conclusion": "Broad company/asset query: 15 unrelated records, capped; exact company-name refinement: seven records, four relevant and three unrelated; contrary Man Maw/tin: six records. September 1-20; 15 requested each. Partial post-text captures, no full-thread/media verification; no saved preferred handles.",
+      "model_implication": "No forecast input change; maintain illustrative sensitivity.",
+      "gap": "Non-exhaustive search and partial threads/media. No numeric baseline assumptions taken from posts.",
+      "next_step": "Inspect linked studies/media and current inventory series before any baseline change.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-decision/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-decision/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "filings",
+      "question": "What selected comparable metrics were reviewed?",
+      "period": "FY2023",
+      "source_ids": [
+        "23b68b441ddbd0bca508d1b8bdf0a91f8db32d7e7f1ccfbc149ac8bcf536534f",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Selected reported financial or operating metrics are retained in Excel and compared in the reader report.",
+      "model_implication": "Dated quote added; explicit 6/5/4-week first-year shutdown sensitivity, annual operating costs fixed; remains illustrative.",
+      "gap": "Not every report line or payable-sales movement is normalized.",
+      "next_step": "Complete remaining statement/cost-definition and payable-sales reconciliation.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-decision/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-decision/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "filings",
+      "question": "What selected comparable metrics were reviewed?",
+      "period": "FY2024",
+      "source_ids": [
+        "d0186eff6253c87bad2060c240e1a4c1d16725699f0584865fa5c5c1153df82b",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Selected reported financial or operating metrics are retained in Excel and compared in the reader report.",
+      "model_implication": "Dated quote added; explicit 6/5/4-week first-year shutdown sensitivity, annual operating costs fixed; remains illustrative.",
+      "gap": "Not every report line or payable-sales movement is normalized.",
+      "next_step": "Complete remaining statement/cost-definition and payable-sales reconciliation.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-decision/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-decision/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "filings",
+      "question": "What selected comparable metrics were reviewed?",
+      "period": "FY2025",
+      "source_ids": [
+        "d0186eff6253c87bad2060c240e1a4c1d16725699f0584865fa5c5c1153df82b",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Selected reported financial or operating metrics are retained in Excel and compared in the reader report.",
+      "model_implication": "Dated quote added; explicit 6/5/4-week first-year shutdown sensitivity, annual operating costs fixed; remains illustrative.",
+      "gap": "Not every report line or payable-sales movement is normalized.",
+      "next_step": "Complete remaining statement/cost-definition and payable-sales reconciliation.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-decision/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-decision/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "filings",
+      "question": "What selected comparable metrics were reviewed?",
+      "period": "2024-Q3",
+      "source_ids": [
+        "ffd77d2dac01aa29d980cc4920b83ff9f4c7451d20b73b8e1c32fca960e5fdd3",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Selected reported financial or operating metrics are retained in Excel and compared in the reader report.",
+      "model_implication": "Dated quote added; explicit 6/5/4-week first-year shutdown sensitivity, annual operating costs fixed; remains illustrative.",
+      "gap": "Not every report line or payable-sales movement is normalized.",
+      "next_step": "Complete remaining statement/cost-definition and payable-sales reconciliation.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-decision/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-decision/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "filings",
+      "question": "What selected comparable metrics were reviewed?",
+      "period": "2024-Q4",
+      "source_ids": [
+        "ffd77d2dac01aa29d980cc4920b83ff9f4c7451d20b73b8e1c32fca960e5fdd3",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Selected reported financial or operating metrics are retained in Excel and compared in the reader report.",
+      "model_implication": "Dated quote added; explicit 6/5/4-week first-year shutdown sensitivity, annual operating costs fixed; remains illustrative.",
+      "gap": "Not every report line or payable-sales movement is normalized.",
+      "next_step": "Complete remaining statement/cost-definition and payable-sales reconciliation.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-decision/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-decision/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "filings",
+      "question": "What selected comparable metrics were reviewed?",
+      "period": "2025-Q1",
+      "source_ids": [
+        "a9081e2642e129025ef01dd489e27c4d346e44318a3be3567e305cf450c13128",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Selected reported financial or operating metrics are retained in Excel and compared in the reader report.",
+      "model_implication": "Dated quote added; explicit 6/5/4-week first-year shutdown sensitivity, annual operating costs fixed; remains illustrative.",
+      "gap": "Not every report line or payable-sales movement is normalized.",
+      "next_step": "Complete remaining statement/cost-definition and payable-sales reconciliation.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-decision/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-decision/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "filings",
+      "question": "What selected comparable metrics were reviewed?",
+      "period": "2025-Q2",
+      "source_ids": [
+        "a9081e2642e129025ef01dd489e27c4d346e44318a3be3567e305cf450c13128",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Selected reported financial or operating metrics are retained in Excel and compared in the reader report.",
+      "model_implication": "Dated quote added; explicit 6/5/4-week first-year shutdown sensitivity, annual operating costs fixed; remains illustrative.",
+      "gap": "Not every report line or payable-sales movement is normalized.",
+      "next_step": "Complete remaining statement/cost-definition and payable-sales reconciliation.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-decision/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-decision/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "filings",
+      "question": "What selected comparable metrics were reviewed?",
+      "period": "2025-Q3",
+      "source_ids": [
+        "9ea99274f7aef90eaab4e69d24ba1e3294d5b40ba06b479ea6d5c1b1d419e875",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Selected reported financial or operating metrics are retained in Excel and compared in the reader report.",
+      "model_implication": "Dated quote added; explicit 6/5/4-week first-year shutdown sensitivity, annual operating costs fixed; remains illustrative.",
+      "gap": "Not every report line or payable-sales movement is normalized.",
+      "next_step": "Complete remaining statement/cost-definition and payable-sales reconciliation.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-decision/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-decision/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "filings",
+      "question": "What selected comparable metrics were reviewed?",
+      "period": "2025-Q4",
+      "source_ids": [
+        "9ea99274f7aef90eaab4e69d24ba1e3294d5b40ba06b479ea6d5c1b1d419e875",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Selected reported financial or operating metrics are retained in Excel and compared in the reader report.",
+      "model_implication": "Dated quote added; explicit 6/5/4-week first-year shutdown sensitivity, annual operating costs fixed; remains illustrative.",
+      "gap": "Not every report line or payable-sales movement is normalized.",
+      "next_step": "Complete remaining statement/cost-definition and payable-sales reconciliation.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-decision/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-decision/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "filings",
+      "question": "What selected comparable metrics were reviewed?",
+      "period": "2026-Q1",
+      "source_ids": [
+        "7d5f39d55d61520323042564726b09468c646a20f8263a01555ee9873e24cf49",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Selected reported financial or operating metrics are retained in Excel and compared in the reader report.",
+      "model_implication": "Dated quote added; explicit 6/5/4-week first-year shutdown sensitivity, annual operating costs fixed; remains illustrative.",
+      "gap": "Not every report line or payable-sales movement is normalized.",
+      "next_step": "Complete remaining statement/cost-definition and payable-sales reconciliation.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-decision/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-decision/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "filings",
+      "question": "What selected comparable metrics were reviewed?",
+      "period": "2026-Q2",
+      "source_ids": [
+        "7d5f39d55d61520323042564726b09468c646a20f8263a01555ee9873e24cf49",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Selected reported financial or operating metrics are retained in Excel and compared in the reader report.",
+      "model_implication": "Dated quote added; explicit 6/5/4-week first-year shutdown sensitivity, annual operating costs fixed; remains illustrative.",
+      "gap": "Not every report line or payable-sales movement is normalized.",
+      "next_step": "Complete remaining statement/cost-definition and payable-sales reconciliation.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-decision/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-decision/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "filings",
+      "question": "What drove H1 profit and cash, and how was capital deployed?",
+      "period": "H1 2025 versus H1 2026",
+      "source_ids": [
+        "02e93165b3fcdb88bf9ddc87f12642b404d64f7949b560cf755f0c3d1894e577",
+        "4428c979e2c02dda713e4cb5bfab770c0c2d83eeeace76431c76b293992ada19"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "done",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Gross profit increase 59.636m; other pre-tax changes -4.211m and tax -4.468m reconcile net profit increase 50.957m. OCF increase 62.241m reconciled through direct cash-flow components. Cash bridge closes at 373.998m. Tax sensitivity adjusts both periods. Selected management delivery and investment remeasurements assessed.",
+      "model_implication": "New formula-linked historical Analysis sheet; existing forecast inputs and scenario values unchanged. No tax-asset cash addition or speculative allocation premium.",
+      "gap": "Full payable-sales and profit-to-operating-cash reconciliation, complete investment returns and incentives remain incomplete.",
+      "next_step": "Review receivables/settlement roll-forward and investment outcomes; obtain current Rentails economics and funding.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-decision/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-decision/model.json",
+      "fact_ids": [],
+      "reconciliation": "H1 2026 consolidated statements PDF pages 15 and 17; tax note page 27. Report bridge components and Excel residuals independently checked. Other investing -23.608m reconciled to disclosed uses and receipts."
+    },
+    {
+      "category": "filings",
+      "question": "What disclosed investments are missing from the operating illustration?",
+      "period": "30 June 2026 carrying amounts",
+      "source_ids": [
+        "02e93165b3fcdb88bf9ddc87f12642b404d64f7949b560cf755f0c3d1894e577"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "done",
+        "analyzed": "done",
+        "model_used": "done"
+      },
+      "conclusion": "48.417m financial assets plus43.864m associates=92.281m carrying inventory. Market-to-operating residual remains1.135595bn after that inventory. Not current fair values or Rentails valuation.",
+      "model_implication": "Formula-linked Decision diagnostic only; no forecast or other_assets change.",
+      "gap": "Current investment realization values, Rentails and dilution remain unresolved.",
+      "next_step": "Review current quoted holdings, note redemption and project economics before any asset valuation.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-decision/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-decision/model.json",
+      "fact_ids": [
+        "c75ab7527c293893ccae13965893b5df3133ca0d31af3bc701b54bf96dfa7ef9",
+        "9d6eb8a75c4701c01ff7dd7530879a75a02f69195da03faeaf8843ad583b29dd"
+      ],
+      "reconciliation": "PDF pages22-23 visually reviewed; financial assets43.939+1.827+2.651=48.417; associates closing43.864, total92.281 AUDm."
+    },
+    {
+      "category": "filings",
+      "question": "Does the updated resource establish a remaining production schedule?",
+      "period": "31 March 2026 resource, published29 June",
+      "source_ids": [
+        "c8c0141ce0858f7b9106b924465035a34f11819a8d4889ce32a6ccdd28e2cca2",
+        "45fa2aee573b3a92864fd43fc6c030123f594c08b352e1f6fbd270a47cbaeb8a"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "not_applicable"
+      },
+      "conclusion": "Resource inclusive of reserves and not equivalent to recoverable metal. Company expected mine-plan/reserve updateQ3; not found in checked index.",
+      "model_implication": "Do not replace assumed3/5/7-year horizons with resource divided by current production.",
+      "gap": "Updated payable mine plan and reserve schedule not located.",
+      "next_step": "Recheck after30 September; date of release not confirmed.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-decision/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-decision/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    }
+  ],
+  "artifact_sha256": {
+    "examples/mlx/editions/2026-09-20-decision/MLX-investment-review.md": "32a103ec22d978a4929736a393aea0ce571c3494b8f0635c623543aa0e2ef17f",
+    "examples/mlx/editions/2026-09-20-decision/model.json": "668d08f4f7960823bd5fef90f17032e3307a27e45b1c76fcf08d3896a9a9e4f8"
+  },
+  "id": "75e2d8c02b7a9e6d2d6c1dc3771aec1bb831b80010cc32832178b9a1e1fd15cd",
+  "recorded_at": "2026-09-20T06:09:21.163624+00:00"
+}

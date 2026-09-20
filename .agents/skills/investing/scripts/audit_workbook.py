@@ -4,6 +4,7 @@ Run from the checkout: uv run python <this-script> <snapshot/model.json> --recal
 """
 import argparse
 import json
+import math
 from pathlib import Path
 
 import openpyxl
@@ -58,6 +59,23 @@ def audit(path, recalculate=False):
                     issues.append(f"Analysis!{cell}: bridge must reconcile to zero")
             if len(book["Analysis"]._charts) != 2:
                 issues.append("Analysis: expected both historical bridge charts")
+        if "Decision" in cached:
+            decision = cached["Decision"]
+            expected_equity = cached["Valuation"]["B9"].value / 1_000_000
+            if not isinstance(decision["B17"].value, (int, float)) or not math.isclose(decision["B17"].value, expected_equity, abs_tol=1e-7):
+                issues.append("Decision: equity bridge differs from Valuation")
+            if data.get("reference_price") is None:
+                if any(decision[cell].value != "N/A" for cell in ("B9", "B18", "B24", "B40", "C41")):
+                    issues.append("Decision: missing quote must not produce a market comparison")
+            else:
+                market = data["reference_price"] * data["diluted_shares"] / 1_000_000
+                if not math.isclose(decision["B9"].value, market, abs_tol=1e-7):
+                    issues.append("Decision: market equity differs from price times shares")
+                if data["other_assets"]:
+                    if decision["B24"].value != "N/A":
+                        issues.append("Decision: investment residual risks double counting")
+                elif not math.isclose(decision["B24"].value, market - expected_equity - decision["B23"].value, abs_tol=1e-7):
+                    issues.append("Decision: investment residual does not reconcile")
         if len(book["Summary"]._charts) != 2:
             issues.append("Summary: expected both model charts")
     finally:

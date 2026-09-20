@@ -17,6 +17,8 @@ Reusable improvements must update this skill or its linked templates in the same
 
 Start every new reader report with the [executive summary and investment opinion](references/investment-decision.md), before company background: Buy/Hold/Sell, dated price, horizon, supported valuation, principal reasons, downside and rating-change triggers. Use a visible Not rated status when decision-critical evidence cannot support a rating; never disguise incomplete research as Hold. Preserve prior dated opinions.
 
+Use the [decision edition contract](../../../docs/reader-releases.md#decision-editions) for the visible opinion and optional v4 Decision worksheet. Reconcile price paid, included operating value and separately disclosed investments. Show a historical cash cross-check without calling it normalized or forward yield. Investigate material residuals; do not assign them automatically to an omitted project. A captured newer peer filing supersedes preliminary guidance only after its definitions and numbers are reviewed.
+
 ## Analyst standard
 
 For substantive investigations and regenerated company reports, apply the [source playbook](references/source-playbook.md), [historical normalization](references/historical-normalization.md), [valuation readiness](references/valuation-readiness.md), [X evidence standard](references/x-evidence.md), and [reader report template](references/reader-report-template.md). Save the validated evidence-stage register through [evidence completion](../../../docs/evidence-completion.md). These are required deliverables, not optional headings. Research updates perform fresh checks; re-exports retain actual prior check dates. Material unknowns remain visible and cannot become completed analysis merely because a document was captured.

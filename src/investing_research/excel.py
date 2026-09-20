@@ -161,7 +161,7 @@ def read_inputs(path: Path):
         book.close()
 
 
-def create(inputs: Path, output: Path):
+def create(inputs: Path, output: Path, *, presentation_version: int = 2):
     from .excel_layout import write_excel_model
 
     if output.exists():
@@ -173,7 +173,7 @@ def create(inputs: Path, output: Path):
     # Only publish complete packages; a failed writer must not occupy the target name.
     with tempfile.TemporaryDirectory(dir=output.parent, prefix=".excel-create-") as temp:
         staged = Path(temp) / "model.xlsx"
-        write_excel_model(data, staged)
+        write_excel_model(data, staged, presentation_version=presentation_version)
         read_inputs(staged)
         staged.rename(output)
     return {"workbook": str(output), "status": "editable_unverified", "next": "Run invest excel-sync on this workbook"}

@@ -39,3 +39,15 @@ Preserve each dated rating, expectation and outcome through existing research re
 - [Docling](https://github.com/docling-project/docling), [Last30Days](https://github.com/mvanhorn/last30days-skill), [Bird](https://github.com/steipete/bird): retain extraction/discovery/capture roles; no new rating engine. Bird's upstream page was unavailable in this check. Discovery coverage does not establish decision readiness.
 
 These instructions specify analyst behavior; they do not claim that code automatically evaluates economic completeness or generates a reliable rating.
+
+## Executable decision edition
+
+Optional workbook presentation v4 adds a Decision worksheet using the existing inputs and model outputs. It requires the latest unambiguous consolidated investment-inventory period with `financial_assets_fvtpl` and `investment_in_associates`, plus two comparable FY periods of operating cash flow, equipment and mine-development payments. Keep original source dates/pages and currency. Use v2/v3 when the company's reporting does not support this exhibit; never insert zeros to unlock it.
+
+Compare selected model equity with quote times the declared share denominator. Identify stale or proxy shares prominently. Show financial investments and associates at their disclosed carrying amounts, separately from any fair-value assessment. The residual after these carrying amounts is available only if model `other_assets` is zero; otherwise reconcile overlaps manually in the report. Do not add book equity, deferred-tax assets, plant book values or rehabilitation provisions mechanically to an operating DCF. Closure belongs once in the appropriate schedule; a discounted accounting provision is not an undiscounted closure cheque.
+
+Historical operating cash less equipment and mine-development spending remains a diagnostic. It includes interest and tax timing and precedes other investing/financing. Compare it with market equity, not enterprise value, and do not label its reciprocal a normalized or prospective valuation multiple. A genuine normalized cross-check still needs adjustments, not a renamed historical ratio.
+
+For the opposing case, describe the linked mechanism: weaker selling prices can reduce price-linked charges but leave fixed mine costs; disruption can reduce receipts while committed capital continues; delay shifts project benefits beyond the holding horizon; funding can introduce debt or dilution. Quantify supported links and explicitly identify unmodelled ones. Do not fabricate a capital envelope, share issue or project NPV to fill a table.
+
+Store the dated opinion in the reader release's `decision` record and the existing recommendation/research history. The exporter checks consistency for v4 editions, including a visible blocker for Not rated; this is a publication check, not a proof of analytical correctness. Recheck original disclosures when a peer's guidance becomes final results, and explain substantive changes in tax, minority interests and actual shareholder distributions.

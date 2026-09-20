@@ -24,7 +24,7 @@ def write_excel_model(data: dict, path: Path, *, presentation_version: int = 2) 
     if presentation_version == 1:
         from .excel_layout_v1 import write_excel_model as legacy
         return legacy(data, path)
-    if presentation_version not in (2, 3):
+    if presentation_version not in (2, 3, 4):
         raise ValueError("Unsupported workbook presentation version")
     validate_model(data)
     path = Path(path)
@@ -72,8 +72,10 @@ def write_excel_model(data: dict, path: Path, *, presentation_version: int = 2) 
         "Readme",
         "_Model",
     )
-    if presentation_version == 3:
+    if presentation_version >= 3:
         names = names[:3] + ("Analysis",) + names[3:]
+    if presentation_version == 4:
+        names = names[:1] + ("Decision",) + names[1:]
     sheets = {name: wb.add_worksheet(name) for name in names}
     n = max(len(s["years"]) for s in data["scenarios"].values())
     manifest = {
@@ -126,7 +128,7 @@ def write_excel_model(data: dict, path: Path, *, presentation_version: int = 2) 
         ws.set_margins(0.3, 0.3, 0.4, 0.4)
         ws.set_footer("&L" + data["company_id"] + " | " + name + "&RPage &P of &N", {"margin": 0.2})
         if name != "_Model":
-            ws.merge_range(0, 0, 1, max(5, n + 1), f"{data['company_id'].replace('-', ':', 1).upper()}  /  {name}", styles["title"])
+            ws.merge_range(0, 0, 1, 7 if name == "Decision" else max(5, n + 1), f"{data['company_id'].replace('-', ':', 1).upper()}  /  {name}", styles["title"])
             ws.print_area(0, 0, 45, max(5, n + 1))
     a = sheets["Assumptions"]
     a.write("A4", "Active scenario", styles["section"])
@@ -557,9 +559,12 @@ def write_excel_model(data: dict, path: Path, *, presentation_version: int = 2) 
         readme.merge_range(start + 2 + i * 4, 0, start + 4 + i * 4, 7, limitation, styles["text"])
     readme.print_area(0, 0, start + 4 + len(limitations) * 4, 7)
     readme.set_h_pagebreaks([start] + [start + 2 + i * 4 for i in range(8, len(limitations), 8)])
-    if presentation_version == 3:
+    if presentation_version >= 3:
         from .excel_analysis import write_analysis
         write_analysis(wb, sheets["Analysis"], data, styles, formula)
+    if presentation_version == 4:
+        from .excel_decision import write_decision
+        write_decision(sheets["Decision"], data, styles, formula, global_refs, manifest["outputs"])
     metadata = sheets["_Model"]
     metadata.write_string(0, 0, MARKER)
     payload = json.dumps(manifest, ensure_ascii=False, allow_nan=False, separators=(",", ":"))

@@ -9,3 +9,11 @@ Include the model comparison as a simple Markdown table with rows `| Bear | 0.45
 Run `uv run python scripts/export-reader-report.py EDITION/review.md --output EDITION/review.pdf`. The exporter requires `release.json` beside the report, or an explicit `--manifest` path. It rejects changed files, mismatched companies, dates, model/workbook inputs, wrong links and scenario values. It accepts incomplete research as an explicitly limited briefing; hashes and declared coverage do not establish truth or a recommendation.
 
 Update the current-edition README only after calculation and visual review. Link older editions; never overwrite them. A re-export preserves the original research dates. For substantive research, update the evidence register only for sources actually checked and preserve failed searches.
+
+## Decision editions
+
+All newly authored investment opinions use an additional `decision` object in the release manifest. It is mandatory for presentation-v4 workbooks. Existing historical editions remain valid. Fields are `opinion` (Buy/Hold/Sell/Not rated), `as_of` (research-cutoff date), `horizon`, `rationale`, `next_checkpoint`, `previous_assessment`, `change_triggers` (nonempty list), and `blocker` (required for Not rated).
+
+The first `##` heading must be `Executive summary and investment opinion`; include `**Opinion: Not rated**` (or the supported rating) and the declared text fields verbatim within that section. This binds the human-readable summary to the review record. Definitive price-based ratings require a model classified as valuation; an illustrative operating sensitivity cannot support one. Classification and consistency alone never establish investment suitability or evidence quality.
+
+The v4 Decision sheet is a diagnostic: price paid versus selected operating model, carrying-value inventory and historical cash yields. Its residual is not a project's valuation, and the historical yields are not normalized forecasts. Follow the skill's asset, cash-flow, funding and contrary-case research checks before reaching an opinion.

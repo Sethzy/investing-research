@@ -273,13 +273,14 @@ def model(ctx: typer.Context, inputs: Path):
 
 
 @app.command()
-def excel_create(ctx: typer.Context, inputs: Path, output: Annotated[Path, typer.Option()]):
+def excel_create(ctx: typer.Context, inputs: Path, output: Annotated[Path, typer.Option()],
+                 presentation_version: Annotated[int, typer.Option(min=2, max=4)] = 2):
     """Create a professional editable workbook; preserve any existing working model."""
     from .excel import create
     ws = ctx.obj
     with ws.lock():
         try:
-            emit(create(ws.inside(str(inputs)), ws.inside(str(output))))
+            emit(create(ws.inside(str(inputs)), ws.inside(str(output)), presentation_version=presentation_version))
         except ValueError as error:
             raise typer.BadParameter(str(error)) from None
 

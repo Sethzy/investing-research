@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "company_id": "asx-mlx",
+  "research_cutoff": "2026-09-20T06:04:28.556034Z",
+  "valuation_class": "illustrative_sensitivity",
+  "decision": {
+    "opinion": "Not rated",
+    "as_of": "2026-09-20",
+    "horizon": "24 months; analyst-selected, not a saved personal preference.",
+    "rationale": "Improved cash generation is encouraging, but the current price requires a stronger asset-value case than this research establishes.",
+    "blocker": "Rentails economics and funding, remaining mine cash flows and current diluted shares could change the conclusion.",
+    "next_checkpoint": "Recheck the company announcement page after 30 September for the expected Q3 mine-plan and reserve update; its release is not confirmed.",
+    "previous_assessment": "Previous review, 20 September: cautiously constructive on the business, with no price-based rating. That judgment is unchanged.",
+    "change_triggers": [
+      "A supported asset-and-funding valuation that makes the return attractive could support Buy.",
+      "A supported neutral return could support Hold; unattractive returns or a broken thesis could support Sell."
+    ]
+  },
+  "files": {
+    "report": {
+      "path": "MLX-investment-review.md",
+      "sha256": "32a103ec22d978a4929736a393aea0ce571c3494b8f0635c623543aa0e2ef17f"
+    },
+    "workbook": {
+      "path": "model.xlsx",
+      "sha256": "26685935bb73f1932f550f9123c92dd5c4a9814894993b6db2945a96f8f0ce1f"
+    },
+    "model": {
+      "path": "model.json",
+      "sha256": "668d08f4f7960823bd5fef90f17032e3307a27e45b1c76fcf08d3896a9a9e4f8"
+    },
+    "inputs": {
+      "path": "inputs.json",
+      "sha256": "552836171e2dd3bede59de265820cf7db273d12ed57a1e9cfd053e159c25434c"
+    },
+    "coverage": {
+      "path": "coverage.json",
+      "sha256": "2e344653a3c151de652899418d2c3dda0e1b3ea350aaedc1b7bc7bbef1f04d33"
+    }
+  }
+}
