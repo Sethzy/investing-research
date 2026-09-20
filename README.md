@@ -172,6 +172,8 @@ Project code is MIT licensed; see [third-party notices](THIRD_PARTY_NOTICES.md) 
 
 ## Evidence and report completion
 
-See the [dated MLX evidence review](examples/mlx/editions/2026-09-20-evidence/README.md) for the readable PDF and matching Excel, including fresh X checks, selected historical normalization and explicit remaining gaps. The original workbook remains the formatting reference.
+See [the latest MLX review and dated history](examples/mlx/README.md) for the readable PDF and matching Excel. The current edition adds a dated market quote, shutdown sensitivity, capital-needs assessment, two producer comparisons and refreshed X checks. The original workbook remains the formatting reference.
+
+The [KISS specification](docs/specs/2026-09-20-kiss-research-release.md) keeps the workflow focused on material research updates. [Reader publication checks](docs/reader-releases.md) bind each PDF's source report to its reviewed evidence and synchronized Excel snapshot.
 
 Substantive reports distinguish collected sources from reconciled and analyzed evidence. The bundled skill requires dedicated history, valuation, development/funding, industry, X and unresolved-coverage sections. See [the completion workflow](docs/evidence-completion.md). Research refreshes perform new checks; re-exporting preserves the original research dates. Missing inputs remain visible rather than being filled with unsupported estimates.

@@ -1,0 +1,11 @@
+# Matching reader editions
+
+Each edition contains a reader Markdown/PDF, a synchronized `model.xlsx`, `model.json` and `inputs.json`, a `coverage.json` evidence review, and `release.json`. Technical JSON is supporting material; the user reads the story and opens Excel.
+
+`release.json` has `schema_version: 1`, `company_id`, timezone-aware `research_cutoff`, `valuation_class` matching the model purpose, and `files`. The file roles are `report`, `workbook`, `model`, `inputs`, `coverage`; each records a relative `path` and the actual file's `sha256`. Keep the model snapshot files together. Compute hashes after authoring and reviewing the final files, never to conceal an unexplained change. Use the evidence review saved by `coverage-review`; its artifact hashes must include the final reader Markdown and model JSON. Reference both through the review items' `analysis_path` and `model_path`. This binding does not require falsely marking model use complete.
+
+Include the model comparison as a simple Markdown table with rows `| Bear | 0.45 |`, `| Base | 0.79 |`, `| Bull | 1.39 |` (replace example values with accepted results). Label units and whether results are illustrative directly above it. The exporter verifies these values to two decimal places. Other narrative figures still need source review.
+
+Run `uv run python scripts/export-reader-report.py EDITION/review.md --output EDITION/review.pdf`. The exporter requires `release.json` beside the report, or an explicit `--manifest` path. It rejects changed files, mismatched companies, dates, model/workbook inputs, wrong links and scenario values. It accepts incomplete research as an explicitly limited briefing; hashes and declared coverage do not establish truth or a recommendation.
+
+Update the current-edition README only after calculation and visual review. Link older editions; never overwrite them. A re-export preserves the original research dates. For substantive research, update the evidence register only for sources actually checked and preserve failed searches.

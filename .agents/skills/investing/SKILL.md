@@ -5,6 +5,12 @@ description: Research and monitor watched companies using public reports, authen
 
 # Investing workflow
 
+## Keep the workflow simple
+
+Read the prior edition, check filings and X, investigate material changes, update the existing Excel, explain the changes, verify the edition and append it. Follow [the KISS release contract](../../../docs/reader-releases.md). Keep technical records outside the reader narrative. Use a concise capital-needs table and two or three relevant peers; do not build a screening engine or speculative project model. Distinguish not-yet-disclosed inputs from unfinished research. Do not add agents, scoring frameworks or integrations unless they solve an observed problem.
+
+Before PDF export, require the matching release manifest, synchronized model snapshot and evidence review. Publish illustrative work honestly; never promote its label merely because formatting or formulas pass. Save refined X plans through existing research revisions, then record material claims as investigated, corroborated, contradicted or unresolved in the reader update. Preserve actual source-check dates.
+
 ## Analyst standard
 
 For substantive investigations and regenerated company reports, apply the [source playbook](references/source-playbook.md), [historical normalization](references/historical-normalization.md), [valuation readiness](references/valuation-readiness.md), [X evidence standard](references/x-evidence.md), and [reader report template](references/reader-report-template.md). Save the validated evidence-stage register through [evidence completion](../../../docs/evidence-completion.md). These are required deliverables, not optional headings. Research updates perform fresh checks; re-exports retain actual prior check dates. Material unknowns remain visible and cannot become completed analysis merely because a document was captured.

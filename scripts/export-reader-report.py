@@ -12,7 +12,9 @@ from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.platypus import KeepTogether, PageBreak, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 
 
-def export(source, output):
+def export(source, output, manifest_path=None):
+    from investing_research.publication import validate_release
+    validate_release(source, manifest_path or source.parent / "release.json")
     text = source.read_text()
     from investing_research.coverage import reader_gaps
     missing = reader_gaps(text)
@@ -23,7 +25,8 @@ def export(source, output):
     if output.exists():
         raise ValueError("Choose a new output path to preserve the earlier reader edition.")
     styles = getSampleStyleSheet()
-    styles.add(ParagraphStyle(name="Reader", fontName="Helvetica", fontSize=11, leading=16, spaceAfter=11))
+    styles.add(ParagraphStyle(name="Reader", fontName="Helvetica", fontSize=11, leading=16,
+                              spaceAfter=11, allowWidows=0, allowOrphans=0))
     styles.add(ParagraphStyle(name="Cell", fontName="Helvetica", fontSize=9.3, leading=13))
     styles.add(ParagraphStyle(name="Quote", parent=styles["Reader"], leftIndent=12,
                               rightIndent=12, borderPadding=8, spaceBefore=5,
@@ -71,6 +74,8 @@ def export(source, output):
             count = len(data[0])
             width = A4[0] - 96
             weights = {2: [0.32, 0.68], 3: [0.46, 0.27, 0.27]}.get(count, [1 / count] * count)
+            if count == 3 and "Producer and period" in rows[0]:
+                weights = [0.22, 0.36, 0.42]
             table = Table(data, colWidths=[width * w for w in weights], repeatRows=1)
             table.setStyle(TableStyle([
                 ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#DCE9EF")),
@@ -106,6 +111,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("source", type=Path)
     parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--manifest", type=Path, help="Defaults to release.json beside the reader report")
     args = parser.parse_args()
-    export(args.source, args.output)
+    export(args.source, args.output, args.manifest)
     print(args.output)

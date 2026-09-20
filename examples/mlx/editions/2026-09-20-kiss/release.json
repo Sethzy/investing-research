@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "company_id": "asx-mlx",
+  "research_cutoff": "2026-09-20T05:29:26.700491+00:00",
+  "valuation_class": "illustrative_sensitivity",
+  "files": {
+    "report": {
+      "path": "MLX-investment-review.md",
+      "sha256": "a32da87d7d1b9bba6d656ddbc240698013f97307cb310d941825f28418b77dfd"
+    },
+    "workbook": {
+      "path": "model.xlsx",
+      "sha256": "7dc98c13b6f117f868485de162f9e5aca0e86ebc795bad128b012878c568bff6"
+    },
+    "model": {
+      "path": "model.json",
+      "sha256": "203eb3d13c3df80b15f5cffa08c59257a744fedd1063b1d9e969aa33a793c0eb"
+    },
+    "inputs": {
+      "path": "inputs.json",
+      "sha256": "04a2360226278eb475e4a3f7106ec12f03c55d4353278bea56138ece433f063a"
+    },
+    "coverage": {
+      "path": "coverage.json",
+      "sha256": "590f7ae5b370fc19e1e49eba4c6707529167997d3b6447ab008ad85c8d70c1d8"
+    }
+  }
+}

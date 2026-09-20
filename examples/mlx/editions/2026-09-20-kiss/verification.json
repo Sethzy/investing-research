@@ -1,0 +1,35 @@
+{
+  "workbook_sha256": "7dc98c13b6f117f868485de162f9e5aca0e86ebc795bad128b012878c568bff6",
+  "structural_status": "passed",
+  "presentation_version": 2,
+  "visible_sheets": [
+    "Summary",
+    "Assumptions",
+    "Historical",
+    "Operating",
+    "Valuation",
+    "Sensitivities",
+    "Checks",
+    "Readme"
+  ],
+  "formulas": 254,
+  "historical_rows": 158,
+  "source_links_checked": 158,
+  "source_comments_checked": 180,
+  "live_recalculation": {
+    "status": "passed",
+    "engine": "LibreOffice",
+    "checks": "All three cases, operating outputs and sensitivities matched Python during excel-sync"
+  },
+  "visual_status": "All eight sheets inspected across 23 LibreOffice PDF pages; Summary, quote controls, Operating and Valuation also rendered at worksheet scale. Reader PDF 18 pages reviewed with affected pages rechecked after layout repairs. Native Microsoft Excel not opened.",
+  "source_accessibility": "not checked; preserved URLs compared only",
+  "issues": [],
+  "publication": {
+    "status": "passed",
+    "company_id": "asx-mlx",
+    "valuation_class": "illustrative_sensitivity",
+    "research_cutoff": "2026-09-20T05:29:26.700491+00:00",
+    "note": "Artifact consistency checked; source interpretation and economic assumptions require review."
+  },
+  "pdf_sha256": "50f2e4b80e6373a6555aa5d8c42af6232af18162ccfc34b0fe9f0eff212110bf"
+}
