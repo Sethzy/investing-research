@@ -96,3 +96,32 @@ def test_release_mismatch_rejected(edition, mutation):
     (root / "release.json").write_text(json.dumps(value))
     with pytest.raises(ValueError):
         validate_release(report, root / "release.json")
+
+
+def test_conditional_companion_release_and_tamper(tmp_path):
+    source = ROOT / 'examples/mlx/editions/2026-09-20-valuation-questions'
+    shutil.copytree(source, tmp_path / 'edition')
+    root = tmp_path / 'edition'
+    manifest = root / 'release.json'
+    report = root / 'MLX-investment-review.md'
+    assert validate_release(report, manifest)['status'] == 'passed'
+    workbook = root / 'questions/questions.xlsx'
+    workbook.write_bytes(workbook.read_bytes() + b'changed')
+    with pytest.raises(ValueError, match='Valuation questions changed'):
+        validate_release(report, manifest)
+
+
+def test_companion_cannot_change_company(tmp_path):
+    source = ROOT / 'examples/mlx/editions/2026-09-20-valuation-questions'
+    shutil.copytree(source, tmp_path / 'edition')
+    root = tmp_path / 'edition'
+    inputs = root / 'questions/inputs.json'
+    data = json.loads(inputs.read_text())
+    data['company_id'] = 'asx-other'
+    inputs.write_text(json.dumps(data))
+    manifest = root / 'release.json'
+    record = json.loads(manifest.read_text())
+    record['valuation_questions']['inputs']['sha256'] = sha256(inputs)
+    manifest.write_text(json.dumps(record))
+    with pytest.raises(ValueError, match='Companion company'):
+        validate_release(root / 'MLX-investment-review.md', manifest)

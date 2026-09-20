@@ -57,3 +57,7 @@ No delivery approval solely because the generator ran, tests passed, a preview l
 Presentation v3 adds the optional historical Analysis sheet. Use `write_excel_model(inputs, path, presentation_version=3)` when two complete comparable periods are available, then the ordinary `excel-sync` contract. Otherwise retain v2 and explain the missing comparison. This changes presentation and historical exhibits, not forecast assumptions.
 
 Presentation v4 retains Analysis and adds the Decision sheet using `write_excel_model(inputs, path, presentation_version=4)`. Read [investment-decision.md](investment-decision.md) for required historical metrics and exclusions. The [decision edition](../../../../examples/mlx/editions/2026-09-20-decision/model.xlsx) is the worked reference for this optional exhibit. The original layout versions stay reproducible; refresh preserves the selected version.
+
+## Conditional questions companion
+
+The [valuation questions template](valuation-questions.md) generates a separate three-sheet diagnostic. It does not replace or mutate the versioned operating model. Inspect Cash quality, both printed pages of Value hurdle and Project hurdle. Verify delay, ownership, closure, haircut, zero-rate and funding-shortfall behavior; preserve inputs and independently checked results.

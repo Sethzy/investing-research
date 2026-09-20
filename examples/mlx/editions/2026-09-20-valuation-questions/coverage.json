@@ -1,0 +1,669 @@
+{
+  "company_id": "asx-mlx",
+  "researched_at": "2026-09-20T06:26:03.064074Z",
+  "mode": "research_update",
+  "web_checked_at": "2026-09-20T06:18:56.284630Z",
+  "x_checked_at": "2026-09-20T05:59:07.121963Z",
+  "x_status": "searched",
+  "x_scope": "No new searches in this valuation follow-up. Retained earlier same-day checks: Broad company/asset query: 15 unrelated records, capped; exact company-name refinement: seven records, four relevant and three unrelated; contrary Man Maw/tin: six records. September 1-20; 15 requested each. Partial post-text captures, no full-thread/media verification; no saved preferred handles.",
+  "items": [
+    {
+      "category": "filings",
+      "question": "Do reported operating results convert into cash?",
+      "period": "As of 20 September 2026",
+      "source_ids": [
+        "7d5f39d55d61520323042564726b09468c646a20f8263a01555ee9873e24cf49",
+        "23b68b441ddbd0bca508d1b8bdf0a91f8db32d7e7f1ccfbc149ac8bcf536534f",
+        "02e93165b3fcdb88bf9ddc87f12642b404d64f7949b560cf755f0c3d1894e577",
+        "d0186eff6253c87bad2060c240e1a4c1d16725699f0584865fa5c5c1153df82b",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Annual cash-quality bridge independently reconciled: adjusted FY2024/FY2025 cash46.6028/74.075m. H1sold3048tonnes, prior3191 and provisional402tonnes verified in revenue/receivables notes. Annual no-dilutive-securities statement reviewed.",
+      "model_implication": "Accepted operating forecast unchanged. New separate conditional cash/life, project hurdle and funding companion; no automatic rating.",
+      "gap": "Full payable-contract detail, through-cycle forecast and updated mine schedule remain incomplete.",
+      "next_step": "Replace explicit stress assumptions with current engineering, depleted reserve and tax/capital schedules.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-valuation-questions/model.json",
+      "fact_ids": [
+        "9ec2921c9c65b9f7afbc97a63192d65ff385efe3a6b5a28acf433bea31532358",
+        "8e50cdcffc201faab76669fa040ae67d819f0f43e2a00c0ec7a3c777b1f5f7d6",
+        "1edf822cbdf19d4be04e95f19a25d494ab8692f4ded0bcf1194bfece26842721"
+      ],
+      "reconciliation": "OCF less signed asset/liability/provision movements =129.803/161.053m before movements; remove investment interest/fee, add financing interest, subtract tax approximation and reported capital."
+    },
+    {
+      "category": "management",
+      "question": "Are project promises and capital allocation supported?",
+      "period": "As of 20 September 2026",
+      "source_ids": [
+        "02e93165b3fcdb88bf9ddc87f12642b404d64f7949b560cf755f0c3d1894e577",
+        "6d8ee5206de2910811aaa48b91caae6f227b8347e600e80a186ea9a2df5410e1"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "not_applicable",
+        "reconciled": "not_applicable",
+        "analyzed": "done",
+        "model_used": "not_applicable"
+      },
+      "conclusion": "January versus August project timetable compared; later investment decision remains conditional. Subsequent-events note confirms Greentech delisting24August and MLX rejecting both partial offers; Stellar one-for-ten July consolidation.",
+      "model_implication": "No forecast input change; maintain illustrative sensitivity.",
+      "gap": "Current investee fair values/liquidity and current Rentails sanctioned budget are unresolved; companion uses explicit haircut and capital stresses.",
+      "next_step": "Review current FEED economics and compare past reinvestment commitments with outcomes.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-valuation-questions/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "regulatory",
+      "question": "Does permitting support the project timetable?",
+      "period": "As of 20 September 2026",
+      "source_ids": [
+        "a639994e6c51389af37fa2e9134e179dfe2cff27c0dde42ce72df1f28743c2a9",
+        "e147bb1a636bf0e9f03c369c16a1c1d797ae3286e0767c8170e0eebef6190dbc"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "not_applicable",
+        "reconciled": "not_applicable",
+        "analyzed": "done",
+        "model_used": "not_applicable"
+      },
+      "conclusion": "EPA page records closed draft consultation and issued final EIS guidelines; this is not final approval.",
+      "model_implication": "No forecast input change; maintain illustrative sensitivity.",
+      "gap": "Final approval, permit conditions and publication date of displayed stage not established.",
+      "next_step": "Check subsequent EPA decisions and West Coast Council records.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-valuation-questions/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "industry",
+      "question": "Does supply support an enduring shortage?",
+      "period": "As of 20 September 2026",
+      "source_ids": [
+        "6eb86a68b370d3abac97f4b0a5a293aaf2b88f0c57d437bc4362c27ca70d5a15",
+        "3306e6a3368b14a15657c9a1d9b3592bb4dd1ee7eb23f20f437b0f37598433fb"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "not_applicable",
+        "reconciled": "not_applicable",
+        "analyzed": "done",
+        "model_used": "not_applicable"
+      },
+      "conclusion": "Dated June issuer-reported inventory context challenges timeless shortage claims; direct current exchange series remains unverified.",
+      "model_implication": "No forecast input change; maintain illustrative sensitivity.",
+      "gap": "Current inventories, demand balance and refined supply volumes incomplete.",
+      "next_step": "Obtain dated LME stock/price series and government/customs contained-metal data.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-valuation-questions/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "counterevidence",
+      "question": "What could undermine the bullish thesis?",
+      "period": "As of 20 September 2026",
+      "source_ids": [
+        "7d5f39d55d61520323042564726b09468c646a20f8263a01555ee9873e24cf49",
+        "6eb86a68b370d3abac97f4b0a5a293aaf2b88f0c57d437bc4362c27ca70d5a15"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "not_applicable",
+        "reconciled": "not_applicable",
+        "analyzed": "done",
+        "model_used": "not_applicable"
+      },
+      "conclusion": "Potential supply return and June operating deterioration challenge extrapolation of high margins.",
+      "model_implication": "No forecast input change; maintain illustrative sensitivity.",
+      "gap": "Independent current supply data and demand/substitution challenge not fully tested.",
+      "next_step": "Test actual restart volumes and weaker-price operating cash sensitivity.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-valuation-questions/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "peers",
+      "question": "Is MLX attractive relative to comparable producers?",
+      "period": "As of 20 September 2026",
+      "source_ids": [
+        "a6134808d45f4ff64f5c3e2b5276ed38303ca1606db2d09720e8a766b1ad28b6",
+        "3306e6a3368b14a15657c9a1d9b3592bb4dd1ee7eb23f20f437b0f37598433fb",
+        "e7fb45c39e51b7f00d12a4fc19117d5bf60ee7e85df834c6747f7e1700da1bfc"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "not_applicable"
+      },
+      "conclusion": "Later Alphamin Q2 MD&A replaces guidance with EBITDA167.280mUSD and AISC19042USD/t; reviewed distributions, minority interests, price-linked charges and possible additional profit tax. Timah retained.",
+      "model_implication": "No forecast input change; maintain illustrative sensitivity.",
+      "gap": "Matched market valuations/FX and normalized peer cash flows not completed; Alphamin accompanying statements not independently reconciled.",
+      "next_step": "Review latest final statements and dated market values before ranking peers.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-valuation-questions/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "x",
+      "question": "What material investor claims need corroboration?",
+      "period": "As of 20 September 2026",
+      "source_ids": [
+        "b586f4789cdf06b6f74c3b399dc732f94074a53cd5dd493e18d6edab1a7cc21f",
+        "976dc1b95c6f7f1fe02329ad07fb4ab99cb8593df8fc1f4160320a69c52afa7a",
+        "5372fa9a38a336fd70c2b11e4282bc0f3f5f2b84d1587e7cf5abea34c692920b",
+        "bac2b6b03807b3d67c6556dba133b6181cf753ccd71eee91455f2dc96ea376e4",
+        "1e46328998d28f2b98ab700bf391372c3d2fd783d11d3f7a855d5662872dbf4f",
+        "4e8be23505f316081950cbfce98f0e13a451e57efd053114c7a86a400475147d",
+        "661a026f12f9d64b415025063b912169a68d0636b28a323854e99d8224b3fe27",
+        "39fbaed10a31fbb076802ce6289ec7fe2f40019524dc984924472dc75e00ad75",
+        "c1aad2157980bbb9bc02ab2c4759a499861c7d534bcd2770646a8091fd733e9f",
+        "40d3f95e434c30318cc7697e970e9988b700b1235ed79b3a0a72db44ec112be2",
+        "c8602786f80da3fbc9e47f3989afe8138c09165c96fabe161b33b684dfb674b2",
+        "4b1e2882de504cc6f061c2009eea7c82bce1f9b267e32f8f8b95f85fc002546f",
+        "833b8d651561def147cb2d57f6b19395869344cff46bbf92d73cd93f1e75cfd4",
+        "4916241a08d589a0870fdef2293154204af67480d44de76a5c122993e320b9b4",
+        "140ff9e0de08021e504fa98ea9e244f987b6a9a3f59ce0d9a3c31b8c49ea89f4",
+        "92000479a624be44adfbc9b76ec14c8624a97ebca9666b1c072fab765e246ee8",
+        "c6304ef9e99f49b0951fdf956139716d838169768995c9c33ea0d26566d5d515",
+        "6920df90c955b9052eecc538274915a427f8d2844dd00db9b714dd6a406ca60b",
+        "02d5e419ff45731e473b457ad1bc4207ea386df552c6b3baa3af299a8d974659",
+        "67f77f70e0210a58138cf30627bfb193d1731cb08db934e4d44e4f965986d16b",
+        "05096510c465e0fc6874995231f3a47fe36e9f3f7833613b98df168028e16b60",
+        "c21d82702f1eb00ffed19b5dbe7824550cb8b93cedb0742d4e6f6016afc41069",
+        "7f3c203f58f0c30cddc467ee67b9b4f5f8db791e3cd6a8c68c5dc874dfd6fcc9",
+        "e76e329baa0a87a233ac16642e179bc79aba56457ecb52ab56f2202fbcc6f20a",
+        "ada060e4c2554e1b108ed920d7d45731a0d524cba1bbcac135bdc5feaa4e1075",
+        "f871e89c8cc82270bb23ac593a6bd077e63295d4c0200a83b33bac22170e0bcd",
+        "6bd842791de271433399754f8ba8b48de4a6e30569566af97f6abdf6f6c5cc45",
+        "7b147d54b0e3acd16ad446887ea9dc3cdafd310daf67dbe7059ee2ec50896222",
+        "f09816aa70f47f4d0d7652b3f3dc19a001d24078328889e9dcead2751d4ed780",
+        "be012f93bddae1528a02ce574f47f3bc42e6e484ada2e8bdc6e2b255970678d6"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "not_applicable",
+        "reconciled": "not_applicable",
+        "analyzed": "done",
+        "model_used": "not_applicable"
+      },
+      "conclusion": "Broad company/asset query: 15 unrelated records, capped; exact company-name refinement: seven records, four relevant and three unrelated; contrary Man Maw/tin: six records. September 1-20; 15 requested each. Partial post-text captures, no full-thread/media verification; no saved preferred handles.",
+      "model_implication": "No forecast input change; maintain illustrative sensitivity.",
+      "gap": "Non-exhaustive search and partial threads/media. No numeric baseline assumptions taken from posts.",
+      "next_step": "Inspect linked studies/media and current inventory series before any baseline change.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-valuation-questions/model.json",
+      "fact_ids": [],
+      "reconciliation": ""
+    },
+    {
+      "category": "filings",
+      "question": "What selected comparable metrics were reviewed?",
+      "period": "FY2023",
+      "source_ids": [
+        "23b68b441ddbd0bca508d1b8bdf0a91f8db32d7e7f1ccfbc149ac8bcf536534f",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9",
+        "02e93165b3fcdb88bf9ddc87f12642b404d64f7949b560cf755f0c3d1894e577",
+        "d0186eff6253c87bad2060c240e1a4c1d16725699f0584865fa5c5c1153df82b"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Annual cash-quality bridge independently reconciled: adjusted FY2024/FY2025 cash46.6028/74.075m. H1sold3048tonnes, prior3191 and provisional402tonnes verified in revenue/receivables notes. Annual no-dilutive-securities statement reviewed.",
+      "model_implication": "Accepted operating forecast unchanged. New separate conditional cash/life, project hurdle and funding companion; no automatic rating.",
+      "gap": "Full payable-contract detail, through-cycle forecast and updated mine schedule remain incomplete.",
+      "next_step": "Replace explicit stress assumptions with current engineering, depleted reserve and tax/capital schedules.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-valuation-questions/model.json",
+      "fact_ids": [
+        "9ec2921c9c65b9f7afbc97a63192d65ff385efe3a6b5a28acf433bea31532358",
+        "8e50cdcffc201faab76669fa040ae67d819f0f43e2a00c0ec7a3c777b1f5f7d6",
+        "1edf822cbdf19d4be04e95f19a25d494ab8692f4ded0bcf1194bfece26842721"
+      ],
+      "reconciliation": "OCF less signed asset/liability/provision movements =129.803/161.053m before movements; remove investment interest/fee, add financing interest, subtract tax approximation and reported capital."
+    },
+    {
+      "category": "filings",
+      "question": "What selected comparable metrics were reviewed?",
+      "period": "FY2024",
+      "source_ids": [
+        "d0186eff6253c87bad2060c240e1a4c1d16725699f0584865fa5c5c1153df82b",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9",
+        "02e93165b3fcdb88bf9ddc87f12642b404d64f7949b560cf755f0c3d1894e577"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Annual cash-quality bridge independently reconciled: adjusted FY2024/FY2025 cash46.6028/74.075m. H1sold3048tonnes, prior3191 and provisional402tonnes verified in revenue/receivables notes. Annual no-dilutive-securities statement reviewed.",
+      "model_implication": "Accepted operating forecast unchanged. New separate conditional cash/life, project hurdle and funding companion; no automatic rating.",
+      "gap": "Full payable-contract detail, through-cycle forecast and updated mine schedule remain incomplete.",
+      "next_step": "Replace explicit stress assumptions with current engineering, depleted reserve and tax/capital schedules.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-valuation-questions/model.json",
+      "fact_ids": [
+        "9ec2921c9c65b9f7afbc97a63192d65ff385efe3a6b5a28acf433bea31532358",
+        "8e50cdcffc201faab76669fa040ae67d819f0f43e2a00c0ec7a3c777b1f5f7d6",
+        "1edf822cbdf19d4be04e95f19a25d494ab8692f4ded0bcf1194bfece26842721"
+      ],
+      "reconciliation": "OCF less signed asset/liability/provision movements =129.803/161.053m before movements; remove investment interest/fee, add financing interest, subtract tax approximation and reported capital."
+    },
+    {
+      "category": "filings",
+      "question": "What selected comparable metrics were reviewed?",
+      "period": "FY2025",
+      "source_ids": [
+        "d0186eff6253c87bad2060c240e1a4c1d16725699f0584865fa5c5c1153df82b",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9",
+        "02e93165b3fcdb88bf9ddc87f12642b404d64f7949b560cf755f0c3d1894e577"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Annual cash-quality bridge independently reconciled: adjusted FY2024/FY2025 cash46.6028/74.075m. H1sold3048tonnes, prior3191 and provisional402tonnes verified in revenue/receivables notes. Annual no-dilutive-securities statement reviewed.",
+      "model_implication": "Accepted operating forecast unchanged. New separate conditional cash/life, project hurdle and funding companion; no automatic rating.",
+      "gap": "Full payable-contract detail, through-cycle forecast and updated mine schedule remain incomplete.",
+      "next_step": "Replace explicit stress assumptions with current engineering, depleted reserve and tax/capital schedules.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-valuation-questions/model.json",
+      "fact_ids": [
+        "9ec2921c9c65b9f7afbc97a63192d65ff385efe3a6b5a28acf433bea31532358",
+        "8e50cdcffc201faab76669fa040ae67d819f0f43e2a00c0ec7a3c777b1f5f7d6",
+        "1edf822cbdf19d4be04e95f19a25d494ab8692f4ded0bcf1194bfece26842721"
+      ],
+      "reconciliation": "OCF less signed asset/liability/provision movements =129.803/161.053m before movements; remove investment interest/fee, add financing interest, subtract tax approximation and reported capital."
+    },
+    {
+      "category": "filings",
+      "question": "What selected comparable metrics were reviewed?",
+      "period": "2024-Q3",
+      "source_ids": [
+        "ffd77d2dac01aa29d980cc4920b83ff9f4c7451d20b73b8e1c32fca960e5fdd3",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9",
+        "02e93165b3fcdb88bf9ddc87f12642b404d64f7949b560cf755f0c3d1894e577",
+        "d0186eff6253c87bad2060c240e1a4c1d16725699f0584865fa5c5c1153df82b"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Annual cash-quality bridge independently reconciled: adjusted FY2024/FY2025 cash46.6028/74.075m. H1sold3048tonnes, prior3191 and provisional402tonnes verified in revenue/receivables notes. Annual no-dilutive-securities statement reviewed.",
+      "model_implication": "Accepted operating forecast unchanged. New separate conditional cash/life, project hurdle and funding companion; no automatic rating.",
+      "gap": "Full payable-contract detail, through-cycle forecast and updated mine schedule remain incomplete.",
+      "next_step": "Replace explicit stress assumptions with current engineering, depleted reserve and tax/capital schedules.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-valuation-questions/model.json",
+      "fact_ids": [
+        "9ec2921c9c65b9f7afbc97a63192d65ff385efe3a6b5a28acf433bea31532358",
+        "8e50cdcffc201faab76669fa040ae67d819f0f43e2a00c0ec7a3c777b1f5f7d6",
+        "1edf822cbdf19d4be04e95f19a25d494ab8692f4ded0bcf1194bfece26842721"
+      ],
+      "reconciliation": "OCF less signed asset/liability/provision movements =129.803/161.053m before movements; remove investment interest/fee, add financing interest, subtract tax approximation and reported capital."
+    },
+    {
+      "category": "filings",
+      "question": "What selected comparable metrics were reviewed?",
+      "period": "2024-Q4",
+      "source_ids": [
+        "ffd77d2dac01aa29d980cc4920b83ff9f4c7451d20b73b8e1c32fca960e5fdd3",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9",
+        "02e93165b3fcdb88bf9ddc87f12642b404d64f7949b560cf755f0c3d1894e577",
+        "d0186eff6253c87bad2060c240e1a4c1d16725699f0584865fa5c5c1153df82b"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Annual cash-quality bridge independently reconciled: adjusted FY2024/FY2025 cash46.6028/74.075m. H1sold3048tonnes, prior3191 and provisional402tonnes verified in revenue/receivables notes. Annual no-dilutive-securities statement reviewed.",
+      "model_implication": "Accepted operating forecast unchanged. New separate conditional cash/life, project hurdle and funding companion; no automatic rating.",
+      "gap": "Full payable-contract detail, through-cycle forecast and updated mine schedule remain incomplete.",
+      "next_step": "Replace explicit stress assumptions with current engineering, depleted reserve and tax/capital schedules.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-valuation-questions/model.json",
+      "fact_ids": [
+        "9ec2921c9c65b9f7afbc97a63192d65ff385efe3a6b5a28acf433bea31532358",
+        "8e50cdcffc201faab76669fa040ae67d819f0f43e2a00c0ec7a3c777b1f5f7d6",
+        "1edf822cbdf19d4be04e95f19a25d494ab8692f4ded0bcf1194bfece26842721"
+      ],
+      "reconciliation": "OCF less signed asset/liability/provision movements =129.803/161.053m before movements; remove investment interest/fee, add financing interest, subtract tax approximation and reported capital."
+    },
+    {
+      "category": "filings",
+      "question": "What selected comparable metrics were reviewed?",
+      "period": "2025-Q1",
+      "source_ids": [
+        "a9081e2642e129025ef01dd489e27c4d346e44318a3be3567e305cf450c13128",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9",
+        "02e93165b3fcdb88bf9ddc87f12642b404d64f7949b560cf755f0c3d1894e577",
+        "d0186eff6253c87bad2060c240e1a4c1d16725699f0584865fa5c5c1153df82b"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Annual cash-quality bridge independently reconciled: adjusted FY2024/FY2025 cash46.6028/74.075m. H1sold3048tonnes, prior3191 and provisional402tonnes verified in revenue/receivables notes. Annual no-dilutive-securities statement reviewed.",
+      "model_implication": "Accepted operating forecast unchanged. New separate conditional cash/life, project hurdle and funding companion; no automatic rating.",
+      "gap": "Full payable-contract detail, through-cycle forecast and updated mine schedule remain incomplete.",
+      "next_step": "Replace explicit stress assumptions with current engineering, depleted reserve and tax/capital schedules.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-valuation-questions/model.json",
+      "fact_ids": [
+        "9ec2921c9c65b9f7afbc97a63192d65ff385efe3a6b5a28acf433bea31532358",
+        "8e50cdcffc201faab76669fa040ae67d819f0f43e2a00c0ec7a3c777b1f5f7d6",
+        "1edf822cbdf19d4be04e95f19a25d494ab8692f4ded0bcf1194bfece26842721"
+      ],
+      "reconciliation": "OCF less signed asset/liability/provision movements =129.803/161.053m before movements; remove investment interest/fee, add financing interest, subtract tax approximation and reported capital."
+    },
+    {
+      "category": "filings",
+      "question": "What selected comparable metrics were reviewed?",
+      "period": "2025-Q2",
+      "source_ids": [
+        "a9081e2642e129025ef01dd489e27c4d346e44318a3be3567e305cf450c13128",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9",
+        "02e93165b3fcdb88bf9ddc87f12642b404d64f7949b560cf755f0c3d1894e577",
+        "d0186eff6253c87bad2060c240e1a4c1d16725699f0584865fa5c5c1153df82b"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Annual cash-quality bridge independently reconciled: adjusted FY2024/FY2025 cash46.6028/74.075m. H1sold3048tonnes, prior3191 and provisional402tonnes verified in revenue/receivables notes. Annual no-dilutive-securities statement reviewed.",
+      "model_implication": "Accepted operating forecast unchanged. New separate conditional cash/life, project hurdle and funding companion; no automatic rating.",
+      "gap": "Full payable-contract detail, through-cycle forecast and updated mine schedule remain incomplete.",
+      "next_step": "Replace explicit stress assumptions with current engineering, depleted reserve and tax/capital schedules.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-valuation-questions/model.json",
+      "fact_ids": [
+        "9ec2921c9c65b9f7afbc97a63192d65ff385efe3a6b5a28acf433bea31532358",
+        "8e50cdcffc201faab76669fa040ae67d819f0f43e2a00c0ec7a3c777b1f5f7d6",
+        "1edf822cbdf19d4be04e95f19a25d494ab8692f4ded0bcf1194bfece26842721"
+      ],
+      "reconciliation": "OCF less signed asset/liability/provision movements =129.803/161.053m before movements; remove investment interest/fee, add financing interest, subtract tax approximation and reported capital."
+    },
+    {
+      "category": "filings",
+      "question": "What selected comparable metrics were reviewed?",
+      "period": "2025-Q3",
+      "source_ids": [
+        "9ea99274f7aef90eaab4e69d24ba1e3294d5b40ba06b479ea6d5c1b1d419e875",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9",
+        "02e93165b3fcdb88bf9ddc87f12642b404d64f7949b560cf755f0c3d1894e577",
+        "d0186eff6253c87bad2060c240e1a4c1d16725699f0584865fa5c5c1153df82b"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Annual cash-quality bridge independently reconciled: adjusted FY2024/FY2025 cash46.6028/74.075m. H1sold3048tonnes, prior3191 and provisional402tonnes verified in revenue/receivables notes. Annual no-dilutive-securities statement reviewed.",
+      "model_implication": "Accepted operating forecast unchanged. New separate conditional cash/life, project hurdle and funding companion; no automatic rating.",
+      "gap": "Full payable-contract detail, through-cycle forecast and updated mine schedule remain incomplete.",
+      "next_step": "Replace explicit stress assumptions with current engineering, depleted reserve and tax/capital schedules.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-valuation-questions/model.json",
+      "fact_ids": [
+        "9ec2921c9c65b9f7afbc97a63192d65ff385efe3a6b5a28acf433bea31532358",
+        "8e50cdcffc201faab76669fa040ae67d819f0f43e2a00c0ec7a3c777b1f5f7d6",
+        "1edf822cbdf19d4be04e95f19a25d494ab8692f4ded0bcf1194bfece26842721"
+      ],
+      "reconciliation": "OCF less signed asset/liability/provision movements =129.803/161.053m before movements; remove investment interest/fee, add financing interest, subtract tax approximation and reported capital."
+    },
+    {
+      "category": "filings",
+      "question": "What selected comparable metrics were reviewed?",
+      "period": "2025-Q4",
+      "source_ids": [
+        "9ea99274f7aef90eaab4e69d24ba1e3294d5b40ba06b479ea6d5c1b1d419e875",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9",
+        "02e93165b3fcdb88bf9ddc87f12642b404d64f7949b560cf755f0c3d1894e577",
+        "d0186eff6253c87bad2060c240e1a4c1d16725699f0584865fa5c5c1153df82b"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Annual cash-quality bridge independently reconciled: adjusted FY2024/FY2025 cash46.6028/74.075m. H1sold3048tonnes, prior3191 and provisional402tonnes verified in revenue/receivables notes. Annual no-dilutive-securities statement reviewed.",
+      "model_implication": "Accepted operating forecast unchanged. New separate conditional cash/life, project hurdle and funding companion; no automatic rating.",
+      "gap": "Full payable-contract detail, through-cycle forecast and updated mine schedule remain incomplete.",
+      "next_step": "Replace explicit stress assumptions with current engineering, depleted reserve and tax/capital schedules.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-valuation-questions/model.json",
+      "fact_ids": [
+        "9ec2921c9c65b9f7afbc97a63192d65ff385efe3a6b5a28acf433bea31532358",
+        "8e50cdcffc201faab76669fa040ae67d819f0f43e2a00c0ec7a3c777b1f5f7d6",
+        "1edf822cbdf19d4be04e95f19a25d494ab8692f4ded0bcf1194bfece26842721"
+      ],
+      "reconciliation": "OCF less signed asset/liability/provision movements =129.803/161.053m before movements; remove investment interest/fee, add financing interest, subtract tax approximation and reported capital."
+    },
+    {
+      "category": "filings",
+      "question": "What selected comparable metrics were reviewed?",
+      "period": "2026-Q1",
+      "source_ids": [
+        "7d5f39d55d61520323042564726b09468c646a20f8263a01555ee9873e24cf49",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9",
+        "02e93165b3fcdb88bf9ddc87f12642b404d64f7949b560cf755f0c3d1894e577",
+        "d0186eff6253c87bad2060c240e1a4c1d16725699f0584865fa5c5c1153df82b"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Annual cash-quality bridge independently reconciled: adjusted FY2024/FY2025 cash46.6028/74.075m. H1sold3048tonnes, prior3191 and provisional402tonnes verified in revenue/receivables notes. Annual no-dilutive-securities statement reviewed.",
+      "model_implication": "Accepted operating forecast unchanged. New separate conditional cash/life, project hurdle and funding companion; no automatic rating.",
+      "gap": "Full payable-contract detail, through-cycle forecast and updated mine schedule remain incomplete.",
+      "next_step": "Replace explicit stress assumptions with current engineering, depleted reserve and tax/capital schedules.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-valuation-questions/model.json",
+      "fact_ids": [
+        "9ec2921c9c65b9f7afbc97a63192d65ff385efe3a6b5a28acf433bea31532358",
+        "8e50cdcffc201faab76669fa040ae67d819f0f43e2a00c0ec7a3c777b1f5f7d6",
+        "1edf822cbdf19d4be04e95f19a25d494ab8692f4ded0bcf1194bfece26842721"
+      ],
+      "reconciliation": "OCF less signed asset/liability/provision movements =129.803/161.053m before movements; remove investment interest/fee, add financing interest, subtract tax approximation and reported capital."
+    },
+    {
+      "category": "filings",
+      "question": "What selected comparable metrics were reviewed?",
+      "period": "2026-Q2",
+      "source_ids": [
+        "7d5f39d55d61520323042564726b09468c646a20f8263a01555ee9873e24cf49",
+        "f75a0040df7c06a15a6b2327a573cc46de3206cc80e399f9a6bafe4342c00961",
+        "e8915b82071fae3570d26d2bd3ab78d52c03476c9d0ca553799427b2bde712e9",
+        "02e93165b3fcdb88bf9ddc87f12642b404d64f7949b560cf755f0c3d1894e577",
+        "d0186eff6253c87bad2060c240e1a4c1d16725699f0584865fa5c5c1153df82b"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Annual cash-quality bridge independently reconciled: adjusted FY2024/FY2025 cash46.6028/74.075m. H1sold3048tonnes, prior3191 and provisional402tonnes verified in revenue/receivables notes. Annual no-dilutive-securities statement reviewed.",
+      "model_implication": "Accepted operating forecast unchanged. New separate conditional cash/life, project hurdle and funding companion; no automatic rating.",
+      "gap": "Full payable-contract detail, through-cycle forecast and updated mine schedule remain incomplete.",
+      "next_step": "Replace explicit stress assumptions with current engineering, depleted reserve and tax/capital schedules.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-valuation-questions/model.json",
+      "fact_ids": [
+        "9ec2921c9c65b9f7afbc97a63192d65ff385efe3a6b5a28acf433bea31532358",
+        "8e50cdcffc201faab76669fa040ae67d819f0f43e2a00c0ec7a3c777b1f5f7d6",
+        "1edf822cbdf19d4be04e95f19a25d494ab8692f4ded0bcf1194bfece26842721"
+      ],
+      "reconciliation": "OCF less signed asset/liability/provision movements =129.803/161.053m before movements; remove investment interest/fee, add financing interest, subtract tax approximation and reported capital."
+    },
+    {
+      "category": "filings",
+      "question": "What drove H1 profit and cash, and how was capital deployed?",
+      "period": "H1 2025 versus H1 2026",
+      "source_ids": [
+        "02e93165b3fcdb88bf9ddc87f12642b404d64f7949b560cf755f0c3d1894e577",
+        "4428c979e2c02dda713e4cb5bfab770c0c2d83eeeace76431c76b293992ada19",
+        "d0186eff6253c87bad2060c240e1a4c1d16725699f0584865fa5c5c1153df82b"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "done",
+        "analyzed": "done",
+        "model_used": "partial"
+      },
+      "conclusion": "Annual cash-quality bridge independently reconciled: adjusted FY2024/FY2025 cash46.6028/74.075m. H1sold3048tonnes, prior3191 and provisional402tonnes verified in revenue/receivables notes. Annual no-dilutive-securities statement reviewed.",
+      "model_implication": "Accepted operating forecast unchanged. New separate conditional cash/life, project hurdle and funding companion; no automatic rating.",
+      "gap": "Full payable-contract detail, through-cycle forecast and updated mine schedule remain incomplete.",
+      "next_step": "Replace explicit stress assumptions with current engineering, depleted reserve and tax/capital schedules.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-valuation-questions/model.json",
+      "fact_ids": [
+        "9ec2921c9c65b9f7afbc97a63192d65ff385efe3a6b5a28acf433bea31532358",
+        "8e50cdcffc201faab76669fa040ae67d819f0f43e2a00c0ec7a3c777b1f5f7d6",
+        "1edf822cbdf19d4be04e95f19a25d494ab8692f4ded0bcf1194bfece26842721"
+      ],
+      "reconciliation": "OCF less signed asset/liability/provision movements =129.803/161.053m before movements; remove investment interest/fee, add financing interest, subtract tax approximation and reported capital."
+    },
+    {
+      "category": "filings",
+      "question": "What disclosed investments are missing from the operating illustration?",
+      "period": "30 June 2026 carrying amounts",
+      "source_ids": [
+        "02e93165b3fcdb88bf9ddc87f12642b404d64f7949b560cf755f0c3d1894e577",
+        "d0186eff6253c87bad2060c240e1a4c1d16725699f0584865fa5c5c1153df82b"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "done",
+        "analyzed": "done",
+        "model_used": "done"
+      },
+      "conclusion": "Annual cash-quality bridge independently reconciled: adjusted FY2024/FY2025 cash46.6028/74.075m. H1sold3048tonnes, prior3191 and provisional402tonnes verified in revenue/receivables notes. Annual no-dilutive-securities statement reviewed.",
+      "model_implication": "Accepted operating forecast unchanged. New separate conditional cash/life, project hurdle and funding companion; no automatic rating.",
+      "gap": "Full payable-contract detail, through-cycle forecast and updated mine schedule remain incomplete.",
+      "next_step": "Replace explicit stress assumptions with current engineering, depleted reserve and tax/capital schedules.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-valuation-questions/model.json",
+      "fact_ids": [
+        "9ec2921c9c65b9f7afbc97a63192d65ff385efe3a6b5a28acf433bea31532358",
+        "8e50cdcffc201faab76669fa040ae67d819f0f43e2a00c0ec7a3c777b1f5f7d6",
+        "1edf822cbdf19d4be04e95f19a25d494ab8692f4ded0bcf1194bfece26842721"
+      ],
+      "reconciliation": "OCF less signed asset/liability/provision movements =129.803/161.053m before movements; remove investment interest/fee, add financing interest, subtract tax approximation and reported capital."
+    },
+    {
+      "category": "filings",
+      "question": "Does the updated resource establish a remaining production schedule?",
+      "period": "31 March 2026 resource, published29 June",
+      "source_ids": [
+        "c8c0141ce0858f7b9106b924465035a34f11819a8d4889ce32a6ccdd28e2cca2",
+        "45fa2aee573b3a92864fd43fc6c030123f594c08b352e1f6fbd270a47cbaeb8a",
+        "02e93165b3fcdb88bf9ddc87f12642b404d64f7949b560cf755f0c3d1894e577",
+        "d0186eff6253c87bad2060c240e1a4c1d16725699f0584865fa5c5c1153df82b"
+      ],
+      "stages": {
+        "captured": "done",
+        "read": "done",
+        "extracted": "done",
+        "reconciled": "partial",
+        "analyzed": "done",
+        "model_used": "not_applicable"
+      },
+      "conclusion": "Annual cash-quality bridge independently reconciled: adjusted FY2024/FY2025 cash46.6028/74.075m. H1sold3048tonnes, prior3191 and provisional402tonnes verified in revenue/receivables notes. Annual no-dilutive-securities statement reviewed.",
+      "model_implication": "Accepted operating forecast unchanged. New separate conditional cash/life, project hurdle and funding companion; no automatic rating.",
+      "gap": "Full payable-contract detail, through-cycle forecast and updated mine schedule remain incomplete.",
+      "next_step": "Replace explicit stress assumptions with current engineering, depleted reserve and tax/capital schedules.",
+      "analysis_path": "examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.md",
+      "model_path": "examples/mlx/editions/2026-09-20-valuation-questions/model.json",
+      "fact_ids": [
+        "9ec2921c9c65b9f7afbc97a63192d65ff385efe3a6b5a28acf433bea31532358",
+        "8e50cdcffc201faab76669fa040ae67d819f0f43e2a00c0ec7a3c777b1f5f7d6",
+        "1edf822cbdf19d4be04e95f19a25d494ab8692f4ded0bcf1194bfece26842721"
+      ],
+      "reconciliation": "OCF less signed asset/liability/provision movements =129.803/161.053m before movements; remove investment interest/fee, add financing interest, subtract tax approximation and reported capital."
+    }
+  ],
+  "artifact_sha256": {
+    "examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.md": "c719dfea5948b4f10336b42cd56b9dff6385460664877ec85c23ec6e68853977",
+    "examples/mlx/editions/2026-09-20-valuation-questions/model.json": "668d08f4f7960823bd5fef90f17032e3307a27e45b1c76fcf08d3896a9a9e4f8"
+  },
+  "id": "6c915f6a608504f62296eb37d4a119953e3b8e493aacd1e920a19dc2af8691ff",
+  "recorded_at": "2026-09-20T06:26:23.966502+00:00"
+}

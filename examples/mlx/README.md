@@ -1,13 +1,14 @@
 # Metals X research
 
-Start with the latest [investment review PDF](editions/2026-09-20-decision/MLX-investment-review.pdf), or [read it online](editions/2026-09-20-decision/MLX-investment-review.md). Open the matching [Excel model](editions/2026-09-20-decision/model.xlsx) for assumptions and calculations.
+Start with the latest [investment review PDF](editions/2026-09-20-valuation-questions/MLX-investment-review.pdf), or [read it online](editions/2026-09-20-valuation-questions/MLX-investment-review.md). Open the [conditional analysis Excel](editions/2026-09-20-valuation-questions/questions/questions.xlsx) for the new cash, value and funding tests, alongside the [unchanged operating Excel](editions/2026-09-20-valuation-questions/model.xlsx).
 
-The latest review opens with an explicit investment opinion and adds a market-to-model bridge, disclosed investments, historical cash-flow cross-check, linked downside cases and updated peer analysis. Excel includes a formula-linked Decision sheet. **MLX remains Not rated:** material asset and funding questions still affect the conclusion. Earlier operating assumptions remain illustrative.
+The latest review adds adjusted historical cash flows, conditional operating-value and Rentails cash/funding thresholds, and newly analyzed sales and subsequent-event disclosures. **MLX remains Not rated:** these tests sharpen the decision questions without pretending undisclosed project economics are known.
 
 ## Dated updates
 
 | Edition | What changed |
 |---|---|
+| [20 September 2026 — valuation questions](editions/2026-09-20-valuation-questions/README.md) | Cash-quality bridge, finite cash/life tests, project break-even and funding thresholds; H1 sales and Greentech corrections. |
 | [20 September 2026 — investment decision review](editions/2026-09-20-decision/README.md) | Executive opinion, asset inventory, market expectations, cash cross-check and revised peer evidence; forecast assumptions unchanged. |
 | [20 September 2026 — earnings and capital allocation](editions/2026-09-20-analysis/README.md) | Profit drivers, tax sensitivity, cash conversion, capital deployment and management outcomes; forecast assumptions unchanged. |
 | [20 September 2026 — operating and market update](editions/2026-09-20-kiss/README.md) | Dated price, explicit shutdown sensitivity, capital needs, peers and X claim follow-up. |

@@ -71,9 +71,33 @@ def validate_release(report: Path, manifest_path: Path):
     if reader_gaps(text):
         raise ValueError("Reader sections are incomplete")
     links = re.findall(r"\[[^]]+\]\(([^)]*\.xlsx)\)", text)
-    if not links or any(local_file(report.parent, link) != files["workbook"] for link in links):
+    allowed_workbooks = {files["workbook"]}
+    companion = record.get("valuation_questions")
+    if companion is not None:
+        from .valuation_questions import verify_companion
+        companion_paths = {}
+        for role, filename in (("inputs", "inputs.json"), ("results", "results.json"), ("workbook", "questions.xlsx")):
+            entry = companion[role]
+            path = local_file(root, entry["path"])
+            if path.name != filename or sha256(path) != entry["sha256"]:
+                raise ValueError("Valuation questions changed after review")
+            companion_paths[role] = path
+        directory = companion_paths["workbook"].parent
+        if any(path.parent != directory for path in companion_paths.values()):
+            raise ValueError("Use one complete valuation questions companion")
+        verify_companion(directory)
+        companion_inputs = json.loads(companion_paths["inputs"].read_text())
+        if companion_inputs["company_id"] != record["company_id"]:
+            raise ValueError("Companion company differs from reader edition")
+        if companion_inputs["as_of"] != record["research_cutoff"][:10]:
+            raise ValueError("Companion date differs from reader edition")
+        allowed_workbooks.add(companion_paths["workbook"])
+    linked_workbooks = {local_file(report.parent, link) for link in links}
+    if files["workbook"] not in linked_workbooks or not linked_workbooks <= allowed_workbooks:
         raise ValueError("Reader Excel link does not match the reviewed workbook")
     model = verify_snapshot(files["model"])
+    if companion is not None and companion_inputs["currency"] != model["currency"]:
+        raise ValueError("Companion currency differs from operating model")
     raw_review = json.loads(files["coverage"].read_text())
     reviewed_hashes = set(raw_review.get("artifact_sha256", {}).values())
     if not {sha256(files["report"]), sha256(files["model"])} <= reviewed_hashes:

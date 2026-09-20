@@ -13,3 +13,5 @@ For MLX show Renison operating value, attributable corporate cash/debt and other
 Rentails gets its own economics and funding section: latest study/FEED, permits, both owners' decision, attributable capital, construction timing, ramp-up, operating costs, recoveries, closure and overruns. Compare funding needs with cash after existing-business needs; test delays, costs and explicit debt/equity terms. Use the existing funding-review only when its required inputs are supported. Never plug missing funding with invented equity or present the overlay as an integrated three-statement model.
 
 Keep reference quote and quote date separate from model date. No verified current quote means no market-upside claim. Continue supported business analysis. Unresolved material inputs must appear beside the conclusion, not only in an appendix.
+
+For an incomplete valuation, follow [valuation questions](valuation-questions.md) to quantify supported conditional bounds and break-even requirements while continuing source research.

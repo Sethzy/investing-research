@@ -1,0 +1,17 @@
+{
+  "adjusted_cash": [
+    46.602799999999995,
+    74.07499999999999
+  ],
+  "equity": 952.2760007797798,
+  "per_share": 1.0743276369727064,
+  "residual": 953.4679559202201,
+  "required_operating_cash": 278.72186428653123,
+  "project_break_even": 81.11532386122884,
+  "project_market_hurdle": 384.47692446154053,
+  "project_delay_hurdle": 422.76724802325776,
+  "cash_available": 254.168,
+  "maximum_whole_capital": 508.336,
+  "funding_gap": 0,
+  "existing_cash_shortfall": 0
+}

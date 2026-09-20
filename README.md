@@ -172,7 +172,7 @@ Project code is MIT licensed; see [third-party notices](THIRD_PARTY_NOTICES.md) 
 
 ## Evidence and report completion
 
-See [the latest MLX review and dated history](examples/mlx/README.md) for the readable PDF and matching Excel. The current edition adds earnings-quality and capital-allocation analysis with a formula-linked Excel Analysis sheet. It retains the dated market quote, shutdown sensitivity, producer comparisons and refreshed X checks. The original workbook remains the formatting reference.
+See [the latest MLX review and dated history](examples/mlx/README.md) for the readable PDF and matching Excel. The current edition adds adjusted historical cash flows, conditional operating-value and project-funding tests, and corrections from the sales and subsequent-events notes. It retains the original operating workbook, peer analysis and explicitly dated earlier X checks. The original workbook remains the formatting reference.
 
 The [KISS specification](docs/specs/2026-09-20-kiss-research-release.md) keeps the workflow focused on material research updates. [Reader publication checks](docs/reader-releases.md) bind each PDF's source report to its reviewed evidence and synchronized Excel snapshot.
 

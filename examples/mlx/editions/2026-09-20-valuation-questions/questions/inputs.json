@@ -1,0 +1,278 @@
+{
+  "company": "Metals X (ASX:MLX)",
+  "currency": "AUD",
+  "as_of": "2026-09-20",
+  "annual": [
+    {
+      "period": "FY2024",
+      "ocf": 143.567,
+      "working_capital_movement": 13.764,
+      "interest_income": 9.837,
+      "extension_fee": 5,
+      "interest_expense": 0.314,
+      "depreciation": 22.806,
+      "equipment": 17.425,
+      "mine_development": 22.511,
+      "exploration": 0.999
+    },
+    {
+      "period": "FY2025",
+      "ocf": 128.323,
+      "working_capital_movement": -32.73,
+      "interest_income": 13.235,
+      "extension_fee": 0,
+      "interest_expense": 0.452,
+      "depreciation": 25.45,
+      "equipment": 13.747,
+      "mine_development": 22.211,
+      "exploration": 1.391
+    }
+  ],
+  "drivers": {
+    "price": 2.15,
+    "shares": 886.392538,
+    "cash": 373.998,
+    "debt": 1.1,
+    "investments": 92.281,
+    "investment_haircut": 0.25,
+    "closure": 50,
+    "life": 8,
+    "rate": 0.1,
+    "annual_cash": 100,
+    "ownership": 0.5,
+    "project_capital": 500,
+    "project_life": 15,
+    "first_cash_year": 3,
+    "project_closure": 50,
+    "cash_buffer": 100,
+    "other_commitments": 18.73,
+    "tax_rate": 0.3
+  },
+  "provenance": {
+    "annual.0.ocf": {
+      "status": "reported",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=26",
+      "basis": "FY2024 consolidated AUDm; already attributable",
+      "rationale": "Reported amount converted from A$000 to A$m; no extra 50% attribution."
+    },
+    "annual.0.working_capital_movement": {
+      "status": "derived",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=49",
+      "basis": "FY2024 consolidated AUDm; already attributable",
+      "rationale": "Signed sum of the five changes in assets/liabilities/provisions in the operating-cash reconciliation."
+    },
+    "annual.0.interest_income": {
+      "status": "reported",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=43",
+      "basis": "FY2024 consolidated AUDm; already attributable",
+      "rationale": "Reported amount converted from A$000 to A$m; no extra 50% attribution."
+    },
+    "annual.0.extension_fee": {
+      "status": "reported",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=43",
+      "basis": "FY2024 consolidated AUDm; already attributable",
+      "rationale": "Reported amount converted from A$000 to A$m; no extra 50% attribution."
+    },
+    "annual.0.interest_expense": {
+      "status": "reported",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=44",
+      "basis": "FY2024 consolidated AUDm; already attributable",
+      "rationale": "Reported amount converted from A$000 to A$m; no extra 50% attribution."
+    },
+    "annual.0.depreciation": {
+      "status": "reported",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=49",
+      "basis": "FY2024 consolidated AUDm; already attributable",
+      "rationale": "Reported amount converted from A$000 to A$m; no extra 50% attribution."
+    },
+    "annual.0.equipment": {
+      "status": "reported",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=26",
+      "basis": "FY2024 consolidated AUDm; already attributable",
+      "rationale": "Reported amount converted from A$000 to A$m; no extra 50% attribution."
+    },
+    "annual.0.mine_development": {
+      "status": "reported",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=26",
+      "basis": "FY2024 consolidated AUDm; already attributable",
+      "rationale": "Reported amount converted from A$000 to A$m; no extra 50% attribution."
+    },
+    "annual.0.exploration": {
+      "status": "reported",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=26",
+      "basis": "FY2024 consolidated AUDm; already attributable",
+      "rationale": "Reported amount converted from A$000 to A$m; no extra 50% attribution."
+    },
+    "annual.1.ocf": {
+      "status": "reported",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=26",
+      "basis": "FY2025 consolidated AUDm; already attributable",
+      "rationale": "Reported amount converted from A$000 to A$m; no extra 50% attribution."
+    },
+    "annual.1.working_capital_movement": {
+      "status": "derived",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=49",
+      "basis": "FY2025 consolidated AUDm; already attributable",
+      "rationale": "Signed sum of the five changes in assets/liabilities/provisions in the operating-cash reconciliation."
+    },
+    "annual.1.interest_income": {
+      "status": "reported",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=43",
+      "basis": "FY2025 consolidated AUDm; already attributable",
+      "rationale": "Reported amount converted from A$000 to A$m; no extra 50% attribution."
+    },
+    "annual.1.extension_fee": {
+      "status": "reported",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=43",
+      "basis": "FY2025 consolidated AUDm; already attributable",
+      "rationale": "Reported amount converted from A$000 to A$m; no extra 50% attribution."
+    },
+    "annual.1.interest_expense": {
+      "status": "reported",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=44",
+      "basis": "FY2025 consolidated AUDm; already attributable",
+      "rationale": "Reported amount converted from A$000 to A$m; no extra 50% attribution."
+    },
+    "annual.1.depreciation": {
+      "status": "reported",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=49",
+      "basis": "FY2025 consolidated AUDm; already attributable",
+      "rationale": "Reported amount converted from A$000 to A$m; no extra 50% attribution."
+    },
+    "annual.1.equipment": {
+      "status": "reported",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=26",
+      "basis": "FY2025 consolidated AUDm; already attributable",
+      "rationale": "Reported amount converted from A$000 to A$m; no extra 50% attribution."
+    },
+    "annual.1.mine_development": {
+      "status": "reported",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=26",
+      "basis": "FY2025 consolidated AUDm; already attributable",
+      "rationale": "Reported amount converted from A$000 to A$m; no extra 50% attribution."
+    },
+    "annual.1.exploration": {
+      "status": "reported",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=26",
+      "basis": "FY2025 consolidated AUDm; already attributable",
+      "rationale": "Reported amount converted from A$000 to A$m; no extra 50% attribution."
+    },
+    "drivers.price": {
+      "status": "reported",
+      "source": "https://stockanalysis.com/quote/asx/MLX/history/",
+      "basis": "A$ per share, 18 September 2026 close",
+      "rationale": "Delayed quote retained from prior captured edition."
+    },
+    "drivers.shares": {
+      "status": "reported",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/08/MLX-30-June-2026-Appendix-4D-and-Half-Year-Report.pdf#page=27",
+      "basis": "June issued shares, millions",
+      "rationale": "Cross-check: annual PDF p48 no dilutive potential shares; H1 EPS basic equals diluted. No verified September capital register."
+    },
+    "drivers.cash": {
+      "status": "reported",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/08/MLX-30-June-2026-Appendix-4D-and-Half-Year-Report.pdf#page=16",
+      "basis": "Consolidated June cash",
+      "rationale": "No assumed September roll-forward or future operating receipts."
+    },
+    "drivers.debt": {
+      "status": "reported",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/08/MLX-30-June-2026-Appendix-4D-and-Half-Year-Report.pdf#page=26",
+      "basis": "Consolidated June hire purchase",
+      "rationale": "Current 1.003 plus noncurrent 0.097; deducted once."
+    },
+    "drivers.investments": {
+      "status": "derived",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/08/MLX-30-June-2026-Appendix-4D-and-Half-Year-Report.pdf#page=21",
+      "basis": "June carrying amounts",
+      "rationale": "48.417 financial assets plus 43.864 associates. Greentech subsequently delisted, p28; not current realizable values."
+    },
+    "drivers.ownership": {
+      "status": "reported",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/08/MLX-30-June-2026-Appendix-4D-and-Half-Year-Report.pdf#page=9",
+      "basis": "MLX share of BMTJV",
+      "rationale": "50% applied only to whole-project economics; operating cash inputs are already attributable."
+    },
+    "drivers.other_commitments": {
+      "status": "derived",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/08/MLX-30-June-2026-Appendix-4D-and-Half-Year-Report.pdf#page=27",
+      "basis": "Consolidated commitments",
+      "rationale": "16.79 capital plus 1.94 tenement commitments. Reserved conservatively, separately from additional buffer; no future operating cash credited."
+    },
+    "drivers.tax_rate": {
+      "status": "assumption",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=45",
+      "basis": "Tax approximation",
+      "rationale": "30% statutory reference, applied to adjusted operating cash less accounting D&A; ignores loss shields/tax-depreciation differences."
+    },
+    "drivers.investment_haircut": {
+      "status": "assumption",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/08/MLX-30-June-2026-Appendix-4D-and-Half-Year-Report.pdf#page=28",
+      "basis": "Portfolio haircut stress",
+      "rationale": "25% illustrative liquidity/valuation haircut, not an appraisal; includes Greentech delisting and associate uncertainty."
+    },
+    "drivers.closure": {
+      "status": "assumption",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/08/MLX-30-June-2026-Appendix-4D-and-Half-Year-Report.pdf#page=25",
+      "basis": "Attributable nominal closure stress",
+      "rationale": "A$50m paid at chosen end of life, not reported closure cash. Reported provision A$34.48m is discounted; do not equate the two."
+    },
+    "drivers.life": {
+      "status": "assumption",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2025/11/24_MLX_ASX_2025-Renison-Ore-Reserve-Update_17-November-2025.pdf",
+      "basis": "Years remaining from valuation",
+      "rationale": "Eight-year stress; March-2025 reserve life was nine years, not nine years remaining today. Requires updated depleted mine schedule."
+    },
+    "drivers.rate": {
+      "status": "assumption",
+      "source": "Analyst stress test, 20 September 2026",
+      "basis": "Nominal annual required return",
+      "rationale": "10% scenario hurdle, not an estimated WACC."
+    },
+    "drivers.annual_cash": {
+      "status": "assumption",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=49",
+      "basis": "Attributable after-tax operating cash before financing",
+      "rationale": "100m stress exceeds FY2025 adjusted 74.075m; stronger H1 motivates testing, not automatic annualization. Corporate costs and recurring capital included."
+    },
+    "drivers.project_capital": {
+      "status": "assumption",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/08/MLX-30-June-2026-Appendix-4D-and-Half-Year-Report.pdf#page=9",
+      "basis": "Whole-project AUDm paid at time zero",
+      "rationale": "500m stress only; no current sanctioned Rentails cost. Do not use the 2017 study as current guidance."
+    },
+    "drivers.project_life": {
+      "status": "assumption",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/08/MLX-30-June-2026-Appendix-4D-and-Half-Year-Report.pdf#page=9",
+      "basis": "Whole-project operating years",
+      "rationale": "15-year stress only; no reserve-backed project schedule."
+    },
+    "drivers.first_cash_year": {
+      "status": "assumption",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/08/MLX-30-June-2026-Appendix-4D-and-Half-Year-Report.pdf#page=9",
+      "basis": "Years after valuation to first end-year receipt",
+      "rationale": "First receipt in year three, not a company commissioning promise; FEED late 2026 and FID 2027 are earlier milestones."
+    },
+    "drivers.project_closure": {
+      "status": "assumption",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/08/MLX-30-June-2026-Appendix-4D-and-Half-Year-Report.pdf#page=9",
+      "basis": "Whole-project nominal cash at end",
+      "rationale": "50m additional closure stress, separate from operating asset closure; validate incremental overlap when integrated schedule exists."
+    },
+    "drivers.cash_buffer": {
+      "status": "assumption",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/08/MLX-30-June-2026-Appendix-4D-and-Half-Year-Report.pdf#page=9",
+      "basis": "Additional corporate liquidity reserve",
+      "rationale": "100m illustrative reserve, above identified commitments and debt; no user policy implied."
+    }
+  },
+  "limitations": [
+    "Conditional arithmetic, not a supported fair value or current project estimate.",
+    "June cash, debt, shares and investment carrying amounts are not September balances.",
+    "Flat annual cash excludes changes in working capital, remaining-2026 stub, ramp and depletion schedules.",
+    "Investment haircut, mine life, closure, discount rate, cash buffer and project economics are analyst stress assumptions.",
+    "Historical tax uses accounting depreciation; no full tax-loss, tax-depreciation or sustaining-capital normalization.",
+    "No new X searches in this valuation follow-up; retain earlier evidence dates."
+  ],
+  "company_id": "asx-mlx"
+}

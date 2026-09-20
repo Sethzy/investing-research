@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "company_id": "asx-mlx",
+  "research_cutoff": "2026-09-20T06:26:03.064074Z",
+  "valuation_class": "illustrative_sensitivity",
+  "decision": {
+    "opinion": "Not rated",
+    "as_of": "2026-09-20",
+    "horizon": "24 months; analyst-selected, not a saved personal preference.",
+    "rationale": "The price requires substantially stronger operating cash flows or development value than the evidence currently supports.",
+    "blocker": "A depleted mine plan and current Rentails engineering, capital and funding terms are still needed to support a price-based rating.",
+    "next_checkpoint": "Recheck the company announcement page after 30 September for the expected Q3 mine-plan and reserve update; its release is not confirmed.",
+    "previous_assessment": "Previous review, 20 September: Not rated. The rating is unchanged; this follow-up quantifies the unresolved economics and corrects omissions in the filing analysis.",
+    "change_triggers": [
+      "A supported asset-and-funding valuation that makes the return attractive could support Buy.",
+      "A supported neutral return could support Hold; unattractive returns or a broken thesis could support Sell."
+    ]
+  },
+  "files": {
+    "report": {
+      "path": "MLX-investment-review.md",
+      "sha256": "c719dfea5948b4f10336b42cd56b9dff6385460664877ec85c23ec6e68853977"
+    },
+    "workbook": {
+      "path": "model.xlsx",
+      "sha256": "26685935bb73f1932f550f9123c92dd5c4a9814894993b6db2945a96f8f0ce1f"
+    },
+    "model": {
+      "path": "model.json",
+      "sha256": "668d08f4f7960823bd5fef90f17032e3307a27e45b1c76fcf08d3896a9a9e4f8"
+    },
+    "inputs": {
+      "path": "inputs.json",
+      "sha256": "552836171e2dd3bede59de265820cf7db273d12ed57a1e9cfd053e159c25434c"
+    },
+    "coverage": {
+      "path": "coverage.json",
+      "sha256": "2e454490c098f4ef14ddbe8c51f52cf8f09158c31031305beb6ffa4d1825f184"
+    }
+  },
+  "valuation_questions": {
+    "inputs": {
+      "path": "questions/inputs.json",
+      "sha256": "b319b5faf7ad6f8627a0582653cf4582da0d943952ecd394709b27e90fdaf861"
+    },
+    "results": {
+      "path": "questions/results.json",
+      "sha256": "243e402c6f893b3ff2b7221badc5a97e75a5cd3a888b41778de271d7e09cc025"
+    },
+    "workbook": {
+      "path": "questions/questions.xlsx",
+      "sha256": "818904cc2edf93759b04274eb14b5072e31117aabc95471017e50bdde5bbdb30"
+    }
+  }
+}

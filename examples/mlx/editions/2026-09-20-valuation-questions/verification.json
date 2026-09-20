@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "sheets": [
+    "Value hurdle",
+    "Cash quality",
+    "Project hurdle"
+  ],
+  "checked_outputs": 22,
+  "pdf_pages": 28,
+  "visual_review": "All three companion sheets inspected with Artifact Tool at normal zoom; all four printed pages reviewed in LibreOffice; all 28 reader PDF pages rendered and inspected.",
+  "native_excel": "Not opened; LibreOffice independent recalculation and Artifact Tool inspection performed.",
+  "operating_model": "Unchanged verified v4 snapshot retained; companion is conditional only.",
+  "tests": "169 full-suite tests passed; 24 focused tests passed after final publication safeguards."
+}
