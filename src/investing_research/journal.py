@@ -37,13 +37,15 @@ def update(workspace, company_id):
     captures = workspace.captures()
     runs = sorted((read_json(p) for p in (workspace.root / "state/runs").glob("*.json")),
                   key=lambda r: r["started_at"])
+    prior_decisions = {}
     for run in runs:
         if company_id not in run.get("company_ids", []):
             continue
         ops = [o for o in run.get("operations", []) if o.get("company_id") == company_id]
-        decisions = {d["capture_id"]: d for d in run.get("decisions", [])
-                     if d["company_id"] == company_id}
-        capture_ids = sorted({cid for op in ops for cid in op.get("capture_ids", [])} | decisions.keys())
+        current_decisions = {d["capture_id"]: d for d in run.get("decisions", [])
+                             if d["company_id"] == company_id}
+        decisions = {**prior_decisions, **current_decisions}
+        capture_ids = sorted({cid for op in ops for cid in op.get("capture_ids", [])} | current_decisions.keys())
         lines = [f"## Run {run['started_at']} / {run['status']}", "",
                  f"Run ID: {run['id']}. Reviewed: {run.get('reviewed_at') or 'pending'}.", "",
                  "### X search coverage", ""]
@@ -78,6 +80,8 @@ def update(workspace, company_id):
                 lines += [f"[Retained capture file](../../{file})", ""]
             decision = decisions.get(cid)
             if decision:
+                if cid not in current_decisions:
+                    lines += ["Analysis carried forward from an earlier reviewed run of this exact capture.", ""]
                 lines += [f"Analysis ({decision['verification']}; "
                           f"{'material' if decision['material'] else 'not material'}): "
                           f"{decision['summary']}", "",
@@ -85,6 +89,7 @@ def update(workspace, company_id):
             else:
                 lines += ["Analysis: review pending; no investment conclusion recorded.", ""]
         save({"kind": "run", "run_id": run["id"], "status": run["status"], "body": "\n".join(lines)})
+        prior_decisions.update(current_decisions)
 
     # Keep dated artifact inventories and readable narratives as immutable snapshots.
     paths = set(folder.glob("models/*/*")) | set(folder.glob("updates/*/*")) | set(folder.glob("funding/*/*"))

@@ -77,3 +77,16 @@ def test_pdf_preserves_exact_attachment(workspace):
     text = '\n'.join(p.extract_text() for p in reader.pages)
     assert 'Last line' in text and 'review pending' in text
     assert any(p.get('/Annots') for p in reader.pages)
+
+
+def test_repeated_capture_carries_prior_review_not_unrelated_posts(workspace):
+    run, source, _ = seed(workspace)
+    run.update(status='no_change', decisions=[
+        {'company_id': 'asx-mlx', 'capture_id': source['id'], 'material': False,
+         'verification': 'irrelevant', 'summary': 'Prior review.', 'model_impact': 'None.'}])
+    write_json(workspace.root / 'state/runs/run1.json', run)
+    second = {**run, 'id': 'run2', 'started_at': '2026-09-20T03:00:00Z', 'decisions': []}
+    write_json(workspace.root / 'state/runs/run2.json', second)
+    path = update(workspace, 'asx-mlx')
+    assert 'carried forward' in path.read_text()
+    assert 'review pending' not in path.read_text()
