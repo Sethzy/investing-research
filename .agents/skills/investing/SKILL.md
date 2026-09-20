@@ -68,7 +68,7 @@ Before calling an investigation complete, follow `docs/product-overview.md`: pub
 
 State the user's investment horizon separately from historical coverage, X lookback, catalysts and model forecast years. No saved horizon means it is still a setup question; do not present an example answer or an illustrative mine life as the user's preference.
 
-For every created or materially updated workbook, follow `docs/workbook-quality.md`: independently recalculate, render/open every visible sheet, fix clipping, formats, charts and print layout, and record the visual audit method and outcome. Keep blue inputs, green links, black calculations, source provenance and readable totals. Deliver Markdown with the matching detailed Excel link. A numerical PASS is not a visual-review PASS.
+For every created or materially updated workbook, first read [Excel template and release standard](references/excel-template.md) and inspect its linked workbook and preview. Use the maintained generator, then follow `docs/workbook-quality.md`: independently recalculate, render/open every visible sheet, fix clipping, formats, charts and print layout, and record the visual audit method and outcome. Keep blue inputs, green links, black calculations, source provenance and readable totals. Deliver Markdown with the matching detailed Excel link. A numerical PASS is not a visual-review PASS.
 
 ## Append and update (required)
 

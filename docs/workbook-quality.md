@@ -2,6 +2,10 @@
 
 This is a required step in the bundled investing workflow whenever a workbook is created or materially changed. The project uses its portable workbook generator; recipients do not need a personal skills checkout.
 
+## Template reference
+
+Use the bundled [Excel template and release standard](../.agents/skills/investing/references/excel-template.md), including its worked workbook, summary preview and per-sheet audit matrix. The generator is the reusable template; the worked example supplies visual guidance, not financial assumptions for a new company.
+
 ## Before delivery
 
 1. Recalculate all scenarios and sensitivities with `excel-sync`. Confirm financial parity, units, ownership, quote dates and evidence limitations. Never use visual polish to imply uncertain assumptions are verified.
