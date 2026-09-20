@@ -1,5 +1,11 @@
 # Running the workspace
 
+## One accumulating brief per company
+
+`uv run invest brief asx-mlx --pdf` backfills existing run receipts, appends new run/review and model-artifact revisions, and exports the entire brief. Read `companies/asx-mlx/brief.md` or `brief.pdf`. Collection and dossier rebuilds maintain the Markdown automatically; PDF export is explicit. Every run includes X and public-web coverage, captured post links and literal text, completeness, and a short recorded analysis. Unreviewed posts stay pending; missing lanes stay gaps. All matches remain visible, including noise. Full reports and Excel are linked rather than pasted as binary content.
+
+Immutable entries live in `state/journal/<company>/`. Repeated exports do not duplicate entries. Later reviews append a revision rather than altering the collected entry; original run dates and actual append timestamps distinguish backfills. Model memos and checksummed artifact inventories append when files change. The PDF embeds the exact UTF-8 Markdown; glyphs unsupported by the available font use explicit Unicode code points. Generated journals, PDFs and source captures remain private and Git-ignored. Share them deliberately as an artifact bundle.
+
 Run commands from the checkout root after the README setup. `uv run invest --root /path/to/workspace <command>` selects a different data root; paths in examples below assume the checkout is the data root. JSON is strict: unknown contract fields are rejected. IDs come from command output and local receipts, not from guesses.
 
 ## Search and capture

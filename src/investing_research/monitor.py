@@ -164,6 +164,9 @@ def collect(
     write_review_packet(workspace, run)
     if run["errors"]:
         write_brief(workspace, run, [])
+    from .journal import update as update_journal
+    for company_id in run["company_ids"]:
+        update_journal(workspace, company_id)
     return run
 
 

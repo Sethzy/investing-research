@@ -39,6 +39,8 @@ Use `size` only with the user's explicit current portfolio and risk policy. Requ
 
 ## Report standard
 
+Maintain one accumulating company brief at `companies/<id>/brief.md`. Run `invest brief <id> --pdf` for delivery. Every collection and dossier rebuild appends new run/review or artifact revisions idempotently; prior entries remain immutable in `state/journal/<id>/`. Include all captured X posts with their original URL, literal captured text, capture completeness and short recorded analysis, including irrelevant matches. Include both X and public-web coverage every run, explicitly naming skipped/failed lanes. Link retained report captures and Excel artifacts in the same brief. Pending review is not analysis. Never replace verbatim text with a summary or silently imply a partial search capture is a complete post/thread. The PDF is a full export with exact UTF-8 Markdown attached; unsupported font glyphs are labelled by code point. Preserve earlier PDF exports separately when delivering dated versions.
+
 Lead with as-of date, view and coverage. Separate reported facts, assumptions, interpretations and open questions. Cite each material claim near the text and link model outputs to their input snapshots. Use Mermaid for meaningful company/evidence diagrams and generated charts for numbers, with a plain-language takeaway. Keep saved links repository-relative. Explain model simplifications, unsupported sectors and unavailable history. No decorative or invented numbers.
 
 

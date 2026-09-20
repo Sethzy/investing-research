@@ -16,6 +16,8 @@ extracted/
 companies/
 briefs/
 reports/
+output/
+tmp/
 state/
 
 # Local dependencies and caches

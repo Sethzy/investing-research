@@ -381,6 +381,19 @@ def dossier(ctx: typer.Context, company: str):
 
 
 @app.command()
+def brief(ctx: typer.Context, company: str, pdf: bool = False):
+    """Append new run/artifact revisions to the company brief; optionally export all to PDF."""
+    from .journal import update, export_pdf
+    ws = ctx.obj
+    with ws.lock():
+        path = update(ws, company)
+        result = {"markdown": str(path)}
+        if pdf:
+            result["pdf"] = str(export_pdf(path, path.with_suffix(".pdf")))
+        emit(result)
+
+
+@app.command()
 def status(ctx: typer.Context):
     """Show pending reviews, interrupted runs, and latest coverage."""
     ws = ctx.obj

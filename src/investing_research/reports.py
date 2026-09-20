@@ -255,5 +255,8 @@ def dossier(workspace: Workspace, company_id: str) -> Path:
             lines += ["", f"## {category.title()} history", ""]
             lines += [f"- [{p.parent.name[:12]}]({link(p, folder)})" for p in reports]
     path = folder / "dossier.md"
+    from .journal import update as update_journal
+    update_journal(workspace, company_id)
+    lines += ["", "[Complete dated brief: all runs, X text, reviews and model artifacts](brief.md)"]
     atomic_text(path, "\n".join(lines) + "\n")
     return path
