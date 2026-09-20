@@ -2,6 +2,8 @@
 
 Write a plain-language investment story with nearby original-source citations and the matching Excel link. Keep code, identifiers and operational logs in supporting files.
 
+Begin with the one-page executive summary and explicit opinion in [investment-decision.md](investment-decision.md). Buy/Hold/Sell is the normal rating vocabulary; Not rated is a disclosed evidence exception. Put this before the background and update history.
+
 Required substantive sections (equivalent clear wording is acceptable):
 
 1. Investment judgment and what changed since the previous review: prior/new view, research cutoff, actual web/X check dates, horizon and unchanged assumptions.

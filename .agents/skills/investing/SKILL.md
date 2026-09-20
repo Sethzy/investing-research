@@ -13,6 +13,10 @@ Before PDF export, require the matching release manifest, synchronized model sna
 
 Reusable improvements must update this skill or its linked templates in the same change as the implementation. Keep company-specific judgments in dated company research, not universal instructions. Validate the changed behavior and document remaining limits.
 
+## Executive opinion first
+
+Start every new reader report with the [executive summary and investment opinion](references/investment-decision.md), before company background: Buy/Hold/Sell, dated price, horizon, supported valuation, principal reasons, downside and rating-change triggers. Use a visible Not rated status when decision-critical evidence cannot support a rating; never disguise incomplete research as Hold. Preserve prior dated opinions.
+
 ## Analyst standard
 
 For substantive investigations and regenerated company reports, apply the [source playbook](references/source-playbook.md), [historical normalization](references/historical-normalization.md), [valuation readiness](references/valuation-readiness.md), [X evidence standard](references/x-evidence.md), and [reader report template](references/reader-report-template.md). Save the validated evidence-stage register through [evidence completion](../../../docs/evidence-completion.md). These are required deliverables, not optional headings. Research updates perform fresh checks; re-exports retain actual prior check dates. Material unknowns remain visible and cannot become completed analysis merely because a document was captured.

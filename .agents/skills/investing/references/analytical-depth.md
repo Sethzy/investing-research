@@ -35,3 +35,5 @@ Use a profit bridge and cash-deployment exhibit when they clarify the question. 
 | [Bird upstream](https://github.com/steipete/bird) | Existing vendored authenticated X capture. | Upstream page could not be retrieved in this check. Do not claim active maintenance; test the local integration and retain failures. |
 
 These are adapted analytical patterns, not a wholesale replacement of the existing runtime. Recheck relevant upstream sources when changing their adopted behavior; distinguish source code, documentation, plans and third-party summaries.
+
+For a decision-oriented report, follow [investment-decision.md](investment-decision.md). The later recheck resolves current AI Hedge Fund source paths and adds explicit executive-opinion, valuation-completeness and abstention guidance.
