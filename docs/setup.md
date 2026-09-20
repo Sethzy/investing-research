@@ -2,11 +2,20 @@
 
 You need a local coding agent with terminal access (Codex), its existing subscription, and your own X browser login. No developer API keys are required. The repository includes the agent instructions and Bird adapter; there is no second-brain, wiki or personal-skills dependency.
 
+## Choose the right starting point
+
+- **Review the investor pack:** download the [latest PDF and Excel files](../examples/mlx/README.md). Nothing needs installing to read them beyond your normal document/spreadsheet viewer.
+- **Create your own research workspace:** follow the Codex route below. macOS is the validated live X platform; Linux has offline checks, and Windows live authentication has not been verified.
+
+For a working research installation, Codex needs local terminal access, Git, uv and Node 22+. The installer obtains Python 3.12 and the locked project dependencies. **LibreOffice is a separate prerequisite for verified Excel exports:** ask Codex to install it and ensure `soffice` is available in the same terminal. Installing Microsoft Excel alone does not supply that recalculation command. Docling is optional, not a setup requirement.
+
+Do not copy someone else's working folder. Start from the public Git link, then answer the interview with your own preferences. You can defer X or scheduling and still use public-source research, with those features clearly marked pending.
+
 ## Easiest route: ask your agent to install
 
 Copy this into your local coding agent:
 
-> Install https://github.com/Sethzy/investing-research in a new local folder. Read AGENTS.md and .agents/skills/setup/SKILL.md. Interview me about my investing preferences, configure my watchlist, and guide my own X login. Run the installation, live authentication and synthetic-model checks. Report what works and what still needs me. Set up daily monitoring only if I request it.
+> Install https://github.com/Sethzy/investing-research in a new local folder. Read AGENTS.md and .agents/skills/setup/SKILL.md. Interview me about my investing preferences and preferred X poster handles, configure my watchlist, and guide my own X login. Check all prerequisites, including LibreOffice for verified Excel exports. Run the installation, live authentication and synthetic-model checks. Report what works and what still needs me. Set up daily monitoring only if I request it.
 
 The agent can perform installation and checks. You supply your preferences and complete any browser login or OS access prompt yourself.
 
@@ -135,6 +144,10 @@ Then ask your agent:
 Ask the agent to use your host's supported scheduler at your chosen local time. `uv run invest schedule-prompt` prints the research instruction. A preference saved in a file does not create a job, and this CLI does not run a background reasoning service. Host availability, usage limits and session access still apply.
 
 Require a real scheduled run before trusting unattended operation. Healthy evidence is a completed reviewed receipt and updated dossier, with explicit coverage limits. `pending_review`, interrupted collection, auth errors and no receipt are failures or unfinished work. Keep no-change runs quiet; surface material developments, execution failures and required action.
+
+## First-run diagnostics
+
+`uv run invest doctor` can check installed capabilities before the interview. A fresh clone reports `setup: pending` and directs you to `uv run invest setup`; it does not invent browser preferences. `doctor --live-x` requires completed browser selection and returns `setup_required` until then. An offline diagnostic pass is not a live X pass.
 
 ## Setup completion checklist
 

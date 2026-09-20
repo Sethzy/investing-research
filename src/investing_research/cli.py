@@ -60,7 +60,7 @@ def setup(ctx: typer.Context, edit: bool = False, skip_x: bool = False, answers:
 @app.command()
 def doctor(ctx: typer.Context, live_x: bool = False):
     """Check installed capabilities; optionally run one real read-only X search."""
-    settings = ctx.obj.settings()
+    settings = ctx.obj.settings() if ctx.obj.settings_path.exists() else None
     packages = {}
     for name in ("investing-research", "financetoolkit", "browser-cookie3", "pypdf", "docling"):
         try:
@@ -71,13 +71,17 @@ def doctor(ctx: typer.Context, live_x: bool = False):
         "packages": packages,
         "node": shutil.which("node"),
         "soffice": shutil.which("soffice"),
-        "browser": settings.browser,
-        "profile": settings.profile,
+        "browser": settings.browser if settings else None,
+        "profile": settings.profile if settings else None,
+        "setup": "configured" if settings else "pending",
+        "next": None if settings else "Run uv run invest setup to save your preferences and choose your own X browser profile.",
         "no_api_keys_required": True,
         "x": "not_checked",
         "scheduled_execution": "not_verified",
     }
-    if live_x:
+    if live_x and settings is None:
+        result["x"] = {"status": "setup_required", "message": "Run uv run invest setup before checking your X login."}
+    elif live_x:
         from .x import search
 
         response = search('"Metals X"', count=3, browser=settings.browser, profile=settings.profile)

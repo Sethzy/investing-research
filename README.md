@@ -4,6 +4,14 @@
 
 A standalone investing research workspace for your existing Codex subscription. It searches authenticated X, preserves public reports, calculates financial scenarios locally, and produces readable Markdown and editable Excel. No financial-data, search, X developer, or model API keys are required.
 
+## Start here
+
+**Review the research without installing anything.** For the investor handoff, start with the [latest MLX report (PDF)](examples/mlx/editions/2026-09-20-valuation-questions/MLX-investment-review.pdf), then open the [cash, valuation and funding analysis (Excel)](examples/mlx/editions/2026-09-20-valuation-questions/questions/questions.xlsx). The [original operating model (Excel)](examples/mlx/editions/2026-09-20-valuation-questions/model.xlsx) is preserved separately; the two workbooks answer different questions and their values must not be added together. Use GitHub's download button for PDF/Excel files.
+
+The report is dated **20 September 2026** and the opinion is **Not rated**. It contains conditional tests, not an established price target. Reading it needs only a PDF reader and Excel or LibreOffice; no Codex subscription, installation or X login is needed. See the short [investor review guide](examples/mlx/INVESTOR-REVIEW.md) for what to examine and how to give feedback.
+
+**Run your own research:** use the Codex installation prompt below. Each recipient supplies their own preferences and signs into their own X account. The Git link contains the public examples and workflows, not another person's research history, settings or login.
+
 **The agent operates the research; the CLI supplies collection, evidence storage and calculations.** Running `collect` alone does not assess the investment thesis. Open this checkout in your subscribed agent host and ask it to read and follow the local [investing workflow](.agents/skills/investing/SKILL.md). The skill ships in this repository; no separate skill installation is required. Autonomous research runs only while that host session or its supported automation is executing.
 
 ```mermaid
@@ -18,7 +26,7 @@ flowchart LR
   Portfolio[Your local portfolio and limits] --> Sizing[Constraint-based sizing]
 ```
 
-The workflow supports watchlists, finite-life mining models, explicit annual cash-flow models, bear/base/bull cases, sensitivities, reverse valuation and portfolio constraints. It does not trade. Metals X (ASX:MLX) is the first research example. Read the **[worked MLX Markdown analysis](examples/mlx/report.md)**, then open its **[detailed Excel workbook](examples/mlx/model.xlsx)** to inspect history, assumptions, formulas and sensitivities. It combines cited issuer history with explicitly illustrative forecasts; it is not a completed valuation or live price target. Other demo model files are synthetic.
+The workflow supports watchlists, finite-life mining models, explicit annual cash-flow models, bear/base/bull cases, sensitivities, reverse valuation and portfolio constraints. It does not trade. Metals X (ASX:MLX) is the first research example. Read the **[latest MLX report and dated editions](examples/mlx/README.md)**. The older [worked workbook](examples/mlx/model.xlsx) is retained as a formatting reference, not the latest analysis. It combines cited issuer history with explicitly illustrative forecasts; it is not a completed valuation or live price target. Other demo model files are synthetic.
 
 Read the [product overview and user journeys](docs/product-overview.md). Download the flow diagram as [SVG](docs/assets/research-flow.svg), [PNG](docs/assets/research-flow.png) or [PDF](docs/assets/research-flow.pdf).
 
@@ -28,7 +36,7 @@ Read the [product overview and user journeys](docs/product-overview.md). Downloa
 
 **Give your Codex coding agent this:**
 
-> Install https://github.com/Sethzy/investing-research as a standalone local workspace. Read its AGENTS.md and follow its bundled setup skill. Interview me about my investing preferences, watchlist and monitoring schedule. Help me connect my own X browser login and test it. Keep anything unfinished clearly marked. Do not ask me for API keys or session cookies.
+> Install https://github.com/Sethzy/investing-research as a standalone local workspace. Read its AGENTS.md and follow its bundled setup skill. Interview me about my investing horizon, markets, currency, watchlist, preferred X poster handles and whether I want on-demand or scheduled research. Check the prerequisites and install LibreOffice if needed for verified Excel calculations. Help me connect my own X browser login and test it. Keep anything unfinished clearly marked. Do not ask me for API keys or session cookies.
 
 The agent installs dependencies, asks a short preference interview, resolves your requested companies, checks X, and guides the first research session. You still need to answer the interview and sign in to your own X account. Your agent needs local terminal access; pasting the link into an ordinary chat without local tools cannot install software.
 
@@ -42,7 +50,7 @@ cd investing-research
 bash scripts/install.sh
 ```
 
-The interactive installer starts `invest setup`: currency, horizon, research focus, watchlist, timezone, monitoring time, optional risk limits and X browser profile. Answers stay in ignored local files. Pause with Ctrl-C and resume with `uv run invest setup`; revise with `uv run invest setup --edit`.
+The interactive installer starts `invest setup`: currency, horizon, research focus, watchlist, preferred X poster handles, timezone, monitoring time, optional risk limits and X browser profile. Answers stay in ignored local files. Pause with Ctrl-C and resume with `uv run invest setup`; revise with `uv run invest setup --edit`.
 
 Read the **[full setup guide](docs/setup.md)** and **[X login troubleshooting](docs/x-auth.md)**. Linux gets offline CI checks, but live browser authentication on Linux/Windows remains unverified. A saved daily time does not enable monitoring; the agent must configure a supported host scheduler and verify its first run.
 
@@ -52,7 +60,7 @@ For structured PDF/table extraction with local Docling:
 uv sync --locked --extra documents
 ```
 
-Docling may download public model weights on first use. Baseline public-HTML and PDF text extraction works without that extra. Install LibreOffice and put `soffice` on PATH to synchronize model results into Markdown. Without it, workbook creation and research still work, but no validated Excel-derived model report is published.
+Docling may download public model weights on first use. Baseline public-HTML and PDF text extraction works without that extra. For verified model exports, have Codex install LibreOffice and check that `soffice` is available in its terminal before the model smoke test. The installer installs project dependencies but does not install LibreOffice. Without it, workbook creation and research still work, but no validated Excel-derived model report is published.
 
 Exact Python dependency versions are in [uv.lock](uv.lock); the Bird source and licence ship inside the package. There is no dependency on a personal skills repo, second brain, wiki or QMD.
 

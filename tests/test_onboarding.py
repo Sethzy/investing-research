@@ -282,3 +282,29 @@ def test_setup_answers_default_to_codex(tmp_path):
     result = CliRunner().invoke(app, ["--root", str(tmp_path), "setup", "--skip-x", "--answers", str(path)])
     assert result.exit_code == 0, result.output
     assert read_json(tmp_path / "private/preferences.json")["host"] == "codex"
+
+
+def test_doctor_fresh_clone_reports_pending_without_creating_preferences(tmp_path, monkeypatch):
+    import json
+    import investing_research.cli as cli
+    monkeypatch.setattr(cli.shutil, "which", lambda name: "/test/bin/" + name)
+    result = CliRunner().invoke(app, ["--root", str(tmp_path), "doctor"])
+    assert result.exit_code == 0, result.output
+    data = json.loads(result.output)
+    assert data["setup"] == "pending"
+    assert data["x"] == "not_checked"
+    assert data["browser"] is None
+    assert "invest setup" in data["next"]
+    assert not (tmp_path / "config/local.json").exists()
+    assert not (tmp_path / "private/preferences.json").exists()
+
+
+def test_live_doctor_requires_setup_without_reading_browser(tmp_path, monkeypatch):
+    import json
+    import investing_research.x as x
+    def unexpected(*args, **kwargs):
+        raise AssertionError("Must not read a browser before setup")
+    monkeypatch.setattr(x, "search", unexpected)
+    result = CliRunner().invoke(app, ["--root", str(tmp_path), "doctor", "--live-x"])
+    assert result.exit_code == 1
+    assert json.loads(result.output)["x"]["status"] == "setup_required"

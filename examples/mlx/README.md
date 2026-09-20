@@ -4,6 +4,8 @@ Start with the latest [investment review PDF](editions/2026-09-20-valuation-ques
 
 The latest review adds adjusted historical cash flows, conditional operating-value and Rentails cash/funding thresholds, and newly analyzed sales and subsequent-event disclosures. **MLX remains Not rated:** these tests sharpen the decision questions without pretending undisclosed project economics are known.
 
+For an independent investor assessment, use the [review guide](INVESTOR-REVIEW.md). No installation is needed to read the pack.
+
 ## Dated updates
 
 | Edition | What changed |
