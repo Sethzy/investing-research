@@ -18,7 +18,7 @@ flowchart LR
   Portfolio[Your local portfolio and limits] --> Sizing[Constraint-based sizing]
 ```
 
-The workflow supports watchlists, finite-life mining models, explicit annual cash-flow models, bear/base/bull cases, sensitivities, reverse valuation and portfolio constraints. It does not trade. Metals X (ASX:MLX) is the first research example; numerical example files use **synthetic figures, not MLX estimates or live prices**.
+The workflow supports watchlists, finite-life mining models, explicit annual cash-flow models, bear/base/bull cases, sensitivities, reverse valuation and portfolio constraints. It does not trade. Metals X (ASX:MLX) is the first research example. Read the **[worked MLX Markdown analysis](examples/mlx/report.md)**, then open its **[detailed Excel workbook](examples/mlx/model.xlsx)** to inspect history, assumptions, formulas and sensitivities. It combines cited issuer history with explicitly illustrative forecasts; it is not a completed valuation or live price target. Other demo model files are synthetic.
 
 ## Install
 
@@ -48,7 +48,7 @@ For structured PDF/table extraction with local Docling:
 uv sync --locked --extra documents
 ```
 
-Docling may download public model weights on first use. Baseline public-HTML and PDF text extraction works without that extra. LibreOffice is optional for running models, but `soffice` must be on PATH to verify workbook recalculation against Python. Without it, parity is explicitly unverified.
+Docling may download public model weights on first use. Baseline public-HTML and PDF text extraction works without that extra. Install LibreOffice and put `soffice` on PATH to synchronize model results into Markdown. Without it, workbook creation and research still work, but no validated Excel-derived model report is published.
 
 Exact Python dependency versions are in [uv.lock](uv.lock); the Bird source and licence ship inside the package. There is no dependency on a personal skills repo, second brain, wiki or QMD.
 
@@ -92,7 +92,17 @@ uv run invest scenario examples/model-mine.json --price-multiplier 0.8 --cost-mu
 uv run invest model private/scenario-mine.json
 ```
 
-The first command prints the model output location under `companies/demo-mine/models/`. Each run includes `report.md`, `model.xlsx`, `inputs.json`, `model.json` and a cash-flow chart. The scenario changes base-case commodity price and unit cost across all forecast years, preserving the original file. Read the model's limitations and workbook validation status before using the results.
+With LibreOffice available, the first command prints the validated snapshot location under `companies/demo-mine/models/`. Each run includes `report.md`, its linked `model.xlsx`, `inputs.json` and `model.json`; charts are inside the workbook. The scenario changes base-case commodity price and unit cost across all forecast years, preserving the original file. Read the model's limitations and workbook validation status before using the results.
+
+Read Markdown first; use Excel for the detailed analysis. To edit the MLX example:
+
+```sh
+uv run invest excel-create examples/model-mlx.json --output private/mlx-working.xlsx
+# Edit blue assumptions in Excel, save, then:
+uv run invest excel-sync private/mlx-working.xlsx
+```
+
+Synchronization recalculates all three cases, checks them independently, and publishes a new Markdown report linked to its immutable workbook. Later workbook edits are flagged as unsynchronized. New source inputs can be merged with `excel-refresh`, preserving your overrides and recording conflicts. See [Excel and Markdown workflow](docs/excel-models.md).
 
 For your real portfolio, create ignored `private/portfolio.json` and `private/policy.json` following the synthetic examples. Supply your own current observations, trading-session dates and risk limits, then request a target weight:
 
@@ -115,7 +125,7 @@ Use the printed instruction in your subscribed agent host's supported scheduler,
 | Path | Purpose |
 |---|---|
 | `src/investing_research/` | Small Python application and vendored Bird subset |
-| `examples/` | Public company configurations and synthetic model/portfolio inputs |
+| `examples/` | Public configurations, worked MLX example and synthetic demo inputs |
 | `.agents/skills/setup/`, `.agents/skills/investing/` | Portable setup interview and research workflows |
 | `config/local.json`, `private/` | Your ignored settings, portfolio, policy and working inputs |
 | `data/sources/`, `data/extracted/` | Ignored immutable captures and derived text |

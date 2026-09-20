@@ -171,3 +171,7 @@ The calculator checks the whole portfolio and blocks missing/stale inputs or unr
 ## Scheduled operation
 
 `uv run invest schedule-prompt` prints the full host instruction. Configure that prompt through your subscribed agent host, in your own timezone; this command creates no automation. Test both interactive execution and one real scheduled run with access to your browser profile. A host unable to execute while asleep cannot alert during the outage. Check `status` on return and backfill gaps. The host workflow, not a plain shell cron call, completes semantic reviews and materiality decisions.
+
+## Excel detail and Markdown reports
+
+The current model workflow uses editable Excel assumptions, independent recalculation and immutable Markdown/workbook snapshots. See [the executable workflow](excel-models.md) and [pinned upstream references](upstream-excel.md). Earlier Python-generated snapshots remain readable, but new `model` runs use this workflow.

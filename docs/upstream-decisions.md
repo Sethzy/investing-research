@@ -31,3 +31,7 @@ Keep upstream licence files with redistributed source. Dependency and public mod
 6. Recheck the actual scheduled host environment; interactive browser success does not establish unattended availability.
 
 Do not replace a broken no-key component with a paid/key-requiring service silently. Report the blocked capability and use existing browser tools with explicit coverage limitations where available.
+
+## Excel detail and Markdown reports
+
+The current model workflow uses editable Excel assumptions, independent recalculation and immutable Markdown/workbook snapshots. See [the executable workflow](excel-models.md) and [pinned upstream references](upstream-excel.md). Earlier Python-generated snapshots remain readable, but new `model` runs use this workflow.

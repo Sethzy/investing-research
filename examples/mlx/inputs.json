@@ -1,0 +1,2308 @@
+{
+  "company_id": "asx-mlx",
+  "model_type": "finite_mine",
+  "purpose": "illustrative_sensitivity",
+  "synthetic": false,
+  "currency": "AUD",
+  "valuation_date": "2026-09-20",
+  "reference_price": null,
+  "quote_date": null,
+  "cash": 374000000,
+  "debt": 3285000,
+  "other_assets": 0,
+  "diluted_shares": 886391538,
+  "historical": [
+    {
+      "entity": "Metals X Group",
+      "metric": "cash_and_cash_equivalents",
+      "value": 293606000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2025-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "current_interest_bearing_liabilities",
+      "value": 2849000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2025-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "noncurrent_interest_bearing_liabilities",
+      "value": 436000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2025-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Limited",
+      "metric": "issued_ordinary_shares",
+      "value": 886391538.0,
+      "unit": "shares",
+      "currency": null,
+      "period": "2025-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=62",
+      "page": "62",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "rehabilitation_provision_present_value",
+      "value": 33035000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2025-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=60",
+      "page": "60",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "net_operating_cash_flow",
+      "value": 128323000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2025",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=26",
+      "page": "26",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "cash_paid_property_plant_equipment",
+      "value": 13747000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2025",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=26",
+      "page": "26",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "cash_paid_mine_properties_development",
+      "value": 22211000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2025",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=26",
+      "page": "26",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Renison Tin Operation",
+      "metric": "tin_in_concentrate_produced",
+      "value": 10748.0,
+      "unit": "tonnes_tin",
+      "currency": null,
+      "period": "FY2025",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=9",
+      "page": "9",
+      "basis": "reported",
+      "ownership_basis": "whole_operation"
+    },
+    {
+      "entity": "Renison Tin Operation",
+      "metric": "ownership_interest",
+      "value": 0.5,
+      "unit": "fraction",
+      "currency": null,
+      "period": "2026-Q2",
+      "publication_date": "2026-07-27",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "page": "2",
+      "basis": "reported",
+      "ownership_basis": "whole_operation"
+    },
+    {
+      "entity": "Renison Tin Operation",
+      "metric": "tin_in_concentrate_produced",
+      "value": 2809.0,
+      "unit": "tonnes_tin",
+      "currency": null,
+      "period": "2026-Q2",
+      "publication_date": "2026-07-27",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "page": "2",
+      "basis": "reported",
+      "ownership_basis": "whole_operation"
+    },
+    {
+      "entity": "Renison Tin Operation",
+      "metric": "tin_in_concentrate_produced",
+      "value": 11287.0,
+      "unit": "tonnes_tin",
+      "currency": null,
+      "period": "TTM-ended-2026-06-30",
+      "publication_date": "2026-07-27",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "page": "2",
+      "basis": "reported",
+      "ownership_basis": "whole_operation"
+    },
+    {
+      "entity": "Renison Tin Operation",
+      "metric": "imputed_tin_price",
+      "value": 73834.0,
+      "unit": "AUD_per_tonne_tin",
+      "currency": "AUD",
+      "period": "2026-Q2",
+      "publication_date": "2026-07-27",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "page": "2",
+      "basis": "reported",
+      "ownership_basis": "whole_operation"
+    },
+    {
+      "entity": "Renison Tin Operation",
+      "metric": "imputed_tin_price",
+      "value": 63760.0,
+      "unit": "AUD_per_tonne_tin",
+      "currency": "AUD",
+      "period": "TTM-ended-2026-06-30",
+      "publication_date": "2026-07-27",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "page": "2",
+      "basis": "reported",
+      "ownership_basis": "whole_operation"
+    },
+    {
+      "entity": "Renison Tin Operation",
+      "metric": "c1_cash_production_cost",
+      "value": 20251.0,
+      "unit": "AUD_per_tonne_tin",
+      "currency": "AUD",
+      "period": "2026-Q2",
+      "publication_date": "2026-07-27",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "page": "2",
+      "basis": "reported",
+      "ownership_basis": "whole_operation"
+    },
+    {
+      "entity": "Renison Tin Operation",
+      "metric": "c1_cash_production_cost",
+      "value": 19349.0,
+      "unit": "AUD_per_tonne_tin",
+      "currency": "AUD",
+      "period": "TTM-ended-2026-06-30",
+      "publication_date": "2026-07-27",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "page": "2",
+      "basis": "reported",
+      "ownership_basis": "whole_operation"
+    },
+    {
+      "entity": "Renison Tin Operation",
+      "metric": "imputed_sales_and_marketing_cost",
+      "value": 8758.0,
+      "unit": "AUD_per_tonne_tin",
+      "currency": "AUD",
+      "period": "2026-Q2",
+      "publication_date": "2026-07-27",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "page": "2",
+      "basis": "reported",
+      "ownership_basis": "whole_operation"
+    },
+    {
+      "entity": "Renison Tin Operation",
+      "metric": "all_in_sustaining_cost",
+      "value": 34865.0,
+      "unit": "AUD_per_tonne_tin",
+      "currency": "AUD",
+      "period": "2026-Q2",
+      "publication_date": "2026-07-27",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "page": "2",
+      "basis": "reported",
+      "ownership_basis": "whole_operation"
+    },
+    {
+      "entity": "Renison Tin Operation",
+      "metric": "capital_expenditure",
+      "value": 23400000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2026-Q2",
+      "publication_date": "2026-07-27",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "page": "3",
+      "basis": "reported",
+      "ownership_basis": "whole_operation"
+    },
+    {
+      "entity": "Renison Tin Operation",
+      "metric": "sustaining_capital_expenditure",
+      "value": 16450000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2026-Q2",
+      "publication_date": "2026-07-27",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "page": "3",
+      "basis": "reported",
+      "ownership_basis": "whole_operation"
+    },
+    {
+      "entity": "Renison Tin Operation",
+      "metric": "project_capital_expenditure",
+      "value": 6950000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2026-Q2",
+      "publication_date": "2026-07-27",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "page": "3",
+      "basis": "reported",
+      "ownership_basis": "whole_operation"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "cash_and_cash_equivalents",
+      "value": 374000000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2026-06-30",
+      "publication_date": "2026-07-27",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=9",
+      "page": "9",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "corporate_costs",
+      "value": 560000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2026-Q2",
+      "publication_date": "2026-07-27",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=8",
+      "page": "8",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "revenue",
+      "value": 284999000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2025",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=24",
+      "page": "24",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "revenue",
+      "value": 218820000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2024",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=24",
+      "page": "24",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "cost_of_sales",
+      "value": 158275000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2025",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=24",
+      "page": "24",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "cost_of_sales",
+      "value": 123558000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2024",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=24",
+      "page": "24",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "gross_profit",
+      "value": 126724000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2025",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=24",
+      "page": "24",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "gross_profit",
+      "value": 95262000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2024",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=24",
+      "page": "24",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "general_and_administrative_expenses",
+      "value": 4212000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2025",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=24",
+      "page": "24",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "general_and_administrative_expenses",
+      "value": 2744000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2024",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=24",
+      "page": "24",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "finance_costs",
+      "value": 980000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2025",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=24",
+      "page": "24",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "finance_costs",
+      "value": 566000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2024",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=24",
+      "page": "24",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "profit_before_tax",
+      "value": 138275000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2025",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=24",
+      "page": "24",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "profit_before_tax",
+      "value": 120227000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2024",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=24",
+      "page": "24",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "income_tax_expense",
+      "value": 33670000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2025",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=24",
+      "page": "24",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "income_tax_expense",
+      "value": 17878000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2024",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=24",
+      "page": "24",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "net_income",
+      "value": 104605000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2025",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=24",
+      "page": "24",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "net_income",
+      "value": 102349000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2024",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=24",
+      "page": "24",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "cash_and_cash_equivalents",
+      "value": 220644000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2024-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "trade_and_other_receivables",
+      "value": 36473000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2025-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "trade_and_other_receivables",
+      "value": 8666000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2024-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "inventories",
+      "value": 29488000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2025-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "inventories",
+      "value": 37573000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2024-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "total_current_assets",
+      "value": 363459000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2025-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "total_current_assets",
+      "value": 271243000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2024-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "total_noncurrent_assets",
+      "value": 255050000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2025-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "total_noncurrent_assets",
+      "value": 233789000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2024-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "total_assets",
+      "value": 618509000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2025-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "total_assets",
+      "value": 505032000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2024-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "trade_and_other_payables",
+      "value": 17091000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2025-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "trade_and_other_payables",
+      "value": 20972000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2024-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "current_interest_bearing_liabilities",
+      "value": 3645000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2024-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "noncurrent_interest_bearing_liabilities",
+      "value": 2508000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2024-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "total_current_liabilities",
+      "value": 51679000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2025-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "total_current_liabilities",
+      "value": 43857000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2024-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "total_noncurrent_liabilities",
+      "value": 34297000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2025-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "total_noncurrent_liabilities",
+      "value": 33401000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2024-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "total_liabilities",
+      "value": 85976000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2025-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "total_liabilities",
+      "value": 77258000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2024-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "total_equity",
+      "value": 532533000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2025-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "total_equity",
+      "value": 427774000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "2024-12-31",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "page": "25",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "net_operating_cash_flow",
+      "value": 143567000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2024",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=26",
+      "page": "26",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "cash_paid_property_plant_equipment",
+      "value": 17425000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2024",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=26",
+      "page": "26",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "cash_paid_mine_properties_development",
+      "value": 22511000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2024",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=26",
+      "page": "26",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "net_investing_cash_flow",
+      "value": -52493000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2025",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=26",
+      "page": "26",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "net_investing_cash_flow",
+      "value": -55453000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2024",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=26",
+      "page": "26",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "net_financing_cash_flow",
+      "value": -2868000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2025",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=26",
+      "page": "26",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "net_financing_cash_flow",
+      "value": -10512000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2024",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=26",
+      "page": "26",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "net_change_in_cash",
+      "value": 72962000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2025",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=26",
+      "page": "26",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "net_change_in_cash",
+      "value": 77602000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2024",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=26",
+      "page": "26",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "opening_cash_and_cash_equivalents",
+      "value": 220644000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2025",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=26",
+      "page": "26",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    },
+    {
+      "entity": "Metals X Group",
+      "metric": "opening_cash_and_cash_equivalents",
+      "value": 143042000.0,
+      "unit": "AUD",
+      "currency": "AUD",
+      "period": "FY2024",
+      "publication_date": "2026-03-25",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=26",
+      "page": "26",
+      "basis": "reported",
+      "ownership_basis": "consolidated"
+    }
+  ],
+  "scenarios": {
+    "bear": {
+      "discount_rate": 0.12,
+      "ownership": 0.5,
+      "ownership_basis": "whole_operation",
+      "volume_basis": "imputed_production",
+      "residual_value": 0,
+      "years": [
+        {
+          "year": 2027,
+          "payable_tonnes": 10158.3,
+          "price": 51008,
+          "price_currency": "AUD",
+          "fx": 1,
+          "unit_cost": 30181.8,
+          "royalty_rate": 0,
+          "tax_rate": 0.3,
+          "depreciation": 0,
+          "capex": 93600000,
+          "working_capital_change": 0,
+          "closure": 0,
+          "corporate_cost": 2240000
+        },
+        {
+          "year": 2028,
+          "payable_tonnes": 10158.3,
+          "price": 51008,
+          "price_currency": "AUD",
+          "fx": 1,
+          "unit_cost": 30181.8,
+          "royalty_rate": 0,
+          "tax_rate": 0.3,
+          "depreciation": 0,
+          "capex": 93600000,
+          "working_capital_change": 0,
+          "closure": 0,
+          "corporate_cost": 2240000
+        },
+        {
+          "year": 2029,
+          "payable_tonnes": 10158.3,
+          "price": 51008,
+          "price_currency": "AUD",
+          "fx": 1,
+          "unit_cost": 30181.8,
+          "royalty_rate": 0,
+          "tax_rate": 0.3,
+          "depreciation": 0,
+          "capex": 93600000,
+          "working_capital_change": 0,
+          "closure": 100000000,
+          "corporate_cost": 2240000
+        }
+      ],
+      "notes": "Illustrative 3-year assumed finite horizon; not reserve-backed life. Price multiplier 0.8, unit-cost multiplier 1.1, production proxy multiplier 0.9; not guidance."
+    },
+    "base": {
+      "discount_rate": 0.1,
+      "ownership": 0.5,
+      "ownership_basis": "whole_operation",
+      "volume_basis": "imputed_production",
+      "residual_value": 0,
+      "years": [
+        {
+          "year": 2027,
+          "payable_tonnes": 11287,
+          "price": 63760,
+          "price_currency": "AUD",
+          "fx": 1,
+          "unit_cost": 27438,
+          "royalty_rate": 0,
+          "tax_rate": 0.3,
+          "depreciation": 0,
+          "capex": 93600000,
+          "working_capital_change": 0,
+          "closure": 0,
+          "corporate_cost": 2240000
+        },
+        {
+          "year": 2028,
+          "payable_tonnes": 11287,
+          "price": 63760,
+          "price_currency": "AUD",
+          "fx": 1,
+          "unit_cost": 27438,
+          "royalty_rate": 0,
+          "tax_rate": 0.3,
+          "depreciation": 0,
+          "capex": 93600000,
+          "working_capital_change": 0,
+          "closure": 0,
+          "corporate_cost": 2240000
+        },
+        {
+          "year": 2029,
+          "payable_tonnes": 11287,
+          "price": 63760,
+          "price_currency": "AUD",
+          "fx": 1,
+          "unit_cost": 27438,
+          "royalty_rate": 0,
+          "tax_rate": 0.3,
+          "depreciation": 0,
+          "capex": 93600000,
+          "working_capital_change": 0,
+          "closure": 0,
+          "corporate_cost": 2240000
+        },
+        {
+          "year": 2030,
+          "payable_tonnes": 11287,
+          "price": 63760,
+          "price_currency": "AUD",
+          "fx": 1,
+          "unit_cost": 27438,
+          "royalty_rate": 0,
+          "tax_rate": 0.3,
+          "depreciation": 0,
+          "capex": 93600000,
+          "working_capital_change": 0,
+          "closure": 0,
+          "corporate_cost": 2240000
+        },
+        {
+          "year": 2031,
+          "payable_tonnes": 11287,
+          "price": 63760,
+          "price_currency": "AUD",
+          "fx": 1,
+          "unit_cost": 27438,
+          "royalty_rate": 0,
+          "tax_rate": 0.3,
+          "depreciation": 0,
+          "capex": 93600000,
+          "working_capital_change": 0,
+          "closure": 100000000,
+          "corporate_cost": 2240000
+        }
+      ],
+      "notes": "Illustrative 5-year assumed finite horizon; not reserve-backed life. Price multiplier 1.0, unit-cost multiplier 1.0, production proxy multiplier 1.0; not guidance."
+    },
+    "bull": {
+      "discount_rate": 0.08,
+      "ownership": 0.5,
+      "ownership_basis": "whole_operation",
+      "volume_basis": "imputed_production",
+      "residual_value": 0,
+      "years": [
+        {
+          "year": 2027,
+          "payable_tonnes": 12415.7,
+          "price": 76512,
+          "price_currency": "AUD",
+          "fx": 1,
+          "unit_cost": 26066.1,
+          "royalty_rate": 0,
+          "tax_rate": 0.3,
+          "depreciation": 0,
+          "capex": 93600000,
+          "working_capital_change": 0,
+          "closure": 0,
+          "corporate_cost": 2240000
+        },
+        {
+          "year": 2028,
+          "payable_tonnes": 12415.7,
+          "price": 76512,
+          "price_currency": "AUD",
+          "fx": 1,
+          "unit_cost": 26066.1,
+          "royalty_rate": 0,
+          "tax_rate": 0.3,
+          "depreciation": 0,
+          "capex": 93600000,
+          "working_capital_change": 0,
+          "closure": 0,
+          "corporate_cost": 2240000
+        },
+        {
+          "year": 2029,
+          "payable_tonnes": 12415.7,
+          "price": 76512,
+          "price_currency": "AUD",
+          "fx": 1,
+          "unit_cost": 26066.1,
+          "royalty_rate": 0,
+          "tax_rate": 0.3,
+          "depreciation": 0,
+          "capex": 93600000,
+          "working_capital_change": 0,
+          "closure": 0,
+          "corporate_cost": 2240000
+        },
+        {
+          "year": 2030,
+          "payable_tonnes": 12415.7,
+          "price": 76512,
+          "price_currency": "AUD",
+          "fx": 1,
+          "unit_cost": 26066.1,
+          "royalty_rate": 0,
+          "tax_rate": 0.3,
+          "depreciation": 0,
+          "capex": 93600000,
+          "working_capital_change": 0,
+          "closure": 0,
+          "corporate_cost": 2240000
+        },
+        {
+          "year": 2031,
+          "payable_tonnes": 12415.7,
+          "price": 76512,
+          "price_currency": "AUD",
+          "fx": 1,
+          "unit_cost": 26066.1,
+          "royalty_rate": 0,
+          "tax_rate": 0.3,
+          "depreciation": 0,
+          "capex": 93600000,
+          "working_capital_change": 0,
+          "closure": 0,
+          "corporate_cost": 2240000
+        },
+        {
+          "year": 2032,
+          "payable_tonnes": 12415.7,
+          "price": 76512,
+          "price_currency": "AUD",
+          "fx": 1,
+          "unit_cost": 26066.1,
+          "royalty_rate": 0,
+          "tax_rate": 0.3,
+          "depreciation": 0,
+          "capex": 93600000,
+          "working_capital_change": 0,
+          "closure": 0,
+          "corporate_cost": 2240000
+        },
+        {
+          "year": 2033,
+          "payable_tonnes": 12415.7,
+          "price": 76512,
+          "price_currency": "AUD",
+          "fx": 1,
+          "unit_cost": 26066.1,
+          "royalty_rate": 0,
+          "tax_rate": 0.3,
+          "depreciation": 0,
+          "capex": 93600000,
+          "working_capital_change": 0,
+          "closure": 100000000,
+          "corporate_cost": 2240000
+        }
+      ],
+      "notes": "Illustrative 7-year assumed finite horizon; not reserve-backed life. Price multiplier 1.2, unit-cost multiplier 0.95, production proxy multiplier 1.1; not guidance."
+    }
+  },
+  "provenance": {
+    "/cash": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=9",
+      "rationale": "Reported group closing cash June 30 2026; no ownership scaling; stale at valuation date.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/debt": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=25",
+      "rationale": "Sum current 2,849,000 and noncurrent 436,000 financing liabilities at Dec 31 2025; stale proxy, not a verified current bridge.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/other_assets": {
+      "unit": "AUD",
+      "source": "analyst-assumption://limited-sensitivity",
+      "rationale": "Exclude other investments/residual assets from this limited model; not a statement of zero economic value.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/diluted_shares": {
+      "unit": "shares",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/03/MLX-Annual-Report-31-December-2025.pdf#page=62",
+      "rationale": "Issued-share denominator Dec 31 2025, NOT verified current diluted shares; illustrative only.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/discount_rate": {
+      "unit": "fraction",
+      "source": "analyst-assumption://discount-rate",
+      "rationale": "Illustrative discount rate; not a derived company WACC.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/ownership": {
+      "unit": "fraction",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "Reported 50% ownership of Renison; apply once to whole-operation FCF.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/residual_value": {
+      "unit": "AUD",
+      "source": "analyst-assumption://finite-horizon",
+      "rationale": "No terminal perpetuity or residual asset value; horizon is an unverified stress assumption.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/0/payable_tonnes": {
+      "unit": "tonnes",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM produced 11,287t ×0.9; IMPUTED PRODUCTION PROXY only, not payable sales. Gross imputed revenue includes 100% produced and marketing cost deducts payable tin charges.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/0/price": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM LME-imputed AUD 63,760/t ×0.8; not realized price, no claim of forecast guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/0/fx": {
+      "unit": "AUD/AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "All imputed price/costs reported in AUD; identity conversion.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/0/unit_cost": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "(TTM C 1 19,349 + imputed sales/marketing 8,089) ×1.1; includes royalties/payable deductions. Assumed future run-rate, not guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/0/royalty_rate": {
+      "unit": "fraction",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Royalties already inside imputed sales/marketing; zero additional charge avoids double counting.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/0/tax_rate": {
+      "unit": "fraction",
+      "source": "analyst-assumption://simplified-tax",
+      "rationale": "Assume 30% tax on positive cash-based EBIT; no depreciation shields/losses. Not a verified fiscal forecast.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/0/depreciation": {
+      "unit": "AUD",
+      "source": "analyst-assumption://no-tax-depreciation",
+      "rationale": "Assume no depreciation tax shield; uncertain taxable bases need reconciliation.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/0/capex": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Annualize total whole-operation quarterly 23.4m ×4, includes sustaining and project spend; illustrative, no AISC double deduction.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/0/working_capital_change": {
+      "unit": "AUD",
+      "source": "analyst-assumption://flat-working-capital",
+      "rationale": "Assume zero annual change solely for sensitivity; inventory/receivables timing is not established.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/0/closure": {
+      "unit": "AUD",
+      "source": "analyst-assumption://nominal-closure",
+      "rationale": "Assume nominal whole-operation 100m at final model year; zero earlier payments assumed. Not the reported discounted accounting provision.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/0/corporate_cost": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=8",
+      "rationale": "Annualized group quarterly 0.56m ×4; deducted after ownership scaling, not scaled again.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/1/payable_tonnes": {
+      "unit": "tonnes",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM produced 11,287t ×0.9; IMPUTED PRODUCTION PROXY only, not payable sales. Gross imputed revenue includes 100% produced and marketing cost deducts payable tin charges.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/1/price": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM LME-imputed AUD 63,760/t ×0.8; not realized price, no claim of forecast guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/1/fx": {
+      "unit": "AUD/AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "All imputed price/costs reported in AUD; identity conversion.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/1/unit_cost": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "(TTM C 1 19,349 + imputed sales/marketing 8,089) ×1.1; includes royalties/payable deductions. Assumed future run-rate, not guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/1/royalty_rate": {
+      "unit": "fraction",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Royalties already inside imputed sales/marketing; zero additional charge avoids double counting.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/1/tax_rate": {
+      "unit": "fraction",
+      "source": "analyst-assumption://simplified-tax",
+      "rationale": "Assume 30% tax on positive cash-based EBIT; no depreciation shields/losses. Not a verified fiscal forecast.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/1/depreciation": {
+      "unit": "AUD",
+      "source": "analyst-assumption://no-tax-depreciation",
+      "rationale": "Assume no depreciation tax shield; uncertain taxable bases need reconciliation.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/1/capex": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Annualize total whole-operation quarterly 23.4m ×4, includes sustaining and project spend; illustrative, no AISC double deduction.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/1/working_capital_change": {
+      "unit": "AUD",
+      "source": "analyst-assumption://flat-working-capital",
+      "rationale": "Assume zero annual change solely for sensitivity; inventory/receivables timing is not established.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/1/closure": {
+      "unit": "AUD",
+      "source": "analyst-assumption://nominal-closure",
+      "rationale": "Assume nominal whole-operation 100m at final model year; zero earlier payments assumed. Not the reported discounted accounting provision.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/1/corporate_cost": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=8",
+      "rationale": "Annualized group quarterly 0.56m ×4; deducted after ownership scaling, not scaled again.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/2/payable_tonnes": {
+      "unit": "tonnes",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM produced 11,287t ×0.9; IMPUTED PRODUCTION PROXY only, not payable sales. Gross imputed revenue includes 100% produced and marketing cost deducts payable tin charges.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/2/price": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM LME-imputed AUD 63,760/t ×0.8; not realized price, no claim of forecast guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/2/fx": {
+      "unit": "AUD/AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "All imputed price/costs reported in AUD; identity conversion.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/2/unit_cost": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "(TTM C 1 19,349 + imputed sales/marketing 8,089) ×1.1; includes royalties/payable deductions. Assumed future run-rate, not guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/2/royalty_rate": {
+      "unit": "fraction",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Royalties already inside imputed sales/marketing; zero additional charge avoids double counting.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/2/tax_rate": {
+      "unit": "fraction",
+      "source": "analyst-assumption://simplified-tax",
+      "rationale": "Assume 30% tax on positive cash-based EBIT; no depreciation shields/losses. Not a verified fiscal forecast.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/2/depreciation": {
+      "unit": "AUD",
+      "source": "analyst-assumption://no-tax-depreciation",
+      "rationale": "Assume no depreciation tax shield; uncertain taxable bases need reconciliation.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/2/capex": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Annualize total whole-operation quarterly 23.4m ×4, includes sustaining and project spend; illustrative, no AISC double deduction.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/2/working_capital_change": {
+      "unit": "AUD",
+      "source": "analyst-assumption://flat-working-capital",
+      "rationale": "Assume zero annual change solely for sensitivity; inventory/receivables timing is not established.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/2/closure": {
+      "unit": "AUD",
+      "source": "analyst-assumption://nominal-closure",
+      "rationale": "Assume nominal whole-operation 100m at final model year; zero earlier payments assumed. Not the reported discounted accounting provision.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bear/years/2/corporate_cost": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=8",
+      "rationale": "Annualized group quarterly 0.56m ×4; deducted after ownership scaling, not scaled again.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/discount_rate": {
+      "unit": "fraction",
+      "source": "analyst-assumption://discount-rate",
+      "rationale": "Illustrative discount rate; not a derived company WACC.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/ownership": {
+      "unit": "fraction",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "Reported 50% ownership of Renison; apply once to whole-operation FCF.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/residual_value": {
+      "unit": "AUD",
+      "source": "analyst-assumption://finite-horizon",
+      "rationale": "No terminal perpetuity or residual asset value; horizon is an unverified stress assumption.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/0/payable_tonnes": {
+      "unit": "tonnes",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM produced 11,287t ×1.0; IMPUTED PRODUCTION PROXY only, not payable sales. Gross imputed revenue includes 100% produced and marketing cost deducts payable tin charges.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/0/price": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM LME-imputed AUD 63,760/t ×1.0; not realized price, no claim of forecast guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/0/fx": {
+      "unit": "AUD/AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "All imputed price/costs reported in AUD; identity conversion.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/0/unit_cost": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "(TTM C 1 19,349 + imputed sales/marketing 8,089) ×1.0; includes royalties/payable deductions. Assumed future run-rate, not guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/0/royalty_rate": {
+      "unit": "fraction",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Royalties already inside imputed sales/marketing; zero additional charge avoids double counting.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/0/tax_rate": {
+      "unit": "fraction",
+      "source": "analyst-assumption://simplified-tax",
+      "rationale": "Assume 30% tax on positive cash-based EBIT; no depreciation shields/losses. Not a verified fiscal forecast.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/0/depreciation": {
+      "unit": "AUD",
+      "source": "analyst-assumption://no-tax-depreciation",
+      "rationale": "Assume no depreciation tax shield; uncertain taxable bases need reconciliation.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/0/capex": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Annualize total whole-operation quarterly 23.4m ×4, includes sustaining and project spend; illustrative, no AISC double deduction.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/0/working_capital_change": {
+      "unit": "AUD",
+      "source": "analyst-assumption://flat-working-capital",
+      "rationale": "Assume zero annual change solely for sensitivity; inventory/receivables timing is not established.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/0/closure": {
+      "unit": "AUD",
+      "source": "analyst-assumption://nominal-closure",
+      "rationale": "Assume nominal whole-operation 100m at final model year; zero earlier payments assumed. Not the reported discounted accounting provision.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/0/corporate_cost": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=8",
+      "rationale": "Annualized group quarterly 0.56m ×4; deducted after ownership scaling, not scaled again.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/1/payable_tonnes": {
+      "unit": "tonnes",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM produced 11,287t ×1.0; IMPUTED PRODUCTION PROXY only, not payable sales. Gross imputed revenue includes 100% produced and marketing cost deducts payable tin charges.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/1/price": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM LME-imputed AUD 63,760/t ×1.0; not realized price, no claim of forecast guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/1/fx": {
+      "unit": "AUD/AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "All imputed price/costs reported in AUD; identity conversion.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/1/unit_cost": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "(TTM C 1 19,349 + imputed sales/marketing 8,089) ×1.0; includes royalties/payable deductions. Assumed future run-rate, not guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/1/royalty_rate": {
+      "unit": "fraction",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Royalties already inside imputed sales/marketing; zero additional charge avoids double counting.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/1/tax_rate": {
+      "unit": "fraction",
+      "source": "analyst-assumption://simplified-tax",
+      "rationale": "Assume 30% tax on positive cash-based EBIT; no depreciation shields/losses. Not a verified fiscal forecast.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/1/depreciation": {
+      "unit": "AUD",
+      "source": "analyst-assumption://no-tax-depreciation",
+      "rationale": "Assume no depreciation tax shield; uncertain taxable bases need reconciliation.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/1/capex": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Annualize total whole-operation quarterly 23.4m ×4, includes sustaining and project spend; illustrative, no AISC double deduction.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/1/working_capital_change": {
+      "unit": "AUD",
+      "source": "analyst-assumption://flat-working-capital",
+      "rationale": "Assume zero annual change solely for sensitivity; inventory/receivables timing is not established.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/1/closure": {
+      "unit": "AUD",
+      "source": "analyst-assumption://nominal-closure",
+      "rationale": "Assume nominal whole-operation 100m at final model year; zero earlier payments assumed. Not the reported discounted accounting provision.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/1/corporate_cost": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=8",
+      "rationale": "Annualized group quarterly 0.56m ×4; deducted after ownership scaling, not scaled again.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/2/payable_tonnes": {
+      "unit": "tonnes",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM produced 11,287t ×1.0; IMPUTED PRODUCTION PROXY only, not payable sales. Gross imputed revenue includes 100% produced and marketing cost deducts payable tin charges.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/2/price": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM LME-imputed AUD 63,760/t ×1.0; not realized price, no claim of forecast guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/2/fx": {
+      "unit": "AUD/AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "All imputed price/costs reported in AUD; identity conversion.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/2/unit_cost": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "(TTM C 1 19,349 + imputed sales/marketing 8,089) ×1.0; includes royalties/payable deductions. Assumed future run-rate, not guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/2/royalty_rate": {
+      "unit": "fraction",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Royalties already inside imputed sales/marketing; zero additional charge avoids double counting.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/2/tax_rate": {
+      "unit": "fraction",
+      "source": "analyst-assumption://simplified-tax",
+      "rationale": "Assume 30% tax on positive cash-based EBIT; no depreciation shields/losses. Not a verified fiscal forecast.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/2/depreciation": {
+      "unit": "AUD",
+      "source": "analyst-assumption://no-tax-depreciation",
+      "rationale": "Assume no depreciation tax shield; uncertain taxable bases need reconciliation.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/2/capex": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Annualize total whole-operation quarterly 23.4m ×4, includes sustaining and project spend; illustrative, no AISC double deduction.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/2/working_capital_change": {
+      "unit": "AUD",
+      "source": "analyst-assumption://flat-working-capital",
+      "rationale": "Assume zero annual change solely for sensitivity; inventory/receivables timing is not established.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/2/closure": {
+      "unit": "AUD",
+      "source": "analyst-assumption://nominal-closure",
+      "rationale": "Assume nominal whole-operation 100m at final model year; zero earlier payments assumed. Not the reported discounted accounting provision.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/2/corporate_cost": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=8",
+      "rationale": "Annualized group quarterly 0.56m ×4; deducted after ownership scaling, not scaled again.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/3/payable_tonnes": {
+      "unit": "tonnes",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM produced 11,287t ×1.0; IMPUTED PRODUCTION PROXY only, not payable sales. Gross imputed revenue includes 100% produced and marketing cost deducts payable tin charges.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/3/price": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM LME-imputed AUD 63,760/t ×1.0; not realized price, no claim of forecast guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/3/fx": {
+      "unit": "AUD/AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "All imputed price/costs reported in AUD; identity conversion.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/3/unit_cost": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "(TTM C 1 19,349 + imputed sales/marketing 8,089) ×1.0; includes royalties/payable deductions. Assumed future run-rate, not guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/3/royalty_rate": {
+      "unit": "fraction",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Royalties already inside imputed sales/marketing; zero additional charge avoids double counting.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/3/tax_rate": {
+      "unit": "fraction",
+      "source": "analyst-assumption://simplified-tax",
+      "rationale": "Assume 30% tax on positive cash-based EBIT; no depreciation shields/losses. Not a verified fiscal forecast.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/3/depreciation": {
+      "unit": "AUD",
+      "source": "analyst-assumption://no-tax-depreciation",
+      "rationale": "Assume no depreciation tax shield; uncertain taxable bases need reconciliation.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/3/capex": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Annualize total whole-operation quarterly 23.4m ×4, includes sustaining and project spend; illustrative, no AISC double deduction.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/3/working_capital_change": {
+      "unit": "AUD",
+      "source": "analyst-assumption://flat-working-capital",
+      "rationale": "Assume zero annual change solely for sensitivity; inventory/receivables timing is not established.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/3/closure": {
+      "unit": "AUD",
+      "source": "analyst-assumption://nominal-closure",
+      "rationale": "Assume nominal whole-operation 100m at final model year; zero earlier payments assumed. Not the reported discounted accounting provision.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/3/corporate_cost": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=8",
+      "rationale": "Annualized group quarterly 0.56m ×4; deducted after ownership scaling, not scaled again.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/4/payable_tonnes": {
+      "unit": "tonnes",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM produced 11,287t ×1.0; IMPUTED PRODUCTION PROXY only, not payable sales. Gross imputed revenue includes 100% produced and marketing cost deducts payable tin charges.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/4/price": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM LME-imputed AUD 63,760/t ×1.0; not realized price, no claim of forecast guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/4/fx": {
+      "unit": "AUD/AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "All imputed price/costs reported in AUD; identity conversion.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/4/unit_cost": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "(TTM C 1 19,349 + imputed sales/marketing 8,089) ×1.0; includes royalties/payable deductions. Assumed future run-rate, not guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/4/royalty_rate": {
+      "unit": "fraction",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Royalties already inside imputed sales/marketing; zero additional charge avoids double counting.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/4/tax_rate": {
+      "unit": "fraction",
+      "source": "analyst-assumption://simplified-tax",
+      "rationale": "Assume 30% tax on positive cash-based EBIT; no depreciation shields/losses. Not a verified fiscal forecast.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/4/depreciation": {
+      "unit": "AUD",
+      "source": "analyst-assumption://no-tax-depreciation",
+      "rationale": "Assume no depreciation tax shield; uncertain taxable bases need reconciliation.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/4/capex": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Annualize total whole-operation quarterly 23.4m ×4, includes sustaining and project spend; illustrative, no AISC double deduction.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/4/working_capital_change": {
+      "unit": "AUD",
+      "source": "analyst-assumption://flat-working-capital",
+      "rationale": "Assume zero annual change solely for sensitivity; inventory/receivables timing is not established.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/4/closure": {
+      "unit": "AUD",
+      "source": "analyst-assumption://nominal-closure",
+      "rationale": "Assume nominal whole-operation 100m at final model year; zero earlier payments assumed. Not the reported discounted accounting provision.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/base/years/4/corporate_cost": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=8",
+      "rationale": "Annualized group quarterly 0.56m ×4; deducted after ownership scaling, not scaled again.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/discount_rate": {
+      "unit": "fraction",
+      "source": "analyst-assumption://discount-rate",
+      "rationale": "Illustrative discount rate; not a derived company WACC.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/ownership": {
+      "unit": "fraction",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "Reported 50% ownership of Renison; apply once to whole-operation FCF.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/residual_value": {
+      "unit": "AUD",
+      "source": "analyst-assumption://finite-horizon",
+      "rationale": "No terminal perpetuity or residual asset value; horizon is an unverified stress assumption.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/0/payable_tonnes": {
+      "unit": "tonnes",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM produced 11,287t ×1.1; IMPUTED PRODUCTION PROXY only, not payable sales. Gross imputed revenue includes 100% produced and marketing cost deducts payable tin charges.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/0/price": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM LME-imputed AUD 63,760/t ×1.2; not realized price, no claim of forecast guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/0/fx": {
+      "unit": "AUD/AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "All imputed price/costs reported in AUD; identity conversion.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/0/unit_cost": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "(TTM C 1 19,349 + imputed sales/marketing 8,089) ×0.95; includes royalties/payable deductions. Assumed future run-rate, not guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/0/royalty_rate": {
+      "unit": "fraction",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Royalties already inside imputed sales/marketing; zero additional charge avoids double counting.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/0/tax_rate": {
+      "unit": "fraction",
+      "source": "analyst-assumption://simplified-tax",
+      "rationale": "Assume 30% tax on positive cash-based EBIT; no depreciation shields/losses. Not a verified fiscal forecast.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/0/depreciation": {
+      "unit": "AUD",
+      "source": "analyst-assumption://no-tax-depreciation",
+      "rationale": "Assume no depreciation tax shield; uncertain taxable bases need reconciliation.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/0/capex": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Annualize total whole-operation quarterly 23.4m ×4, includes sustaining and project spend; illustrative, no AISC double deduction.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/0/working_capital_change": {
+      "unit": "AUD",
+      "source": "analyst-assumption://flat-working-capital",
+      "rationale": "Assume zero annual change solely for sensitivity; inventory/receivables timing is not established.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/0/closure": {
+      "unit": "AUD",
+      "source": "analyst-assumption://nominal-closure",
+      "rationale": "Assume nominal whole-operation 100m at final model year; zero earlier payments assumed. Not the reported discounted accounting provision.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/0/corporate_cost": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=8",
+      "rationale": "Annualized group quarterly 0.56m ×4; deducted after ownership scaling, not scaled again.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/1/payable_tonnes": {
+      "unit": "tonnes",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM produced 11,287t ×1.1; IMPUTED PRODUCTION PROXY only, not payable sales. Gross imputed revenue includes 100% produced and marketing cost deducts payable tin charges.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/1/price": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM LME-imputed AUD 63,760/t ×1.2; not realized price, no claim of forecast guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/1/fx": {
+      "unit": "AUD/AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "All imputed price/costs reported in AUD; identity conversion.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/1/unit_cost": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "(TTM C 1 19,349 + imputed sales/marketing 8,089) ×0.95; includes royalties/payable deductions. Assumed future run-rate, not guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/1/royalty_rate": {
+      "unit": "fraction",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Royalties already inside imputed sales/marketing; zero additional charge avoids double counting.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/1/tax_rate": {
+      "unit": "fraction",
+      "source": "analyst-assumption://simplified-tax",
+      "rationale": "Assume 30% tax on positive cash-based EBIT; no depreciation shields/losses. Not a verified fiscal forecast.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/1/depreciation": {
+      "unit": "AUD",
+      "source": "analyst-assumption://no-tax-depreciation",
+      "rationale": "Assume no depreciation tax shield; uncertain taxable bases need reconciliation.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/1/capex": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Annualize total whole-operation quarterly 23.4m ×4, includes sustaining and project spend; illustrative, no AISC double deduction.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/1/working_capital_change": {
+      "unit": "AUD",
+      "source": "analyst-assumption://flat-working-capital",
+      "rationale": "Assume zero annual change solely for sensitivity; inventory/receivables timing is not established.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/1/closure": {
+      "unit": "AUD",
+      "source": "analyst-assumption://nominal-closure",
+      "rationale": "Assume nominal whole-operation 100m at final model year; zero earlier payments assumed. Not the reported discounted accounting provision.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/1/corporate_cost": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=8",
+      "rationale": "Annualized group quarterly 0.56m ×4; deducted after ownership scaling, not scaled again.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/2/payable_tonnes": {
+      "unit": "tonnes",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM produced 11,287t ×1.1; IMPUTED PRODUCTION PROXY only, not payable sales. Gross imputed revenue includes 100% produced and marketing cost deducts payable tin charges.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/2/price": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM LME-imputed AUD 63,760/t ×1.2; not realized price, no claim of forecast guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/2/fx": {
+      "unit": "AUD/AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "All imputed price/costs reported in AUD; identity conversion.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/2/unit_cost": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "(TTM C 1 19,349 + imputed sales/marketing 8,089) ×0.95; includes royalties/payable deductions. Assumed future run-rate, not guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/2/royalty_rate": {
+      "unit": "fraction",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Royalties already inside imputed sales/marketing; zero additional charge avoids double counting.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/2/tax_rate": {
+      "unit": "fraction",
+      "source": "analyst-assumption://simplified-tax",
+      "rationale": "Assume 30% tax on positive cash-based EBIT; no depreciation shields/losses. Not a verified fiscal forecast.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/2/depreciation": {
+      "unit": "AUD",
+      "source": "analyst-assumption://no-tax-depreciation",
+      "rationale": "Assume no depreciation tax shield; uncertain taxable bases need reconciliation.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/2/capex": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Annualize total whole-operation quarterly 23.4m ×4, includes sustaining and project spend; illustrative, no AISC double deduction.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/2/working_capital_change": {
+      "unit": "AUD",
+      "source": "analyst-assumption://flat-working-capital",
+      "rationale": "Assume zero annual change solely for sensitivity; inventory/receivables timing is not established.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/2/closure": {
+      "unit": "AUD",
+      "source": "analyst-assumption://nominal-closure",
+      "rationale": "Assume nominal whole-operation 100m at final model year; zero earlier payments assumed. Not the reported discounted accounting provision.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/2/corporate_cost": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=8",
+      "rationale": "Annualized group quarterly 0.56m ×4; deducted after ownership scaling, not scaled again.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/3/payable_tonnes": {
+      "unit": "tonnes",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM produced 11,287t ×1.1; IMPUTED PRODUCTION PROXY only, not payable sales. Gross imputed revenue includes 100% produced and marketing cost deducts payable tin charges.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/3/price": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM LME-imputed AUD 63,760/t ×1.2; not realized price, no claim of forecast guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/3/fx": {
+      "unit": "AUD/AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "All imputed price/costs reported in AUD; identity conversion.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/3/unit_cost": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "(TTM C 1 19,349 + imputed sales/marketing 8,089) ×0.95; includes royalties/payable deductions. Assumed future run-rate, not guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/3/royalty_rate": {
+      "unit": "fraction",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Royalties already inside imputed sales/marketing; zero additional charge avoids double counting.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/3/tax_rate": {
+      "unit": "fraction",
+      "source": "analyst-assumption://simplified-tax",
+      "rationale": "Assume 30% tax on positive cash-based EBIT; no depreciation shields/losses. Not a verified fiscal forecast.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/3/depreciation": {
+      "unit": "AUD",
+      "source": "analyst-assumption://no-tax-depreciation",
+      "rationale": "Assume no depreciation tax shield; uncertain taxable bases need reconciliation.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/3/capex": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Annualize total whole-operation quarterly 23.4m ×4, includes sustaining and project spend; illustrative, no AISC double deduction.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/3/working_capital_change": {
+      "unit": "AUD",
+      "source": "analyst-assumption://flat-working-capital",
+      "rationale": "Assume zero annual change solely for sensitivity; inventory/receivables timing is not established.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/3/closure": {
+      "unit": "AUD",
+      "source": "analyst-assumption://nominal-closure",
+      "rationale": "Assume nominal whole-operation 100m at final model year; zero earlier payments assumed. Not the reported discounted accounting provision.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/3/corporate_cost": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=8",
+      "rationale": "Annualized group quarterly 0.56m ×4; deducted after ownership scaling, not scaled again.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/4/payable_tonnes": {
+      "unit": "tonnes",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM produced 11,287t ×1.1; IMPUTED PRODUCTION PROXY only, not payable sales. Gross imputed revenue includes 100% produced and marketing cost deducts payable tin charges.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/4/price": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM LME-imputed AUD 63,760/t ×1.2; not realized price, no claim of forecast guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/4/fx": {
+      "unit": "AUD/AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "All imputed price/costs reported in AUD; identity conversion.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/4/unit_cost": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "(TTM C 1 19,349 + imputed sales/marketing 8,089) ×0.95; includes royalties/payable deductions. Assumed future run-rate, not guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/4/royalty_rate": {
+      "unit": "fraction",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Royalties already inside imputed sales/marketing; zero additional charge avoids double counting.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/4/tax_rate": {
+      "unit": "fraction",
+      "source": "analyst-assumption://simplified-tax",
+      "rationale": "Assume 30% tax on positive cash-based EBIT; no depreciation shields/losses. Not a verified fiscal forecast.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/4/depreciation": {
+      "unit": "AUD",
+      "source": "analyst-assumption://no-tax-depreciation",
+      "rationale": "Assume no depreciation tax shield; uncertain taxable bases need reconciliation.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/4/capex": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Annualize total whole-operation quarterly 23.4m ×4, includes sustaining and project spend; illustrative, no AISC double deduction.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/4/working_capital_change": {
+      "unit": "AUD",
+      "source": "analyst-assumption://flat-working-capital",
+      "rationale": "Assume zero annual change solely for sensitivity; inventory/receivables timing is not established.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/4/closure": {
+      "unit": "AUD",
+      "source": "analyst-assumption://nominal-closure",
+      "rationale": "Assume nominal whole-operation 100m at final model year; zero earlier payments assumed. Not the reported discounted accounting provision.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/4/corporate_cost": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=8",
+      "rationale": "Annualized group quarterly 0.56m ×4; deducted after ownership scaling, not scaled again.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/5/payable_tonnes": {
+      "unit": "tonnes",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM produced 11,287t ×1.1; IMPUTED PRODUCTION PROXY only, not payable sales. Gross imputed revenue includes 100% produced and marketing cost deducts payable tin charges.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/5/price": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM LME-imputed AUD 63,760/t ×1.2; not realized price, no claim of forecast guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/5/fx": {
+      "unit": "AUD/AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "All imputed price/costs reported in AUD; identity conversion.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/5/unit_cost": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "(TTM C 1 19,349 + imputed sales/marketing 8,089) ×0.95; includes royalties/payable deductions. Assumed future run-rate, not guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/5/royalty_rate": {
+      "unit": "fraction",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Royalties already inside imputed sales/marketing; zero additional charge avoids double counting.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/5/tax_rate": {
+      "unit": "fraction",
+      "source": "analyst-assumption://simplified-tax",
+      "rationale": "Assume 30% tax on positive cash-based EBIT; no depreciation shields/losses. Not a verified fiscal forecast.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/5/depreciation": {
+      "unit": "AUD",
+      "source": "analyst-assumption://no-tax-depreciation",
+      "rationale": "Assume no depreciation tax shield; uncertain taxable bases need reconciliation.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/5/capex": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Annualize total whole-operation quarterly 23.4m ×4, includes sustaining and project spend; illustrative, no AISC double deduction.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/5/working_capital_change": {
+      "unit": "AUD",
+      "source": "analyst-assumption://flat-working-capital",
+      "rationale": "Assume zero annual change solely for sensitivity; inventory/receivables timing is not established.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/5/closure": {
+      "unit": "AUD",
+      "source": "analyst-assumption://nominal-closure",
+      "rationale": "Assume nominal whole-operation 100m at final model year; zero earlier payments assumed. Not the reported discounted accounting provision.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/5/corporate_cost": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=8",
+      "rationale": "Annualized group quarterly 0.56m ×4; deducted after ownership scaling, not scaled again.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/6/payable_tonnes": {
+      "unit": "tonnes",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM produced 11,287t ×1.1; IMPUTED PRODUCTION PROXY only, not payable sales. Gross imputed revenue includes 100% produced and marketing cost deducts payable tin charges.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/6/price": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "TTM LME-imputed AUD 63,760/t ×1.2; not realized price, no claim of forecast guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/6/fx": {
+      "unit": "AUD/AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "All imputed price/costs reported in AUD; identity conversion.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/6/unit_cost": {
+      "unit": "AUD/tonne",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=2",
+      "rationale": "(TTM C 1 19,349 + imputed sales/marketing 8,089) ×0.95; includes royalties/payable deductions. Assumed future run-rate, not guidance.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/6/royalty_rate": {
+      "unit": "fraction",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Royalties already inside imputed sales/marketing; zero additional charge avoids double counting.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/6/tax_rate": {
+      "unit": "fraction",
+      "source": "analyst-assumption://simplified-tax",
+      "rationale": "Assume 30% tax on positive cash-based EBIT; no depreciation shields/losses. Not a verified fiscal forecast.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/6/depreciation": {
+      "unit": "AUD",
+      "source": "analyst-assumption://no-tax-depreciation",
+      "rationale": "Assume no depreciation tax shield; uncertain taxable bases need reconciliation.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/6/capex": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=3",
+      "rationale": "Annualize total whole-operation quarterly 23.4m ×4, includes sustaining and project spend; illustrative, no AISC double deduction.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/6/working_capital_change": {
+      "unit": "AUD",
+      "source": "analyst-assumption://flat-working-capital",
+      "rationale": "Assume zero annual change solely for sensitivity; inventory/receivables timing is not established.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/6/closure": {
+      "unit": "AUD",
+      "source": "analyst-assumption://nominal-closure",
+      "rationale": "Assume nominal whole-operation 100m at final model year; zero earlier payments assumed. Not the reported discounted accounting provision.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    },
+    "/scenarios/bull/years/6/corporate_cost": {
+      "unit": "AUD",
+      "source": "https://www.metalsx.com.au/wp-content/uploads/2026/07/02_MLX_Quarterly-Report_30-June-2026_Final.pdf#page=8",
+      "rationale": "Annualized group quarterly 0.56m ×4; deducted after ownership scaling, not scaled again.",
+      "author": "Agent-authored public example; reported source or explicit assumption as described"
+    }
+  },
+  "known_limitations": [
+    "ILLUSTRATIVE IMPUTED-REVENUE SENSITIVITY ONLY. This is not an actionable fair-value estimate or an investment recommendation.",
+    "Production is used solely as the company-style imputed-revenue proxy (100% produced tin sold/paid); it is NOT reported payable sales. The workbook labels it production_tonnes_proxy. Realized payable sales, inventory, settlement timing and revenue must replace this proxy before valuation.",
+    "The baseline price AUD63,760/t is the reported trailing-12-month LME-imputed price, NOT realized tin sales price. Scenario price and volume levels are analyst stress assumptions, not company guidance.",
+    "Unit cost combines reported trailing-12-month C1 AUD19,349/t and imputed sales/marketing AUD8,089/t. Marketing includes royalties and payable-tin deductions, so separate royalty_rate=0 prevents duplicate deductions. Price-linked marketing behavior is not separately modelled and could materially affect sensitivity.",
+    "Finite horizons 3/5/7 years are illustrative assumptions, not reserve-supported mine life. The quarterly report said an updated life-of-mine plan and Ore Reserve were expected in Q3 2026; those updates have not been verified. No perpetuity or residual value is included.",
+    "Cash AUD374m is as at June 30 2026; debt AUD3.285m and issued shares886,391,538 are as at December31 2025. These stale mixed-date balances need updated half-year/ASX checks. Issued shares are a proxy, NOT a verified current fully diluted denominator.",
+    "Closure is an explicit assumed AUD100m whole-operation nominal final-year payment. The reported AUD33.035m group rehabilitation provision is a present-value accounting figure, not this cash-payment estimate; actual scope/timing and other closure sites remain unmodelled.",
+    "Capex annualizes June-quarter whole-operation AUD23.4m to AUD93.6m each model year, including both sustaining and project spend. This is a scenario assumption, not guidance. No additional AISC deduction is made.",
+    "Annual corporate costs annualize group June-quarter AUD0.56m to AUD2.24m, deducted once after 50% attribution. Other investments/residual assets are set to zero only to exclude them from this limited sensitivity, not because they have zero economic value.",
+    "Tax rate30% is an analyst simplifying assumption; depreciation is assumed zero and no loss carryforwards, corporate tax shields or closure deductions are modelled. No forecast working-capital changes are assumed; this is not verified operational guidance.",
+    "Annual row labels2027 onward denote period-end annualized flows one/two/etc years from the valuation date, not an audited fiscal calendar projection. No remaining2026 stub cash flow is forecast. Forecast years are constant run-rate proxies.",
+    "No verified current share quote is supplied. Reverse valuation and price/upside comparisons are unavailable. No actual user portfolio is used.",
+    "Historical statement summaries now include FY2025 and FY2024 as reported in the 2025 annual report. This is a selected comparative history, not a full three-year normalization or a linked three-statement forecast. Group consolidated actuals must not be compared directly with unscaled whole-operation model rows."
+  ],
+  "notes": "Public worked example. Reported historical figures are transcribed from issuer documents; future inputs are agent-authored illustrative assumptions, not management guidance. See MLX-MODEL-NOTES.md for source-page mapping, sign conventions and reconciliation checks."
+}

@@ -237,20 +237,67 @@ def recommend(ctx: typer.Context, path: Path):
 
 @app.command()
 def model(ctx: typer.Context, inputs: Path):
-    """Run validated financial scenarios, charts, report, and formula-based workbook."""
-    from .models import run_model
-
+    """Create/synchronize Excel detail and its Markdown analysis; accept JSON or edited XLSX."""
+    from .excel import create, synchronize
+    from .workspace import digest
     ws = ctx.obj
-    data = read_json(inputs)
+    source = ws.inside(str(inputs))
+    if source.suffix.lower() == ".xlsx":
+        with ws.lock():
+            emit(synchronize(ws, source))
+        return
+    data = read_json(source)
     company_id = data.get("company_id", "")
     import re
 
     if not re.fullmatch(r"[a-z0-9]+-[a-z0-9.-]+", company_id):
         raise typer.BadParameter("Invalid company_id")
     with ws.lock():
-        destination = ws.root / "companies" / company_id / "models"
-        result = run_model(inputs, destination)
+        working = ws.root / "companies" / company_id / "working" / f"model-{digest(data)[:16]}.xlsx"
+        if not working.exists():
+            create(source, working)
+        if shutil.which("soffice"):
+            result = synchronize(ws, working)
+        else:
+            result = {"status": "editable_unverified", "workbook": str(working), "next": "Install LibreOffice/soffice and run invest excel-sync to publish a checked Markdown report"}
     emit(result)
+
+
+@app.command()
+def excel_create(ctx: typer.Context, inputs: Path, output: Annotated[Path, typer.Option()]):
+    """Create a professional editable workbook; preserve any existing working model."""
+    from .excel import create
+    ws = ctx.obj
+    with ws.lock():
+        try:
+            emit(create(ws.inside(str(inputs)), ws.inside(str(output))))
+        except ValueError as error:
+            raise typer.BadParameter(str(error)) from None
+
+
+@app.command()
+def excel_sync(ctx: typer.Context, workbook: Path):
+    """Recalculate Excel and publish a matching Markdown/model snapshot and dossier."""
+    from .excel import synchronize
+    ws = ctx.obj
+    with ws.lock():
+        try:
+            result = synchronize(ws, ws.inside(str(workbook)))
+            emit({key: result[key] for key in ("run_id", "output_dir", "active_case", "workbook_validation")})
+        except ValueError as error:
+            raise typer.BadParameter(str(error)) from None
+
+
+@app.command()
+def excel_refresh(ctx: typer.Context, workbook: Path, inputs: Path, output: Annotated[Path, typer.Option()]):
+    """Refresh source inputs into a new workbook, preserving explicit user overrides."""
+    from .excel import refresh
+    ws = ctx.obj
+    with ws.lock():
+        try:
+            emit(refresh(ws.inside(str(workbook)), ws.inside(str(inputs)), ws.inside(str(output))))
+        except ValueError as error:
+            raise typer.BadParameter(str(error)) from None
 
 
 @app.command()
@@ -267,12 +314,16 @@ def validate_workbook(ctx: typer.Context, model_json: Path):
         inputs = read_json(path.parent / "inputs.json")
         if not result or not inputs:
             raise typer.BadParameter("Expected a model.json with its inputs.json snapshot")
-        expected = analyse(inputs)
-        if any(result.get(k) != v for k, v in expected.items()):
-            raise typer.BadParameter("Model output differs from its input snapshot")
         checked_at = now()
         try:
-            check = verify_workbook(path.parent / "model.xlsx", expected)
+            if result.get("authority") == "excel":
+                from .excel import validate_snapshot_live
+                check = validate_snapshot_live(path)
+            else:
+                expected = analyse(inputs)
+                if any(result.get(k) != v for k, v in expected.items()):
+                    raise ValueError("Model output differs from its input snapshot")
+                check = verify_workbook(path.parent / "model.xlsx", expected)
         except ValueError as error:
             check = {"status": "failed", "reason": str(error)}
         record = {**check, "checked_at": checked_at, "model_file": "model.json"}
@@ -334,12 +385,14 @@ def status(ctx: typer.Context):
     """Show pending reviews, interrupted runs, and latest coverage."""
     ws = ctx.obj
     settings = ws.settings()
+    from .excel import status as excel_status
     runs = sorted(
         [read_json(p) for p in (ws.root / "state/runs").glob("*.json")], key=lambda r: r["started_at"]
     )
     emit(
         {
             "companies": [c.id for c in settings.companies],
+            "excel_models": excel_status(ws),
             "pending": [
                 {"id": r["id"], "status": r["status"]}
                 for r in runs

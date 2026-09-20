@@ -1,0 +1,381 @@
+{
+  "model_version": "1.2.0",
+  "purpose": "illustrative_sensitivity",
+  "company_id": "asx-mlx",
+  "currency": "AUD",
+  "known_limitations": [
+    "ILLUSTRATIVE IMPUTED-REVENUE SENSITIVITY ONLY. This is not an actionable fair-value estimate or an investment recommendation.",
+    "Production is used solely as the company-style imputed-revenue proxy (100% produced tin sold/paid); it is NOT reported payable sales. The workbook labels it production_tonnes_proxy. Realized payable sales, inventory, settlement timing and revenue must replace this proxy before valuation.",
+    "The baseline price AUD63,760/t is the reported trailing-12-month LME-imputed price, NOT realized tin sales price. Scenario price and volume levels are analyst stress assumptions, not company guidance.",
+    "Unit cost combines reported trailing-12-month C1 AUD19,349/t and imputed sales/marketing AUD8,089/t. Marketing includes royalties and payable-tin deductions, so separate royalty_rate=0 prevents duplicate deductions. Price-linked marketing behavior is not separately modelled and could materially affect sensitivity.",
+    "Finite horizons 3/5/7 years are illustrative assumptions, not reserve-supported mine life. The quarterly report said an updated life-of-mine plan and Ore Reserve were expected in Q3 2026; those updates have not been verified. No perpetuity or residual value is included.",
+    "Cash AUD374m is as at June 30 2026; debt AUD3.285m and issued shares886,391,538 are as at December31 2025. These stale mixed-date balances need updated half-year/ASX checks. Issued shares are a proxy, NOT a verified current fully diluted denominator.",
+    "Closure is an explicit assumed AUD100m whole-operation nominal final-year payment. The reported AUD33.035m group rehabilitation provision is a present-value accounting figure, not this cash-payment estimate; actual scope/timing and other closure sites remain unmodelled.",
+    "Capex annualizes June-quarter whole-operation AUD23.4m to AUD93.6m each model year, including both sustaining and project spend. This is a scenario assumption, not guidance. No additional AISC deduction is made.",
+    "Annual corporate costs annualize group June-quarter AUD0.56m to AUD2.24m, deducted once after 50% attribution. Other investments/residual assets are set to zero only to exclude them from this limited sensitivity, not because they have zero economic value.",
+    "Tax rate30% is an analyst simplifying assumption; depreciation is assumed zero and no loss carryforwards, corporate tax shields or closure deductions are modelled. No forecast working-capital changes are assumed; this is not verified operational guidance.",
+    "Annual row labels2027 onward denote period-end annualized flows one/two/etc years from the valuation date, not an audited fiscal calendar projection. No remaining2026 stub cash flow is forecast. Forecast years are constant run-rate proxies.",
+    "No verified current share quote is supplied. Reverse valuation and price/upside comparisons are unavailable. No actual user portfolio is used.",
+    "Historical statement summaries now include FY2025 and FY2024 as reported in the 2025 annual report. This is a selected comparative history, not a full three-year normalization or a linked three-statement forecast. Group consolidated actuals must not be compared directly with unscaled whole-operation model rows."
+  ],
+  "valuation_date": "2026-09-20",
+  "quote_date": null,
+  "reference_price": null,
+  "synthetic": false,
+  "scenarios": {
+    "bear": {
+      "years": [
+        {
+          "year": 2027,
+          "revenue": 518154566.4,
+          "operating_cost": 306595778.94,
+          "royalties": 0,
+          "ebit": 211558787.46,
+          "tax": 63467636.238,
+          "nopat": 148091151.222,
+          "operating_fcf": 54491151.222,
+          "fcf": 25005575.611,
+          "present_value": 22326406.7955357,
+          "illustrative_cash": 399005575.611
+        },
+        {
+          "year": 2028,
+          "revenue": 518154566.4,
+          "operating_cost": 306595778.94,
+          "royalties": 0,
+          "ebit": 211558787.46,
+          "tax": 63467636.238,
+          "nopat": 148091151.222,
+          "operating_fcf": 54491151.222,
+          "fcf": 25005575.611,
+          "present_value": 19934291.7817283,
+          "illustrative_cash": 424011151.222
+        },
+        {
+          "year": 2029,
+          "revenue": 518154566.4,
+          "operating_cost": 306595778.94,
+          "royalties": 0,
+          "ebit": 211558787.46,
+          "tax": 63467636.238,
+          "nopat": 148091151.222,
+          "operating_fcf": -45508848.778,
+          "fcf": -24994424.389,
+          "present_value": -17790537.585556,
+          "illustrative_cash": 399016726.833
+        }
+      ],
+      "enterprise_value": 24470160.9917081,
+      "cash": 374000000,
+      "debt": 3285000,
+      "other_assets": 0,
+      "equity_value": 395185160.991708,
+      "per_share": 0.445835890856291,
+      "minimum_illustrative_cash": 374000000
+    },
+    "base": {
+      "years": [
+        {
+          "year": 2027,
+          "revenue": 719659120,
+          "operating_cost": 309692706,
+          "royalties": 0,
+          "ebit": 409966414,
+          "tax": 122989924.2,
+          "nopat": 286976489.8,
+          "operating_fcf": 193376489.8,
+          "fcf": 94448244.9,
+          "present_value": 85862040.8181818,
+          "illustrative_cash": 468448244.9
+        },
+        {
+          "year": 2028,
+          "revenue": 719659120,
+          "operating_cost": 309692706,
+          "royalties": 0,
+          "ebit": 409966414,
+          "tax": 122989924.2,
+          "nopat": 286976489.8,
+          "operating_fcf": 193376489.8,
+          "fcf": 94448244.9,
+          "present_value": 78056400.7438016,
+          "illustrative_cash": 562896489.8
+        },
+        {
+          "year": 2029,
+          "revenue": 719659120,
+          "operating_cost": 309692706,
+          "royalties": 0,
+          "ebit": 409966414,
+          "tax": 122989924.2,
+          "nopat": 286976489.8,
+          "operating_fcf": 193376489.8,
+          "fcf": 94448244.9,
+          "present_value": 70960364.3125469,
+          "illustrative_cash": 657344734.7
+        },
+        {
+          "year": 2030,
+          "revenue": 719659120,
+          "operating_cost": 309692706,
+          "royalties": 0,
+          "ebit": 409966414,
+          "tax": 122989924.2,
+          "nopat": 286976489.8,
+          "operating_fcf": 193376489.8,
+          "fcf": 94448244.9,
+          "present_value": 64509422.1023154,
+          "illustrative_cash": 751792979.6
+        },
+        {
+          "year": 2031,
+          "revenue": 719659120,
+          "operating_cost": 309692706,
+          "royalties": 0,
+          "ebit": 409966414,
+          "tax": 122989924.2,
+          "nopat": 286976489.8,
+          "operating_fcf": 93376489.8,
+          "fcf": 44448244.9,
+          "present_value": 27598863.0309653,
+          "illustrative_cash": 796241224.5
+        }
+      ],
+      "enterprise_value": 326987091.007811,
+      "cash": 374000000,
+      "debt": 3285000,
+      "other_assets": 0,
+      "equity_value": 697702091.007811,
+      "per_share": 0.787126299267323,
+      "minimum_illustrative_cash": 374000000
+    },
+    "bull": {
+      "years": [
+        {
+          "year": 2027,
+          "revenue": 949950038.4,
+          "operating_cost": 323628877.77,
+          "royalties": 0,
+          "ebit": 626321160.63,
+          "tax": 187896348.189,
+          "nopat": 438424812.441,
+          "operating_fcf": 344824812.441,
+          "fcf": 170172406.2205,
+          "present_value": 157567042.796759,
+          "illustrative_cash": 544172406.2205
+        },
+        {
+          "year": 2028,
+          "revenue": 949950038.4,
+          "operating_cost": 323628877.77,
+          "royalties": 0,
+          "ebit": 626321160.63,
+          "tax": 187896348.189,
+          "nopat": 438424812.441,
+          "operating_fcf": 344824812.441,
+          "fcf": 170172406.2205,
+          "present_value": 145895409.996999,
+          "illustrative_cash": 714344812.441
+        },
+        {
+          "year": 2029,
+          "revenue": 949950038.4,
+          "operating_cost": 323628877.77,
+          "royalties": 0,
+          "ebit": 626321160.63,
+          "tax": 187896348.189,
+          "nopat": 438424812.441,
+          "operating_fcf": 344824812.441,
+          "fcf": 170172406.2205,
+          "present_value": 135088342.589814,
+          "illustrative_cash": 884517218.6615
+        },
+        {
+          "year": 2030,
+          "revenue": 949950038.4,
+          "operating_cost": 323628877.77,
+          "royalties": 0,
+          "ebit": 626321160.63,
+          "tax": 187896348.189,
+          "nopat": 438424812.441,
+          "operating_fcf": 344824812.441,
+          "fcf": 170172406.2205,
+          "present_value": 125081798.694272,
+          "illustrative_cash": 1054689624.882
+        },
+        {
+          "year": 2031,
+          "revenue": 949950038.4,
+          "operating_cost": 323628877.77,
+          "royalties": 0,
+          "ebit": 626321160.63,
+          "tax": 187896348.189,
+          "nopat": 438424812.441,
+          "operating_fcf": 344824812.441,
+          "fcf": 170172406.2205,
+          "present_value": 115816480.272474,
+          "illustrative_cash": 1224862031.1025
+        },
+        {
+          "year": 2032,
+          "revenue": 949950038.4,
+          "operating_cost": 323628877.77,
+          "royalties": 0,
+          "ebit": 626321160.63,
+          "tax": 187896348.189,
+          "nopat": 438424812.441,
+          "operating_fcf": 344824812.441,
+          "fcf": 170172406.2205,
+          "present_value": 107237481.733773,
+          "illustrative_cash": 1395034437.323
+        },
+        {
+          "year": 2033,
+          "revenue": 949950038.4,
+          "operating_cost": 323628877.77,
+          "royalties": 0,
+          "ebit": 626321160.63,
+          "tax": 187896348.189,
+          "nopat": 438424812.441,
+          "operating_fcf": 244824812.441,
+          "fcf": 120172406.2205,
+          "present_value": 70119444.8052013,
+          "illustrative_cash": 1515206843.5435
+        }
+      ],
+      "enterprise_value": 856806000.889294,
+      "cash": 374000000,
+      "debt": 3285000,
+      "other_assets": 0,
+      "equity_value": 1227521000.88929,
+      "per_share": 1.38485189474958,
+      "minimum_illustrative_cash": 374000000
+    }
+  },
+  "sensitivity": [
+    {
+      "driver_multiplier": 0.8,
+      "discount_rate": 0.08,
+      "per_share": 0.578359517378467
+    },
+    {
+      "driver_multiplier": 0.8,
+      "discount_rate": 0.1,
+      "per_share": 0.571685164335585
+    },
+    {
+      "driver_multiplier": 0.8,
+      "discount_rate": 0.12,
+      "per_share": 0.565454109640298
+    },
+    {
+      "driver_multiplier": 1,
+      "discount_rate": 0.08,
+      "per_share": 0.805276522783041
+    },
+    {
+      "driver_multiplier": 1,
+      "discount_rate": 0.1,
+      "per_share": 0.787126299267323
+    },
+    {
+      "driver_multiplier": 1,
+      "discount_rate": 0.12,
+      "per_share": 0.770323737886184
+    },
+    {
+      "driver_multiplier": 1.2,
+      "discount_rate": 0.08,
+      "per_share": 1.03219352818761
+    },
+    {
+      "driver_multiplier": 1.2,
+      "discount_rate": 0.1,
+      "per_share": 1.00256743419906
+    },
+    {
+      "driver_multiplier": 1.2,
+      "discount_rate": 0.12,
+      "per_share": 0.975193366132069
+    }
+  ],
+  "driver_comparisons": [
+    {
+      "driver": "price",
+      "multiplier": 0.8,
+      "per_share": 0.5716851643355854,
+      "change_from_base": -0.215441134931738
+    },
+    {
+      "driver": "price",
+      "multiplier": 1.0,
+      "per_share": 0.7871262992673234,
+      "change_from_base": 0.0
+    },
+    {
+      "driver": "price",
+      "multiplier": 1.2,
+      "per_share": 1.0025674341990616,
+      "change_from_base": 0.21544113493173822
+    },
+    {
+      "driver": "unit_cost",
+      "multiplier": 0.8,
+      "per_share": 0.879837620789548,
+      "change_from_base": 0.09271132152222461
+    },
+    {
+      "driver": "unit_cost",
+      "multiplier": 1.0,
+      "per_share": 0.7871262992673234,
+      "change_from_base": 0.0
+    },
+    {
+      "driver": "unit_cost",
+      "multiplier": 1.2,
+      "per_share": 0.6944149777450992,
+      "change_from_base": -0.09271132152222417
+    },
+    {
+      "driver": "payable_tonnes",
+      "multiplier": 0.8,
+      "per_share": 0.6643964858578097,
+      "change_from_base": -0.12272981340951361
+    },
+    {
+      "driver": "payable_tonnes",
+      "multiplier": 1.0,
+      "per_share": 0.7871262992673234,
+      "change_from_base": 0.0
+    },
+    {
+      "driver": "payable_tonnes",
+      "multiplier": 1.2,
+      "per_share": 0.9098561126768371,
+      "change_from_base": 0.12272981340951372
+    }
+  ],
+  "reverse_valuation": {
+    "status": "unavailable",
+    "reason": "No verified reference price/quote date supplied"
+  },
+  "warnings": [
+    "Annual end-of-period convention; explicit residual only, no terminal perpetuity.",
+    "Cash path excludes financing, dividends and debt maturities; it is not a solvency forecast.",
+    "Mine tax is a simplified current-year positive EBIT tax; no tax-loss carryforwards or jurisdiction tax advice."
+  ],
+  "authority": "excel",
+  "active_case": "base",
+  "synchronized_at": "2026-09-20T02:59:26.928345+00:00",
+  "source_workbook_sha256": "ae52c6308dccbce6af18a3efa926852095517d5676455069e587e00a9e7ec449",
+  "workbook_sha256": "bad30255da866b27ee20b606093bdbf7c1a911c5a32f81630aff08c7c4592022",
+  "source_workbook": "private/mlx-working.xlsx",
+  "input_changes": [],
+  "workbook_validation": {
+    "status": "passed",
+    "engine": "LibreOffice",
+    "checks": "Excel operating, valuation and sensitivity outputs matched independent Python calculations in all three cases"
+  },
+  "run_id": "excel-ae52c6308dccbce6",
+  "output_dir": "examples/mlx"
+}

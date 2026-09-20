@@ -55,7 +55,10 @@ def add_recommendation(workspace: Workspace, value: Recommendation) -> str:
             raise ValueError("Recommendation requires a generated model.json and its inputs.json snapshot")
         validate_model(inputs)
         expected = analyse(inputs)
-        if inputs.get("synthetic") or any(model.get(k) != v for k, v in expected.items()):
+        if model.get("authority") == "excel":
+            from .excel import verify_snapshot
+            verify_snapshot(model_path)
+        elif inputs.get("synthetic") or any(model.get(k) != v for k, v in expected.items()):
             raise ValueError("Model output does not reproduce from its validated input snapshot")
         if (
             inputs.get("reference_price") != value.price
@@ -185,6 +188,24 @@ def dossier(workspace: Workspace, company_id: str) -> Path:
     if not facts:
         lines += ["| No verified facts imported yet | — | — | — | — | — |"]
     lines += ["", "## Models", ""]
+    from .excel import status as excel_status
+    for record in excel_status(workspace, company_id):
+        model_path = workspace.inside(record["model"])
+        model = read_json(model_path)
+        lines += [
+            f"**Excel / Markdown alignment:** {record['status'].replace('_', ' ')}. "
+            f"Last synchronized: {record['synchronized_at']}.", "",
+            f"[Read the model analysis]({link(model_path.parent / 'report.md', folder)}) · "
+            f"[Detailed Excel snapshot]({link(model_path.parent / 'model.xlsx', folder)}) · "
+            f"[Editable working workbook]({link(workspace.inside(record['working_workbook']), folder)})", "",
+        ]
+        if record["status"] == "current" and model:
+            active = model["active_case"]
+            lines += [f"Selected {active} case: {model['scenarios'][active]['per_share']:.4f} {model['currency']}/share. "
+                      "Model output only; evidence limitations in the linked analysis still apply.", ""]
+        else:
+            lines += ["**The working workbook is not synchronized.** Linked analysis describes the last validated snapshot. "
+                      "Run `invest excel-sync` before using new workbook edits in research conclusions.", ""]
     model_reports = sorted((folder / "models").glob("*/report.md"))
     lines += [f"- [{p.parent.name}]({link(p, folder)})" for p in model_reports] or ["No model run yet."]
     for report in model_reports:

@@ -118,7 +118,7 @@ uv run invest status
 uv run invest model examples/model-mine.json
 ```
 
-Collection creates a review packet; `pending_review` means the agent still needs to investigate and classify every candidate. The example model uses synthetic data and proves only the calculation/export path. It produces a Markdown report, chart and editable Excel workbook. Install LibreOffice and put `soffice` on PATH for independent workbook recalculation; otherwise parity remains unverified. The optional `uv sync --locked --extra documents` adds Docling for local structured PDF extraction.
+Collection creates a review packet; `pending_review` means the agent still needs to investigate and classify every candidate. The example model uses synthetic data and proves only the calculation/export path. With LibreOffice available, it produces a Markdown report linked to its detailed Excel workbook, with charts inside. Install LibreOffice and put `soffice` on PATH for independent recalculation. Without it, only an editable, unverified working workbook is created; synchronize after installing the engine to publish results. See [Excel and Markdown](excel-models.md) for editing and refresh commands. The optional `uv sync --locked --extra documents` adds Docling for local structured PDF extraction.
 
 Then ask your agent:
 

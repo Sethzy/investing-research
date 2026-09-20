@@ -343,3 +343,8 @@ Reviewed on 2026-09-20. Links below are discovery references; implementation mus
 - Existing authenticated X capture code is an implementation reference only. Any reused code must be brought into this project with its dependencies and licence obligations; the original workspace is not a runtime dependency.
 
 Bird keyword search passed a live local smoke test on 2026-09-20; see the [validation record](../../validation/2026-09-20-bird-search-smoke.md). This used the existing installed component and local authenticated session, not a fresh install of this repository. No chosen upstream was runtime-tested as an integrated MLX system during specification. The compatibility proof and acceptance suite are required before describing the product as working. GitHub adoption informed selection but is not a substitute for those checks.
+
+
+## Implemented amendment: Markdown report with Excel detail
+
+The primary reading surface is Markdown. Each accepted model report links its matching detailed Excel workbook, rather than duplicating every schedule in prose. Excel contains source history, editable supported assumptions, active bear/base/bull operating schedules, valuation, sensitivities, checks and charts. `excel-sync` independently recalculates all cases before publishing immutable workbook/results/Markdown snapshots. Unsynchronized edits are explicitly stale. `excel-refresh` merges new source inputs while preserving analyst overrides and recording conflicts. Formula/structure changes require a reviewed model revision. See [the current workflow](../../excel-models.md) and [public MLX example](../../../examples/mlx/report.md). The example is an illustrative finite-life sensitivity, not a complete three-statement forecast or investment recommendation.
