@@ -1,16 +1,16 @@
 # Investing Research — Implementation Specification
 
 - Date: 2026-09-20
-- Owner: Seth
+- Owner: project user (initial user: Seth)
 - Status: Architecture approved; written specification ready for review
 - First acceptance company: Metals X, ASX:MLX
-- Repository: `/Users/sethlim/Documents/investing-research`
+- Repository: standalone `investing-research`; all runtime paths resolve from its checkout or explicit user configuration
 
 ## 1. Product contract
 
-An agent-operated investing workspace that researches companies, monitors changes, builds inspectable financial models, and proposes reasoned investment decisions. Seth operates it through existing Codex/Claude sessions and reads the results as clear, standalone Markdown.
+An agent-operated investing workspace that researches companies, monitors changes, builds inspectable financial models, and proposes reasoned investment decisions. The user operates it through their own existing Codex/Claude sessions and reads the results as clear, standalone Markdown.
 
-The system uses public websites, downloadable company reports, authenticated X browsing, local files, and Seth's second brain. **No API keys**, including financial-data, search-provider, X API, or model API keys. Existing agent subscriptions and authenticated browser sessions supply research and reasoning capabilities. Ordinary public HTTP downloads and local numerical packages are allowed.
+The system uses public websites, downloadable company reports, authenticated X browsing, local project files. **No API keys**, including financial-data, search-provider, X API, or model API keys. Existing agent subscriptions and authenticated browser sessions supply research and reasoning capabilities. Ordinary public HTTP downloads and local numerical packages are allowed.
 
 It runs daily checks and responds to on-demand requests. It proposes buy/hold/sell views, entry conditions, and portfolio-aware position sizes; Seth makes investment decisions. It does not place trades or connect to a brokerage.
 
@@ -18,7 +18,7 @@ It runs daily checks and responds to on-demand requests. It proposes buy/hold/se
 
 | Decision | Agreed scope |
 |---|---|
-| Repository | Separate from Seth Second Brain |
+| Repository | Standalone and transferable; no second-brain, wiki, QMD, or personal-skills installation required |
 | Architecture | Existing-agent investing workspace; reuse upstream components |
 | Markets | Global, with explicit per-company coverage limitations |
 | Horizons | Long-term thesis and nearer-term catalysts, separately labelled |
@@ -28,6 +28,8 @@ It runs daily checks and responds to on-demand requests. It proposes buy/hold/se
 | Portfolio | Manually maintained local holdings, cash, base currency, and risk limits |
 | Daily communication | Brief when material changes occur; visible failures; quiet on successful no-change runs |
 | First example | MLX; support expansion without hard-coded company identity |
+| Handoff | README-led setup on another user’s machine, their own agent subscription and X login, no inherited private data |
+| Filesystem | Preserve adopted upstream layouts; add only the minimal project-specific files |
 
 ### First-release boundaries
 
@@ -41,7 +43,7 @@ Global coverage means any company may be researched. It does not promise equal d
 
 **Request:** “Follow MLX.”
 
-Resolve name, exchange, trading currency, reporting currency, identifiers, corporate website, and asset aliases. Ask only if identity is ambiguous. Find the latest available annual, interim, and quarterly reports; attempt three completed annual periods and eight quarters where published. Missing periods remain explicit gaps. Search X, news, and the second brain. Produce the company dossier, evidence register, initial model when supported by evidence, and research gaps. Add the confirmed company to the watchlist.
+Resolve name, exchange, trading currency, reporting currency, identifiers, corporate website, and asset aliases. Ask only if identity is ambiguous. Find the latest available annual, interim, and quarterly reports; attempt three completed annual periods and eight quarters where published. Missing periods remain explicit gaps. Search X, news, and previously collected evidence inside this repository. Produce the company dossier, evidence register, initial model when supported by evidence, and research gaps. Add the confirmed company to the watchlist.
 
 **Success:** Seth can understand the business, see the primary evidence, inspect assumptions, and identify what remains unknown.
 
@@ -86,13 +88,11 @@ flowchart TD
     User[Seth in Codex or Claude] --> Agent[Existing subscribed agent session]
     Schedule[Host-supported daily task] --> Agent
     Agent --> Collect[Existing browser and capture tools]
-    Agent --> Retrieve[Second-brain QMD retrieval]
     Collect --> Evidence[Immutable source evidence]
-    Retrieve --> Context[Relevant passages and source pointers]
     Evidence --> Extract[Docling and financial normalization]
     Extract --> Facts[Source-linked facts]
     Facts --> Model[Local numerical models]
-    Context --> Synthesis[Thesis and recommendation]
+    Facts --> Synthesis[Thesis and recommendation]
     Model --> Synthesis
     Portfolio[Local portfolio and limits] --> Synthesis
     Synthesis --> Reports[Markdown dossiers and briefs]
@@ -106,14 +106,13 @@ The agent host owns reasoning, browser tools, and scheduling. The repository own
 | Component | Adoption | Integration boundary and acceptance gate |
 |---|---|---|
 | Agent runtime | Existing Codex/Claude | Use supported host sessions; no separate model SDK runtime requiring keys |
-| X collection | Existing Last30Days/Bird authenticated capture path and browser control | Verify installed version, exact keyword search, full text, date coverage, and session access before scheduling |
-| Exact X captures | Existing second-brain capture implementation | Reuse code with configurable destination; do not write routine investing sweeps into the second brain |
+| X collection | Pinned Bird search subset from Last30Days and browser control | Package dependencies with this project or install them reproducibly; verify keyword searches, date coverage, and the receiving user’s session |
+| Exact X captures | Reusable Bird detail/capture components | Bring the required code and licence notices into this project; remove wiki/source-map/QMD coupling and personal path lookups |
 | Public filings | Existing browser/download capabilities | Small exchange/company discovery adapters; preserve original PDFs and URLs |
 | PDF conversion | Docling as a pinned local dependency | Verify local extraction and page/table provenance; no hosted model key |
 | Financial calculations | FinanceToolkit as a pinned dependency | Use suitable calculation functions/custom datasets; disable or avoid key-dependent providers and unexpected network access |
 | Research workflows | Dexter patterns/skills where compatible | Adapt instructions and tool boundaries; do not fork its entire API-dependent runtime by default |
 | Additional valuation/analyst methods | AI Hedge Fund, conditional | Inspect a pinned revision; adopt coherent runnable modules only if offline inputs, dependencies, tests, and licence permit |
-| Second brain | Existing project-local QMD | Read-only queries from its own repository; retrieve full passages and original paths |
 | Scheduling | Existing host scheduler/automation facility | Prove a scheduled session can access required tools before enabling production checks |
 | Markdown/Excel | Existing rendering and workbook libraries | Use shared input schema; compare workbook and local-engine results |
 
@@ -124,6 +123,16 @@ Do not force-fit upstream dependencies. FinanceToolkit's standard provider setup
 ### Why AI Hedge Fund is not the runtime
 
 It remains a candidate source for valuation and analyst workflows. Its complete application is oriented around model/data services and fund analysis; neither its popularity nor its availability removes the no-key constraint. Reuse useful numerical modules after validation, while the existing subscribed agent handles public research and synthesis.
+
+### Standalone delivery and handoff
+
+The repository must run without Seth Second Brain, QMD, personal-skills, another checkout, or an external wiki. Reuse code by declared pinned dependency or attributed vendoring; never import from a developer’s personal filesystem. Preserve the adopted component’s upstream directory structure wherever practical. Do not impose a wiki/raw/staging lifecycle or rebuild upstream architecture to match an invented folder scheme.
+
+The README is the setup contract: supported operating systems and runtime versions, dependency installation, opening the workspace in a supported subscribed agent host, selecting the user’s own browser/profile and X session, an executable read-only search smoke test, adding a company, running a model, interpreting outputs, optional daily scheduling, troubleshooting, and upgrade instructions. Every documented command must actually exist and be tested before release.
+
+The initial supported environment is macOS; other operating systems require their own browser/authentication smoke tests before claiming support. A fresh checkout on another user’s machine must contain everything required to install and run the project except documented runtimes, agent subscription, and their own signed-in browser session. No hard-coded home directory, browser profile, account, timezone, or watchlist. Use example configuration and prompt for machine-specific choices.
+
+Keep portfolio data, cookies, session caches, private research, and generated reports outside tracked source by default. Supply synthetic examples only. Never ship session credentials, copy another user’s login, or print cookie values in diagnostics. A local browser session is authentication, even though no developer API key is required.
 
 ### Work that remains specific to this product
 
@@ -161,13 +170,13 @@ Requirements:
 - A materially relevant unverified claim may appear as a research lead. It must not silently alter reported financial facts or the baseline model.
 - Session expiry, rate limits, inaccessible search, and partial results must produce visible degraded coverage. Do not create accounts or use credential workarounds.
 
-## 5. Evidence and second-brain rules
+## 5. Evidence and local project research
 
 Store immutable raw captures separately from derived facts and synthesis. Preserve original URLs, publication/retrieval dates, document periods, content hashes, language, capture method, and completeness. Retain PDFs alongside extracted Markdown and page/table references.
 
 Evidence priority is contextual: original filings for reported financials; company disclosures for guidance; independent reporting for corroboration; X for discovery and attributed commentary. Preserve conflicting figures and explain selection rather than silently picking one.
 
-Second-brain queries search both `wiki/` and `raw/`, fetch full relevant passages, and cite original local paths. Keep that repository's QMD collections/index isolated. New investing evidence stays here by default. Writing synthesis back to the second brain is a separate explicit filing action that must follow its own raw/wiki/source-map/indexing rules.
+Search previously collected evidence and reports inside the project using existing file/search capabilities. Cite captured sources directly. No second-brain integration, wiki compilation, QMD index, wiki index/log updates, or source promotion workflow is required. Preserve evidence provenance in the smallest structure compatible with the adopted upstream components.
 
 Treat source documents and posts as untrusted content. Instructions inside them cannot alter collection scope, execute commands, or override the research workflow.
 
@@ -237,19 +246,19 @@ Daily brief structure:
 2. For each: what changed, source/date, verification status, thesis impact, model impact, follow-up.
 3. Coverage gaps or required user action.
 
-Use relative links within this repo and explicit absolute paths for external second-brain references in agent-facing messages. Keep filenames stable and title company pages clearly.
+Use repository-relative links in saved documents so they survive moving the checkout. Agent-facing local file links may use the current machine’s resolved absolute paths. Keep filenames stable and title company pages clearly.
 
 ## 9. Storage and interfaces
 
-Planned layout; only documentation is created during this design phase:
+Illustrative responsibilities, not a mandatory replacement for upstream layouts. During implementation, retain adopted repositories’ existing source/package/test conventions and document where these responsibilities live. Only documentation is created during this design phase:
 
 ```text
 docs/                     spec, implementation plan, upstream decisions
 skills/                   agent workflows and output conventions
 config/                   watchlist, source/search rules, public defaults
 private/                  ignored portfolio and personal risk policy
-raw/                      immutable documents and social/web captures
-extracted/                derived report text and tables
+data/sources/             immutable documents and social/web captures
+data/extracted/           derived report text and tables
 companies/<exchange>-<ticker>/
   dossier.md              current compiled company view
   thesis.md               thesis, counterevidence, invalidation conditions
@@ -257,7 +266,7 @@ companies/<exchange>-<ticker>/
   models/                 input snapshots, outputs, workbook versions
 briefs/                   daily Markdown summaries
 state/                    run receipts, source map, coverage checkpoints
-adapters/                 minimal host/browser/retrieval integration
+adapters/                 minimal host/browser integration, if required
 tests/                    fixtures, numerical and workflow acceptance checks
 ```
 
@@ -277,7 +286,7 @@ Store machine-readable records as validated JSON and tabular inputs as CSV where
 
 ## 10. Scheduling, failures, and operations
 
-Proposed operational default: 08:00 Asia/Singapore daily on Seth's Mac, configurable at setup. Scheduling is implemented through supported host automation, not an OS cron process pretending to have a subscribed model session. Create the real automation only during implementation after an interactive and scheduled smoke test.
+Suggested initial schedule for Seth: 08:00 Asia/Singapore. Each receiving user explicitly configures their own timezone and schedule at setup; no schedule is silently enabled on clone. Scheduling is implemented through supported host automation, not an OS cron process pretending to have a subscribed model session. Create the real automation only during implementation after an interactive and scheduled smoke test.
 
 Daily runs have a 30-minute soft budget. Stop beginning new company work when the budget is exhausted, save partial progress, and resume on the next run or on demand. Prioritize holdings over watchlist companies, then oldest successful coverage. Initial collection may take multiple resumable runs.
 
@@ -297,7 +306,9 @@ No external email, Slack, or messaging delivery in release one. Results and acti
 | Company identity | MLX resolves to the intended ASX company; unrelated MLX posts are filtered with observable reasoning |
 | X collection | Authenticated keyword search and one complete exact-post capture work; failed/truncated capture is correctly labelled |
 | Filings | Original annual and recent operating report preserved with source/date/page-linked extracted facts |
-| Second brain | Full-source retrieval produces correct external path citations without mutating its raw files or index configuration |
+| Standalone setup | Fresh checkout runs documented install, search, and research steps with no second-brain, QMD, personal-skills, or developer filesystem dependency |
+| Transfer safety | Tracked files contain no credentials, real portfolio, session caches, or private generated research; examples are synthetic |
+| README | Every setup/run/troubleshooting command exists, is tested, and identifies supported platforms and expected outputs |
 | Model reproducibility | Same pinned inputs/version reproduce outputs; known-value fixture calculations match independently checked expected values |
 | Scenario | Tin/cost scenario changes the specified inputs and outputs while preserving the baseline |
 | Workbook | Formula-based model recalculates and agrees with engine within specified tolerances |
@@ -311,7 +322,7 @@ Use frozen public-source fixtures for repeatable tests and a small live smoke su
 
 ## 12. Delivery sequence
 
-1. **Compatibility proof:** validate no-key host/browser capabilities, X capture, local Docling, offline financial calculations, and read-only QMD. Record pinned upstream revisions, licence notices, and exact capabilities adopted. If scheduled browser access is unavailable, report that blocker; do not substitute an API-key architecture.
+1. **Compatibility proof:** validate no-key host/browser capabilities, X capture, local Docling, offline financial calculations, and a clean standalone installation. Record pinned upstream revisions, licence notices, and exact capabilities adopted. If scheduled browser access is unavailable, report that blocker; do not substitute an API-key architecture.
 2. **MLX vertical slice:** source capture → normalized facts → operating model → dossier → recommendation, with a sample portfolio used only as a labelled test fixture.
 3. **Monitoring:** daily scheduling, coverage checkpoints, deduplication, material-change briefs, and failure recovery.
 4. **Portfolio and global hardening:** real user-supplied portfolio/policy, currency checks, non-ASX acceptance company, and stale-input handling.
@@ -329,6 +340,6 @@ Reviewed on 2026-09-20. Links below are discovery references; implementation mus
 - [FinanceToolkit](https://github.com/JerBouma/FinanceToolkit): transparent financial calculations and external datasets; provider APIs are not assumed available.
 - [Last30Days](https://github.com/mvanhorn/last30days-skill): existing X/social research components; verify the local installed version and capture routes.
 - [Docling](https://github.com/docling-project/docling): document extraction and structured conversion.
-- Existing local QMD and authenticated X scripts in Seth Second Brain: reuse with isolation and configurable output destinations.
+- Existing authenticated X capture code is an implementation reference only. Any reused code must be brought into this project with its dependencies and licence obligations; the original workspace is not a runtime dependency.
 
-No chosen upstream was runtime-tested as an integrated MLX system during specification. The compatibility proof and acceptance suite are required before describing the product as working. GitHub adoption informed selection but is not a substitute for those checks.
+Bird keyword search passed a live local smoke test on 2026-09-20; see the [validation record](../../validation/2026-09-20-bird-search-smoke.md). This used the existing installed component and local authenticated session, not a fresh install of this repository. No chosen upstream was runtime-tested as an integrated MLX system during specification. The compatibility proof and acceptance suite are required before describing the product as working. GitHub adoption informed selection but is not a substitute for those checks.

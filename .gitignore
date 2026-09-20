@@ -1,0 +1,26 @@
+# Per-user authentication and settings
+.env
+.env.*
+!.env.example
+private/
+config/local.*
+config/user.*
+*.cookies
+cookies*.json
+session*.json
+
+# Generated research and operational state
+data/
+raw/
+extracted/
+companies/
+briefs/
+reports/
+state/
+
+# Local dependencies and caches
+node_modules/
+.venv/
+__pycache__/
+.cache/
+.DS_Store
