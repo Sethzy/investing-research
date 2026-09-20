@@ -433,3 +433,58 @@ def schedule_prompt(ctx: typer.Context):
 
 if __name__ == "__main__":
     app()
+
+
+@app.command()
+def research_append(ctx: typer.Context, path: Path):
+    """Append a thesis, catalyst or query-plan revision; never replace earlier records."""
+    from .research import append
+    from .reports import dossier
+    ws = ctx.obj
+    with ws.lock():
+        result = append(ws, read_json(ws.inside(str(path))))
+        dossier(ws, result["data"]["company_id"])
+    emit(result)
+
+
+@app.command()
+def research_history(ctx: typer.Context, company: str):
+    """Read complete thesis/catalyst/query history and rebuild its current Markdown view."""
+    from .research import history, rebuild
+    ws = ctx.obj
+    with ws.lock():
+        emit({"events": history(ws, company), "report": ws.relative(rebuild(ws, company))})
+
+
+@app.command()
+def model_review(ctx: typer.Context, path: Path):
+    """Append a sourced actual-versus-estimate and immutable model-change report."""
+    from .model_review import review
+    from .reports import dossier
+    ws = ctx.obj
+    with ws.lock():
+        result = review(ws, read_json(ws.inside(str(path))))
+        dossier(ws, result["company_id"])
+    emit(result)
+
+
+@app.command()
+def funding_review(ctx: typer.Context, path: Path):
+    """Append independently recalculated financing, funding-gap and dilution scenarios."""
+    from .funding import review
+    from .reports import dossier
+    ws = ctx.obj
+    with ws.lock():
+        result = review(ws, read_json(ws.inside(str(path))))
+        dossier(ws, result["company_id"])
+    emit(result)
+
+
+@app.command()
+def research_eval(case: Path, answer: Path):
+    """Evaluate a structured research answer against a frozen offline evidence rubric."""
+    from .research_eval import evaluate
+    result = evaluate(read_json(case), read_json(answer))
+    emit(result)
+    if result["status"] != "passed":
+        raise typer.Exit(1)

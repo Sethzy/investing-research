@@ -1,0 +1,15 @@
+{
+  "company_id": "demo-mine",
+  "kind": "catalyst",
+  "key": "quarterly-report",
+  "previous": null,
+  "as_of": "2026-09-20",
+  "rationale": "Synthetic estimated date; not a verified issuer calendar.",
+  "source_ids": [],
+  "title": "Synthetic quarterly operating report",
+  "event_date": "2026-10-15",
+  "date_basis": "estimated",
+  "status": "upcoming",
+  "expectation": "Check cost per tonne against the original thesis",
+  "outcome": null
+}

@@ -1,0 +1,20 @@
+{
+  "id": "6323d63c729eb5fd79ef602e30b9fd9c2c4a8849fac977e5b296fa8142e72855",
+  "sequence": 4,
+  "recorded_at": "2026-09-20T03:40:38.027547+00:00",
+  "data": {
+    "company_id": "demo-mine",
+    "key": "quarterly-report",
+    "previous": "0fd689af28e20a44ac22b611db4cdbcd6038fdab37d43d04ec184fb8352ff1cc",
+    "as_of": "2026-09-20",
+    "rationale": "Synthetic date revision; earlier estimated date remains in history.",
+    "source_ids": [],
+    "kind": "catalyst",
+    "title": "Synthetic quarterly operating report",
+    "event_date": "2026-10-20",
+    "date_basis": "estimated",
+    "status": "upcoming",
+    "expectation": "Check cost per tonne against the original thesis",
+    "outcome": null
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "company_id": "demo-mine",
+  "claims": {
+    "production": {
+      "value": 50,
+      "unit": "tonnes",
+      "period": "FY2025",
+      "ownership_basis": "attributable",
+      "source_id": "synthetic-report-1",
+      "page": "2"
+    }
+  },
+  "conclusion": "insufficient evidence",
+  "limitations": [
+    "No current quote"
+  ],
+  "counterevidence_ids": [
+    "synthetic-cost-warning-p3"
+  ]
+}

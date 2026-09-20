@@ -1,0 +1,174 @@
+{
+  "id": "c72622de192565691f1205e4a9bc33853f47738bfa4221af631cef6600f8a10e",
+  "version": "1.0.0",
+  "recorded_at": "2026-09-20T03:42:10.722205+00:00",
+  "company_id": "demo-mine",
+  "plan": {
+    "company_id": "demo-mine",
+    "model": "companies/demo-mine/models/excel-b8b9a453301a8fff/model.json",
+    "scenarios": {
+      "bear": [
+        {
+          "year": 2027,
+          "interest_rate": 0.1,
+          "debt_raised": 0.0,
+          "debt_repaid": 1.0,
+          "equity_raised": 10.0,
+          "issue_price": 2.0,
+          "dividends": 1.0,
+          "minimum_cash": 100.0,
+          "source": "synthetic://demo-financing",
+          "rationale": "Deliberately synthetic terms for exercising cash and share schedules"
+        },
+        {
+          "year": 2028,
+          "interest_rate": 0.1,
+          "debt_raised": 0.0,
+          "debt_repaid": 1.0,
+          "equity_raised": 10.0,
+          "issue_price": 2.0,
+          "dividends": 1.0,
+          "minimum_cash": 100.0,
+          "source": "synthetic://demo-financing",
+          "rationale": "Deliberately synthetic terms for exercising cash and share schedules"
+        }
+      ],
+      "base": [
+        {
+          "year": 2027,
+          "interest_rate": 0.1,
+          "debt_raised": 0.0,
+          "debt_repaid": 1.0,
+          "equity_raised": 10.0,
+          "issue_price": 2.0,
+          "dividends": 1.0,
+          "minimum_cash": 100.0,
+          "source": "synthetic://demo-financing",
+          "rationale": "Deliberately synthetic terms for exercising cash and share schedules"
+        },
+        {
+          "year": 2028,
+          "interest_rate": 0.1,
+          "debt_raised": 0.0,
+          "debt_repaid": 1.0,
+          "equity_raised": 10.0,
+          "issue_price": 2.0,
+          "dividends": 1.0,
+          "minimum_cash": 100.0,
+          "source": "synthetic://demo-financing",
+          "rationale": "Deliberately synthetic terms for exercising cash and share schedules"
+        }
+      ],
+      "bull": [
+        {
+          "year": 2027,
+          "interest_rate": 0.1,
+          "debt_raised": 0.0,
+          "debt_repaid": 1.0,
+          "equity_raised": 10.0,
+          "issue_price": 2.0,
+          "dividends": 1.0,
+          "minimum_cash": 100.0,
+          "source": "synthetic://demo-financing",
+          "rationale": "Deliberately synthetic terms for exercising cash and share schedules"
+        },
+        {
+          "year": 2028,
+          "interest_rate": 0.1,
+          "debt_raised": 0.0,
+          "debt_repaid": 1.0,
+          "equity_raised": 10.0,
+          "issue_price": 2.0,
+          "dividends": 1.0,
+          "minimum_cash": 100.0,
+          "source": "synthetic://demo-financing",
+          "rationale": "Deliberately synthetic terms for exercising cash and share schedules"
+        }
+      ]
+    },
+    "rationale": "Synthetic financing example: explicit new equity and debt repayments; this is not MLX data."
+  },
+  "scenarios": {
+    "bear": [
+      {
+        "year": 2027,
+        "opening_cash": 120,
+        "model_fcf": 100,
+        "opening_debt": 20,
+        "interest": 2.0,
+        "closing_cash": 226.0,
+        "closing_debt": 19.0,
+        "closing_shares": 105.0,
+        "funding_gap": 0,
+        "ownership_dilution": 0.04761904761904767
+      },
+      {
+        "year": 2028,
+        "opening_cash": 226.0,
+        "model_fcf": 75,
+        "opening_debt": 19.0,
+        "interest": 1.9000000000000001,
+        "closing_cash": 307.1,
+        "closing_debt": 18.0,
+        "closing_shares": 110.0,
+        "funding_gap": 0,
+        "ownership_dilution": 0.09090909090909094
+      }
+    ],
+    "base": [
+      {
+        "year": 2027,
+        "opening_cash": 120,
+        "model_fcf": 175,
+        "opening_debt": 20,
+        "interest": 2.0,
+        "closing_cash": 301.0,
+        "closing_debt": 19.0,
+        "closing_shares": 105.0,
+        "funding_gap": 0,
+        "ownership_dilution": 0.04761904761904767
+      },
+      {
+        "year": 2028,
+        "opening_cash": 301.0,
+        "model_fcf": 150,
+        "opening_debt": 19.0,
+        "interest": 1.9000000000000001,
+        "closing_cash": 457.1,
+        "closing_debt": 18.0,
+        "closing_shares": 110.0,
+        "funding_gap": 0,
+        "ownership_dilution": 0.09090909090909094
+      }
+    ],
+    "bull": [
+      {
+        "year": 2027,
+        "opening_cash": 120,
+        "model_fcf": 250,
+        "opening_debt": 20,
+        "interest": 2.0,
+        "closing_cash": 376.0,
+        "closing_debt": 19.0,
+        "closing_shares": 105.0,
+        "funding_gap": 0,
+        "ownership_dilution": 0.04761904761904767
+      },
+      {
+        "year": 2028,
+        "opening_cash": 376.0,
+        "model_fcf": 225,
+        "opening_debt": 19.0,
+        "interest": 1.9000000000000001,
+        "closing_cash": 607.1,
+        "closing_debt": 18.0,
+        "closing_shares": 110.0,
+        "funding_gap": 0,
+        "ownership_dilution": 0.09090909090909094
+      }
+    ]
+  },
+  "workbook_sha256": "bf8269b6c4d7ab2ab805497109ed3ad3bffebabb09d80ee82b5fa28677e5dacd",
+  "validation": "passed",
+  "report": "companies/demo-mine/funding/c72622de192565691f1205e4a9bc33853f47738bfa4221af631cef6600f8a10e/report.md"
+}

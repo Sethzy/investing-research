@@ -245,6 +245,15 @@ def dossier(workspace: Workspace, company_id: str) -> Path:
         lines += ["- Company sources have not been collected."]
     if (folder / "thesis.md").exists():
         lines += ["", "[Detailed business thesis and counter-thesis](thesis.md)"]
+    if (workspace.root / "state/research" / company_id).exists():
+        from .research import rebuild
+        rebuild(workspace, company_id)
+        lines += ["", "[Living thesis, catalysts, X plan and revision history](research.md)"]
+    for category in ("updates", "funding"):
+        reports = sorted((folder / category).glob("*/report.md"))
+        if reports:
+            lines += ["", f"## {category.title()} history", ""]
+            lines += [f"- [{p.parent.name[:12]}]({link(p, folder)})" for p in reports]
     path = folder / "dossier.md"
     atomic_text(path, "\n".join(lines) + "\n")
     return path

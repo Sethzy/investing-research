@@ -1,0 +1,34 @@
+{
+  "id": "cc142e0329e847768fe69c2b6af8c351df116fa349202dc1ed1126020c4ea6f2",
+  "recorded_at": "2026-09-20T03:40:46.031567+00:00",
+  "company_id": "demo-mine",
+  "prior_model": "companies/demo-mine/models/excel-0713b67e6b8734d4/model.json",
+  "updated_model": "companies/demo-mine/models/excel-b8b9a453301a8fff/model.json",
+  "rationale": "Synthetic example: cash assumption increases from 100 to 120 AUD. No actual reported quarter is claimed.",
+  "actuals": [],
+  "changes": [
+    {
+      "path": "/cash",
+      "before": 100,
+      "after": 120,
+      "rationale": "Synthetic teaching fixture; not reported company data"
+    }
+  ],
+  "valuation": {
+    "bear": {
+      "before": 2.32892561983471,
+      "after": 2.52892561983471,
+      "delta": 0.19999999999999973
+    },
+    "base": {
+      "before": 3.63057851239669,
+      "after": 3.83057851239669,
+      "delta": 0.20000000000000018
+    },
+    "bull": {
+      "before": 4.93223140495868,
+      "after": 5.13223140495868,
+      "delta": 0.20000000000000018
+    }
+  }
+}

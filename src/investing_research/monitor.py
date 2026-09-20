@@ -66,9 +66,13 @@ def collect(
     deadline = time.monotonic() + settings.budget_minutes * 60
     shared = {}
     for company in companies:
-        specs = [("x", q) for q in company.queries] if include_x else []
+        from .research import latest
+        plan = latest(workspace, company.id).get(("queries", "x-plan"))
+        queries = [q["query"] for q in plan["data"]["queries"]] if plan else company.queries
+        run.setdefault("query_plan_ids", {})[company.id] = plan["id"] if plan else None
+        specs = [("x", q) for q in queries] if include_x else []
         specs += [("web", u) for u in company.sources] if include_web else []
-        if not include_x and company.queries:
+        if not include_x and queries:
             run["errors"].append(f"{company.id}: X collection explicitly skipped")
         if not include_web and company.sources:
             run["errors"].append(f"{company.id}: web collection explicitly skipped")

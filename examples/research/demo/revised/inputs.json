@@ -1,0 +1,612 @@
+{
+  "company_id": "demo-mine",
+  "model_type": "finite_mine",
+  "currency": "AUD",
+  "valuation_date": "2026-09-20",
+  "quote_date": "2026-09-18",
+  "cash": 120,
+  "debt": 20,
+  "other_assets": 0,
+  "diluted_shares": 100,
+  "reference_price": 2,
+  "synthetic": true,
+  "historical": [],
+  "scenarios": {
+    "bear": {
+      "discount_rate": 0.1,
+      "ownership": 0.5,
+      "ownership_basis": "whole_operation",
+      "residual_value": 0,
+      "years": [
+        {
+          "year": 2027,
+          "payable_tonnes": 10,
+          "price": 80,
+          "price_currency": "USD",
+          "fx": 1,
+          "unit_cost": 40,
+          "royalty_rate": 0,
+          "tax_rate": 0.25,
+          "depreciation": 0,
+          "capex": 100,
+          "working_capital_change": 0,
+          "closure": 0,
+          "corporate_cost": 0
+        },
+        {
+          "year": 2028,
+          "payable_tonnes": 10,
+          "price": 80,
+          "price_currency": "USD",
+          "fx": 1,
+          "unit_cost": 40,
+          "royalty_rate": 0,
+          "tax_rate": 0.25,
+          "depreciation": 0,
+          "capex": 100,
+          "working_capital_change": 0,
+          "closure": 50,
+          "corporate_cost": 0
+        }
+      ]
+    },
+    "base": {
+      "discount_rate": 0.1,
+      "ownership": 0.5,
+      "ownership_basis": "whole_operation",
+      "residual_value": 0,
+      "years": [
+        {
+          "year": 2027,
+          "payable_tonnes": 10,
+          "price": 100,
+          "price_currency": "USD",
+          "fx": 1,
+          "unit_cost": 40,
+          "royalty_rate": 0,
+          "tax_rate": 0.25,
+          "depreciation": 0,
+          "capex": 100,
+          "working_capital_change": 0,
+          "closure": 0,
+          "corporate_cost": 0
+        },
+        {
+          "year": 2028,
+          "payable_tonnes": 10,
+          "price": 100,
+          "price_currency": "USD",
+          "fx": 1,
+          "unit_cost": 40,
+          "royalty_rate": 0,
+          "tax_rate": 0.25,
+          "depreciation": 0,
+          "capex": 100,
+          "working_capital_change": 0,
+          "closure": 50,
+          "corporate_cost": 0
+        }
+      ]
+    },
+    "bull": {
+      "discount_rate": 0.1,
+      "ownership": 0.5,
+      "ownership_basis": "whole_operation",
+      "residual_value": 0,
+      "years": [
+        {
+          "year": 2027,
+          "payable_tonnes": 10,
+          "price": 120,
+          "price_currency": "USD",
+          "fx": 1,
+          "unit_cost": 40,
+          "royalty_rate": 0,
+          "tax_rate": 0.25,
+          "depreciation": 0,
+          "capex": 100,
+          "working_capital_change": 0,
+          "closure": 0,
+          "corporate_cost": 0
+        },
+        {
+          "year": 2028,
+          "payable_tonnes": 10,
+          "price": 120,
+          "price_currency": "USD",
+          "fx": 1,
+          "unit_cost": 40,
+          "royalty_rate": 0,
+          "tax_rate": 0.25,
+          "depreciation": 0,
+          "capex": 100,
+          "working_capital_change": 0,
+          "closure": 50,
+          "corporate_cost": 0
+        }
+      ]
+    }
+  },
+  "provenance": {
+    "/cash": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/debt": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/other_assets": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/diluted_shares": {
+      "unit": "shares",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/reference_price": {
+      "unit": "AUD/share",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/discount_rate": {
+      "unit": "fraction",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/ownership": {
+      "unit": "fraction",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/residual_value": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/years/0/payable_tonnes": {
+      "unit": "tonnes",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/years/0/price": {
+      "unit": "USD/tonne",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/years/0/fx": {
+      "unit": "AUD/USD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/years/0/unit_cost": {
+      "unit": "AUD/tonne",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/years/0/royalty_rate": {
+      "unit": "fraction",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/years/0/tax_rate": {
+      "unit": "fraction",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/years/0/depreciation": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/years/0/capex": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/years/0/working_capital_change": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/years/0/closure": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/years/0/corporate_cost": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/years/1/payable_tonnes": {
+      "unit": "tonnes",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/years/1/price": {
+      "unit": "USD/tonne",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/years/1/fx": {
+      "unit": "AUD/USD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/years/1/unit_cost": {
+      "unit": "AUD/tonne",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/years/1/royalty_rate": {
+      "unit": "fraction",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/years/1/tax_rate": {
+      "unit": "fraction",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/years/1/depreciation": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/years/1/capex": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/years/1/working_capital_change": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/years/1/closure": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bear/years/1/corporate_cost": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/discount_rate": {
+      "unit": "fraction",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/ownership": {
+      "unit": "fraction",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/residual_value": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/years/0/payable_tonnes": {
+      "unit": "tonnes",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/years/0/price": {
+      "unit": "USD/tonne",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/years/0/fx": {
+      "unit": "AUD/USD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/years/0/unit_cost": {
+      "unit": "AUD/tonne",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/years/0/royalty_rate": {
+      "unit": "fraction",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/years/0/tax_rate": {
+      "unit": "fraction",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/years/0/depreciation": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/years/0/capex": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/years/0/working_capital_change": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/years/0/closure": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/years/0/corporate_cost": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/years/1/payable_tonnes": {
+      "unit": "tonnes",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/years/1/price": {
+      "unit": "USD/tonne",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/years/1/fx": {
+      "unit": "AUD/USD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/years/1/unit_cost": {
+      "unit": "AUD/tonne",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/years/1/royalty_rate": {
+      "unit": "fraction",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/years/1/tax_rate": {
+      "unit": "fraction",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/years/1/depreciation": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/years/1/capex": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/years/1/working_capital_change": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/years/1/closure": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/base/years/1/corporate_cost": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/discount_rate": {
+      "unit": "fraction",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/ownership": {
+      "unit": "fraction",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/residual_value": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/years/0/payable_tonnes": {
+      "unit": "tonnes",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/years/0/price": {
+      "unit": "USD/tonne",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/years/0/fx": {
+      "unit": "AUD/USD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/years/0/unit_cost": {
+      "unit": "AUD/tonne",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/years/0/royalty_rate": {
+      "unit": "fraction",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/years/0/tax_rate": {
+      "unit": "fraction",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/years/0/depreciation": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/years/0/capex": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/years/0/working_capital_change": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/years/0/closure": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/years/0/corporate_cost": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/years/1/payable_tonnes": {
+      "unit": "tonnes",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/years/1/price": {
+      "unit": "USD/tonne",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/years/1/fx": {
+      "unit": "AUD/USD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/years/1/unit_cost": {
+      "unit": "AUD/tonne",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/years/1/royalty_rate": {
+      "unit": "fraction",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/years/1/tax_rate": {
+      "unit": "fraction",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/years/1/depreciation": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/years/1/capex": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/years/1/working_capital_change": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/years/1/closure": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    },
+    "/scenarios/bull/years/1/corporate_cost": {
+      "unit": "AUD",
+      "rationale": "Synthetic teaching fixture; not reported company data",
+      "author": "example fixture",
+      "source": "synthetic://example"
+    }
+  }
+}

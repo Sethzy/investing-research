@@ -116,6 +116,18 @@ uv run invest size asx-mlx 0.10
 
 Missing or stale inputs block sizing. A zero-share target position must still include its current quote, currency, FX and sector. Output separates target shares from the incremental change; it does not place an order.
 
+## Update and append research
+
+Research now keeps immutable thesis, catalyst and X-plan revisions. New reports can produce actual-versus-estimate comparisons and old/new model summaries; explicit financing scenarios show funding gaps and dilution. Current Markdown links the retained history. Read the [append-and-update workflow](docs/research-updates.md) and inspect the [published synthetic example](examples/research/demo/README.md).
+
+Try the complete offline synthetic journey (LibreOffice required):
+
+```sh
+uv run python scripts/demo-research-updates.py
+```
+
+This writes an ignored demonstration workspace and is safe to rerun. It is not an MLX valuation or a live X test.
+
 ## Daily monitoring
 
 ```sh

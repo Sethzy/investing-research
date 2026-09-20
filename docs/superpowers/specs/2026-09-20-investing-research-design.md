@@ -353,3 +353,8 @@ The primary reading surface is Markdown. Each accepted model report links its ma
 ## Codex and presentation amendment
 
 Codex is the setup and research host; do not ask recipients to choose an agent host. Before delivering a workbook, the bundled workflow requires financial validation plus visual review of every visible sheet, documented according to [workbook quality](../../workbook-quality.md). Publish a source coverage table and keep investment horizon, historical periods, X lookback and forecast years distinct; see the [product overview](../../product-overview.md). The workflow diagram is exportable as SVG, PNG and PDF.
+
+
+## Append/update amendment
+
+Thesis pillars, catalysts and adaptive X plans use immutable revisions with optimistic previous-ID checks, exact-retry idempotency and rebuildable current Markdown. Model review compares verified snapshots and sourced actuals. A separate explicit funding overlay calculates interest, debt, cash floors and dilution with native-workbook parity; it is not a complete three-statement model or an adjusted equity valuation. Frozen structured-answer rubrics supplement code tests. See [contracts and limitations](../../research-updates.md).

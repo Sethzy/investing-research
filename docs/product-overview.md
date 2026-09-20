@@ -53,3 +53,7 @@ Supported Excel assumption edits synchronize; arbitrary formula/structure change
 Scheduled operation must be demonstrated in the actual Codex host. Interactive X success and CI do not prove unattended authentication or another person's environment. The last recorded operational validation still had the first scheduled execution pending.
 
 See [setup](setup.md), [Excel workflow](excel-models.md), [MLX report](../examples/mlx/report.md), [upstream reuse](upstream-decisions.md) and [the specification](superpowers/specs/2026-09-20-investing-research-design.md).
+
+## Append/update upgrade
+
+The [research update workflow](research-updates.md) now provides immutable thesis/catalyst/X-plan revisions, model-change reports, an explicit financing overlay and offline structured research-answer checks. Current reports rebuild from history. Funding assumptions remain separate from the operating workbook; a fully integrated three-statement forecast is still outside the implemented overlay.

@@ -1,0 +1,15 @@
+{
+  "company_id": "asx-mlx",
+  "kind": "queries",
+  "key": "x-plan",
+  "previous": null,
+  "as_of": "2026-09-20",
+  "rationale": "A starting plan for testing the cost and supply thesis; Codex revises after reading results.",
+  "source_ids": [],
+  "queries": [
+    {"query": "\"Metals X\"", "intent": "identity", "reason": "Company disclosures and commentary"},
+    {"query": "\"Renison\" (cost OR disruption OR delay)", "intent": "contrary", "reason": "Seek evidence against stable production and cost assumptions"},
+    {"query": "\"Metals X\" \"quarterly\"", "intent": "event", "reason": "Operating-report discussion and source links"},
+    {"query": "\"tin\" (\"Myanmar\" OR \"smelter\")", "intent": "industry", "reason": "Supply-chain developments requiring primary-source follow-up"}
+  ]
+}

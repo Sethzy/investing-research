@@ -1,0 +1,273 @@
+{
+  "model_version": "1.2.0",
+  "purpose": "valuation",
+  "company_id": "demo-mine",
+  "currency": "AUD",
+  "known_limitations": [],
+  "valuation_date": "2026-09-20",
+  "quote_date": "2026-09-18",
+  "reference_price": 2,
+  "synthetic": true,
+  "scenarios": {
+    "bear": {
+      "years": [
+        {
+          "year": 2027,
+          "revenue": 800,
+          "operating_cost": 400,
+          "royalties": 0,
+          "ebit": 400,
+          "tax": 100,
+          "nopat": 300,
+          "operating_fcf": 200,
+          "fcf": 100,
+          "present_value": 90.9090909090909,
+          "illustrative_cash": 200
+        },
+        {
+          "year": 2028,
+          "revenue": 800,
+          "operating_cost": 400,
+          "royalties": 0,
+          "ebit": 400,
+          "tax": 100,
+          "nopat": 300,
+          "operating_fcf": 150,
+          "fcf": 75,
+          "present_value": 61.9834710743802,
+          "illustrative_cash": 275
+        }
+      ],
+      "enterprise_value": 152.892561983471,
+      "cash": 100,
+      "debt": 20,
+      "other_assets": 0,
+      "equity_value": 232.892561983471,
+      "per_share": 2.32892561983471,
+      "minimum_illustrative_cash": 100
+    },
+    "base": {
+      "years": [
+        {
+          "year": 2027,
+          "revenue": 1000,
+          "operating_cost": 400,
+          "royalties": 0,
+          "ebit": 600,
+          "tax": 150,
+          "nopat": 450,
+          "operating_fcf": 350,
+          "fcf": 175,
+          "present_value": 159.090909090909,
+          "illustrative_cash": 275
+        },
+        {
+          "year": 2028,
+          "revenue": 1000,
+          "operating_cost": 400,
+          "royalties": 0,
+          "ebit": 600,
+          "tax": 150,
+          "nopat": 450,
+          "operating_fcf": 300,
+          "fcf": 150,
+          "present_value": 123.96694214876,
+          "illustrative_cash": 425
+        }
+      ],
+      "enterprise_value": 283.057851239669,
+      "cash": 100,
+      "debt": 20,
+      "other_assets": 0,
+      "equity_value": 363.057851239669,
+      "per_share": 3.63057851239669,
+      "minimum_illustrative_cash": 100
+    },
+    "bull": {
+      "years": [
+        {
+          "year": 2027,
+          "revenue": 1200,
+          "operating_cost": 400,
+          "royalties": 0,
+          "ebit": 800,
+          "tax": 200,
+          "nopat": 600,
+          "operating_fcf": 500,
+          "fcf": 250,
+          "present_value": 227.272727272727,
+          "illustrative_cash": 350
+        },
+        {
+          "year": 2028,
+          "revenue": 1200,
+          "operating_cost": 400,
+          "royalties": 0,
+          "ebit": 800,
+          "tax": 200,
+          "nopat": 600,
+          "operating_fcf": 450,
+          "fcf": 225,
+          "present_value": 185.95041322314,
+          "illustrative_cash": 575
+        }
+      ],
+      "enterprise_value": 413.223140495868,
+      "cash": 100,
+      "debt": 20,
+      "other_assets": 0,
+      "equity_value": 493.223140495868,
+      "per_share": 4.93223140495868,
+      "minimum_illustrative_cash": 100
+    }
+  },
+  "sensitivity": [
+    {
+      "driver_multiplier": 0.8,
+      "discount_rate": 0.08,
+      "per_share": 2.36893004115226
+    },
+    {
+      "driver_multiplier": 0.8,
+      "discount_rate": 0.1,
+      "per_share": 2.32892561983471
+    },
+    {
+      "driver_multiplier": 0.8,
+      "discount_rate": 0.12,
+      "per_share": 2.29075255102041
+    },
+    {
+      "driver_multiplier": 1,
+      "discount_rate": 0.08,
+      "per_share": 3.70637860082305
+    },
+    {
+      "driver_multiplier": 1,
+      "discount_rate": 0.1,
+      "per_share": 3.63057851239669
+    },
+    {
+      "driver_multiplier": 1,
+      "discount_rate": 0.12,
+      "per_share": 3.55829081632653
+    },
+    {
+      "driver_multiplier": 1.2,
+      "discount_rate": 0.08,
+      "per_share": 5.04382716049383
+    },
+    {
+      "driver_multiplier": 1.2,
+      "discount_rate": 0.1,
+      "per_share": 4.93223140495868
+    },
+    {
+      "driver_multiplier": 1.2,
+      "discount_rate": 0.12,
+      "per_share": 4.82582908163265
+    }
+  ],
+  "driver_comparisons": [
+    {
+      "driver": "price",
+      "multiplier": 0.8,
+      "per_share": 2.3289256198347106,
+      "change_from_base": -1.3016528925619832
+    },
+    {
+      "driver": "price",
+      "multiplier": 1.0,
+      "per_share": 3.630578512396694,
+      "change_from_base": 0.0
+    },
+    {
+      "driver": "price",
+      "multiplier": 1.2,
+      "per_share": 4.932231404958677,
+      "change_from_base": 1.3016528925619832
+    },
+    {
+      "driver": "unit_cost",
+      "multiplier": 0.8,
+      "per_share": 4.1512396694214875,
+      "change_from_base": 0.5206611570247937
+    },
+    {
+      "driver": "unit_cost",
+      "multiplier": 1.0,
+      "per_share": 3.630578512396694,
+      "change_from_base": 0.0
+    },
+    {
+      "driver": "unit_cost",
+      "multiplier": 1.2,
+      "per_share": 3.1099173553719,
+      "change_from_base": -0.5206611570247937
+    },
+    {
+      "driver": "payable_tonnes",
+      "multiplier": 0.8,
+      "per_share": 2.8495867768595042,
+      "change_from_base": -0.7809917355371896
+    },
+    {
+      "driver": "payable_tonnes",
+      "multiplier": 1.0,
+      "per_share": 3.630578512396694,
+      "change_from_base": 0.0
+    },
+    {
+      "driver": "payable_tonnes",
+      "multiplier": 1.2,
+      "per_share": 4.411570247933883,
+      "change_from_base": 0.7809917355371896
+    },
+    {
+      "driver": "fx",
+      "multiplier": 0.8,
+      "per_share": 2.3289256198347106,
+      "change_from_base": -1.3016528925619832
+    },
+    {
+      "driver": "fx",
+      "multiplier": 1.0,
+      "per_share": 3.630578512396694,
+      "change_from_base": 0.0
+    },
+    {
+      "driver": "fx",
+      "multiplier": 1.2,
+      "per_share": 4.932231404958677,
+      "change_from_base": 1.3016528925619832
+    }
+  ],
+  "reverse_valuation": {
+    "driver": "price",
+    "multiplier": 0.7494603174603175,
+    "bounds": [
+      0,
+      10
+    ],
+    "status": "solved"
+  },
+  "warnings": [
+    "Annual end-of-period convention; explicit residual only, no terminal perpetuity.",
+    "Cash path excludes financing, dividends and debt maturities; it is not a solvency forecast.",
+    "Mine tax is a simplified current-year positive EBIT tax; no tax-loss carryforwards or jurisdiction tax advice."
+  ],
+  "authority": "excel",
+  "active_case": "base",
+  "synchronized_at": "2026-09-20T03:40:42.699172+00:00",
+  "source_workbook_sha256": "0713b67e6b8734d4e0581083bcba29c0cb8b8790fa549070662b48b55e19b671",
+  "workbook_sha256": "2656f3cb51f5c196b1dd2f239cab7e40251aa65c997092f1d5b569f5695c74a9",
+  "source_workbook": "baseline.xlsx",
+  "input_changes": [],
+  "workbook_validation": {
+    "status": "passed",
+    "engine": "LibreOffice",
+    "checks": "Excel operating, valuation and sensitivity outputs matched independent Python calculations in all three cases"
+  },
+  "run_id": "excel-0713b67e6b8734d4",
+  "output_dir": "examples/research/demo/baseline"
+}

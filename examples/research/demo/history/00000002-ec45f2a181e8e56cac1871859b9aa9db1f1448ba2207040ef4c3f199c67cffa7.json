@@ -1,0 +1,19 @@
+{
+  "id": "ec45f2a181e8e56cac1871859b9aa9db1f1448ba2207040ef4c3f199c67cffa7",
+  "sequence": 2,
+  "recorded_at": "2026-09-20T03:40:38.025428+00:00",
+  "data": {
+    "company_id": "demo-mine",
+    "key": "cost-control",
+    "previous": "aad2768dba5b8e93f1db0b31c02b67127938c6f32374c29424fa985deac0e515",
+    "as_of": "2026-09-20",
+    "rationale": "Synthetic new assumption; original expectation must remain visible.",
+    "source_ids": [],
+    "kind": "pillar",
+    "claim": "Operating costs remain manageable",
+    "expectation": "Unit cost now assumed at 55 AUD/tonne",
+    "invalidation": "Persistent unit cost above 60 AUD/tonne",
+    "status": "weakening",
+    "evidence_status": "unverified"
+  }
+}

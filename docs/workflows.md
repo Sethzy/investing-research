@@ -177,3 +177,7 @@ The calculator checks the whole portfolio and blocks missing/stale inputs or unr
 The current model workflow uses editable Excel assumptions, independent recalculation and immutable Markdown/workbook snapshots. See [the executable workflow](excel-models.md) and [pinned upstream references](upstream-excel.md). Earlier Python-generated snapshots remain readable, but new `model` runs use this workflow.
 
 Before delivering workbook results, complete the [financial and visual quality audit](workbook-quality.md). For research coverage and distinct time horizons, use the [product overview](product-overview.md).
+
+## Append-only research updates
+
+Use `research-append`, `research-history`, `model-review`, `funding-review` and `research-eval` as documented in [research updates](research-updates.md). New thesis assessments, catalyst outcomes and X plans append revisions; current views rebuild without deleting prior expectations.

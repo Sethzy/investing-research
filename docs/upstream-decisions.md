@@ -35,3 +35,5 @@ Do not replace a broken no-key component with a paid/key-requiring service silen
 ## Excel detail and Markdown reports
 
 The current model workflow uses editable Excel assumptions, independent recalculation and immutable Markdown/workbook snapshots. See [the executable workflow](excel-models.md) and [pinned upstream references](upstream-excel.md). Earlier Python-generated snapshots remain readable, but new `model` runs use this workflow.
+
+Append/update workflows retain the pinned financial-services thesis-tracker, model-update, catalyst-calendar and earnings-analysis references. Runtime validation, immutable revisions and funding overlay are local code. Dexter inspired query refinement and structured answer rubrics; its key-dependent runtime and evaluation service are not adopted. See [research updates](research-updates.md).

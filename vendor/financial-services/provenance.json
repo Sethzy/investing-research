@@ -28,6 +28,26 @@
       "path": "plugins/vertical-plugins/financial-analysis/skills/audit-xls/SKILL.md",
       "source_url": "https://raw.githubusercontent.com/anthropics/financial-services/fca3cc8e6c5692ba576b46d7c4783b8443c2a223/plugins/vertical-plugins/financial-analysis/skills/audit-xls/SKILL.md",
       "sha256": "df771f6b90fc3b3d4996d5e8682ab00d4fa6f55beef308ea764b0f7a2a1c38e2"
+    },
+    {
+      "path": "plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md",
+      "source_url": "https://raw.githubusercontent.com/anthropics/financial-services/fca3cc8e6c5692ba576b46d7c4783b8443c2a223/plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md",
+      "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b"
+    },
+    {
+      "path": "plugins/vertical-plugins/equity-research/skills/model-update/SKILL.md",
+      "source_url": "https://raw.githubusercontent.com/anthropics/financial-services/fca3cc8e6c5692ba576b46d7c4783b8443c2a223/plugins/vertical-plugins/equity-research/skills/model-update/SKILL.md",
+      "sha256": "62b2256bf3b52ac3759cb446a10aaa3066a51b4909e09bae0e3b98b741a37fb5"
+    },
+    {
+      "path": "plugins/vertical-plugins/equity-research/skills/catalyst-calendar/SKILL.md",
+      "source_url": "https://raw.githubusercontent.com/anthropics/financial-services/fca3cc8e6c5692ba576b46d7c4783b8443c2a223/plugins/vertical-plugins/equity-research/skills/catalyst-calendar/SKILL.md",
+      "sha256": "12ac4ae7659ab848a8910dfceadab5b21479f23c8d3e0c57a3f5bf814bcf8186"
+    },
+    {
+      "path": "plugins/vertical-plugins/equity-research/skills/earnings-analysis/SKILL.md",
+      "source_url": "https://raw.githubusercontent.com/anthropics/financial-services/fca3cc8e6c5692ba576b46d7c4783b8443c2a223/plugins/vertical-plugins/equity-research/skills/earnings-analysis/SKILL.md",
+      "sha256": "4db857c27a53141b6ebc38ec9ee7f0020dec59cab084ae6753e53366d118c8ee"
     }
   ]
 }

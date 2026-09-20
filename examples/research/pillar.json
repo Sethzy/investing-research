@@ -1,0 +1,14 @@
+{
+  "company_id": "demo-mine",
+  "kind": "pillar",
+  "key": "cost-control",
+  "previous": null,
+  "as_of": "2026-09-20",
+  "rationale": "Synthetic hypothesis for demonstrating append-only updates; not an MLX claim.",
+  "source_ids": [],
+  "claim": "Operating costs remain manageable",
+  "expectation": "Unit cost stays below 50 AUD/tonne",
+  "invalidation": "Persistent unit cost above 60 AUD/tonne",
+  "status": "unresolved",
+  "evidence_status": "unverified"
+}

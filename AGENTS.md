@@ -17,3 +17,5 @@ For an install/setup request, first follow [.agents/skills/setup/SKILL.md](.agen
 - Before changing code, read relevant tests and upstream notices. Keep adopted upstream components attributed and avoid introducing duplicate frameworks. Run meaningful tests for changes and record limitations honestly.
 
 - Before delivering a model, follow `docs/workbook-quality.md` for visual and financial audit; report any unverified presentation step.
+
+- Research updates append immutable revisions using `docs/research-updates.md`; retrieve the current revision before changing a pillar, catalyst or X plan. Keep original expectations and corrections.

@@ -1,0 +1,23 @@
+{
+  "company_id": "demo-mine",
+  "question": "Synthetic fixture: report page 2 states 100 tonnes whole-operation production and 50% ownership; attributable production is 50 tonnes. Page 3 warns of rising costs. There is no verified current quote. Report attributable production, preserve the cost warning and state evidence limits.",
+  "claims": {
+    "production": {
+      "value": 50,
+      "unit": "tonnes",
+      "period": "FY2025",
+      "ownership_basis": "attributable",
+      "source_id": "synthetic-report-1",
+      "page": "2"
+    }
+  },
+  "permitted_conclusions": [
+    "insufficient evidence"
+  ],
+  "required_limitations": [
+    "No current quote"
+  ],
+  "required_counterevidence_ids": [
+    "synthetic-cost-warning-p3"
+  ]
+}
