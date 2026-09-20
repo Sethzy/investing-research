@@ -43,6 +43,22 @@ def test_editable_cells_and_formula_integrity_manifest(tmp_path):
     assert book["Historical"].freeze_panes
 
 
+def test_legacy_workbooks_remain_readable_after_presentation_upgrade(tmp_path):
+    from investing_research.excel import read_inputs
+
+    data = example("mine")
+    old = tmp_path / "old.xlsx"
+    new = tmp_path / "new.xlsx"
+    write_excel_model(data, old, presentation_version=1)
+    write_excel_model(data, new)
+    old_inputs, old_layout, _, _ = read_inputs(old)
+    new_inputs, new_layout, _, _ = read_inputs(new)
+    assert old_inputs == new_inputs
+    assert old_layout["formula_cells"] == new_layout["formula_cells"]
+    assert old_layout["inputs"] == new_layout["inputs"]
+    assert new_layout["presentation_version"] == 2
+
+
 @pytest.mark.parametrize("kind,case", [("mine", "bear"), ("mine", "bull"), ("fcf", "base")])
 def test_native_excel_matches_independent_engine(tmp_path, kind, case):
     soffice = shutil.which("soffice")

@@ -19,25 +19,19 @@ MARKER = "investing-excel-v1"
 CASES = ("bear", "base", "bull")
 
 
-def write_excel_model(data: dict, path: Path, *, presentation_version: int = 2) -> None:
+def write_excel_model(data: dict, path: Path) -> None:
     """Create a formula-driven active-case model with portable JSON cell mapping."""
-    if presentation_version == 1:
-        from .excel_layout_v1 import write_excel_model as legacy
-        return legacy(data, path)
-    if presentation_version != 2:
-        raise ValueError("Unsupported workbook presentation version")
     validate_model(data)
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     wb = xlsxwriter.Workbook(path, {"strings_to_formulas": False, "strings_to_urls": False})
     wb.set_properties({"title": f"{data['company_id']} | investment model", "author": "Investing Research"})
     wb.set_calc_mode("auto")
-    wb.formats[0].set_font_name("Arial")
     styles = {
         "title": wb.add_format(
-            {"bold": True, "font_size": 21, "font_color": "#FFFFFF", "bg_color": "#142D43", "valign": "vcenter"}
+            {"bold": True, "font_size": 21, "font_color": "#FFFFFF", "bg_color": "#142D43"}
         ),
-        "section": wb.add_format({"bold": True, "font_color": "#FFFFFF", "bg_color": "#28566F", "valign": "vcenter", "text_wrap": True}),
+        "section": wb.add_format({"bold": True, "font_color": "#FFFFFF", "bg_color": "#28566F"}),
         "text": wb.add_format({"font_color": "#243746", "text_wrap": True, "valign": "top"}),
         "note": wb.add_format({"font_color": "#667085", "text_wrap": True, "valign": "top", "font_size": 10}),
         "money_m": wb.add_format({"bold": True, "font_size": 15, "font_color": "#008000", "num_format": '#,##0.0,,"m"'}),
@@ -58,9 +52,7 @@ def write_excel_model(data: dict, path: Path, *, presentation_version: int = 2) 
     styles["pass"] = wb.add_format({"bold": True, "font_color": "#176443", "bg_color": "#E6F4EC"})
     styles["fail"] = wb.add_format({"bold": True, "font_color": "#A12232", "bg_color": "#FCE9EC"})
     for fmt in styles.values():
-        fmt.set_font_name("Arial")
-        if fmt != styles["note"] and fmt != styles["text"]:
-            fmt.set_align("vcenter")
+        fmt.set_font_name("Aptos")
     names = (
         "Summary",
         "Assumptions",
@@ -76,7 +68,6 @@ def write_excel_model(data: dict, path: Path, *, presentation_version: int = 2) 
     n = max(len(s["years"]) for s in data["scenarios"].values())
     manifest = {
         "schema_version": 1,
-        "presentation_version": 2,
         "baseline": copy.deepcopy(data),
         "inputs": {},
         "outputs": {},
@@ -111,9 +102,9 @@ def write_excel_model(data: dict, path: Path, *, presentation_version: int = 2) 
 
     for name, ws in sheets.items():
         ws.hide_gridlines(2)
-        ws.set_column("A:A", 35, styles["text"])
-        ws.set_column("B:B", 18)
-        ws.set_column(2, max(8, n + 1), 15)
+        ws.set_column("A:A", 43)
+        ws.set_column("B:B", 25)
+        ws.set_column(2, max(8, n + 1), 17)
         ws.set_default_row(23)
         ws.set_zoom(90)
         ws.set_tab_color("#287F8E" if name in ("Summary", "Assumptions") else "#142D43")
@@ -122,9 +113,9 @@ def write_excel_model(data: dict, path: Path, *, presentation_version: int = 2) 
         ws.set_paper(9)
         ws.fit_to_pages(1, 0)
         ws.set_margins(0.3, 0.3, 0.4, 0.4)
-        ws.set_footer("&L" + data["company_id"] + " | " + name + "&RPage &P of &N", {"margin": 0.2})
+        ws.set_footer("&L" + data["company_id"] + " | " + name + "&RPage &P of &N")
         if name != "_Model":
-            ws.merge_range(0, 0, 1, max(5, n + 1), f"{data['company_id'].replace('-', ':', 1).upper()}  /  {name}", styles["title"])
+            ws.merge_range(0, 0, 1, max(5, n + 1), f"{data['company_id']}  /  {name}", styles["title"])
             ws.print_area(0, 0, 45, max(5, n + 1))
     a = sheets["Assumptions"]
     a.write("A4", "Active scenario", styles["section"])
@@ -204,10 +195,9 @@ def write_excel_model(data: dict, path: Path, *, presentation_version: int = 2) 
                     ar = ref("Assumptions", r, i + 2)
                 annual_refs[name][field].append(ar)
         row += 8 + len(fields)
-    a.set_landscape()
+    a.set_portrait()
     a.print_area(0, 0, row - 2, max(5, n + 1))
-    a.set_h_pagebreaks([18, 18 + (8 + len(fields)), 18 + 2 * (8 + len(fields))])
-    a.repeat_rows(0, 1)
+    a.set_h_pagebreaks([18 + (8 + len(fields)), 18 + 2 * (8 + len(fields))])
 
     def choose(values):
         return f'IF(Assumptions!$B$4="bear",{values[0]},IF(Assumptions!$B$4="base",{values[1]},{values[2]}))'
@@ -278,7 +268,7 @@ def write_excel_model(data: dict, path: Path, *, presentation_version: int = 2) 
         refs = {}
         for key, r in rows.items():
             refs[key] = formula(
-                "Operating", r, col, "=" + choose([annual_refs[c][key][i] for c in CASES]), "pct" if key in ("royalty_rate", "tax_rate") else "link"
+                "Operating", r, col, "=" + choose([annual_refs[c][key][i] for c in CASES]), "link"
             )
         cr = {key: ref("Operating", r, col) for key, r in calc_rows.items()}
         if data["model_type"] == "finite_mine":
@@ -407,7 +397,7 @@ def write_excel_model(data: dict, path: Path, *, presentation_version: int = 2) 
         h.write(5, col, label, styles["section"])
     for r, fact in enumerate(data["historical"], 6):
         values = (
-            fact["metric"].replace("_", " ").capitalize(),
+            fact["metric"],
             fact["period"],
             fact["value"],
             fact["unit"],
@@ -427,7 +417,7 @@ def write_excel_model(data: dict, path: Path, *, presentation_version: int = 2) 
         "Source-linked reported facts. Historical coverage may be incomplete; no integrated statements are inferred.",
         styles["note"],
     )
-    h.set_column("A:A", 36)
+    h.set_column("A:A", 48)
     h.set_column("B:B", 18)
     h.set_column("F:F", 26)
     h.set_column("H:H", 24)
@@ -468,18 +458,11 @@ def write_excel_model(data: dict, path: Path, *, presentation_version: int = 2) 
     )
 
     s = sheets["Summary"]
-    s.set_column("A:A", 36)
-    s.set_column("B:B", 20)
-    s.set_column("C:I", 8)
-    s.freeze_panes(3, 0)
-    s.set_zoom(100)
-    for compact_row in (12, 13, 16, 17, 18):
-        s.set_row(compact_row, 9)
     s.merge_range(
         "A4:H5",
         "SYNTHETIC EXAMPLE"
         if data.get("synthetic")
-        else "Illustrative scenarios | Review assumptions before using these values"
+        else "ILLUSTRATIVE SENSITIVITY — not an actionable valuation"
         if data.get("purpose") == "illustrative_sensitivity"
         else "Evidence-bound valuation — review assumptions and limitations",
         styles["section"],
@@ -487,9 +470,9 @@ def write_excel_model(data: dict, path: Path, *, presentation_version: int = 2) 
     for r, (label, key) in enumerate(
         (
             ("Active scenario", None),
-            (f"Model value per share ({currency})", "per_share"),
-            (f"Equity value ({currency})", "equity_value"),
-            (f"Minimum cash ({currency})", "minimum_illustrative_cash"),
+            ("Model value per share", "per_share"),
+            ("Equity value", "equity_value"),
+            ("Minimum illustrative cash", "minimum_illustrative_cash"),
         ),
         6,
     ):
@@ -497,14 +480,17 @@ def write_excel_model(data: dict, path: Path, *, presentation_version: int = 2) 
         formula("Summary", r, 1, "=Assumptions!B4" if key is None else "=" + vals[key], "money_m" if key in ("equity_value", "minimum_illustrative_cash") else "value")
     s.merge_range(
         "A12:H14",
-        "Start with the investment report for the full story. Choose a scenario on Assumptions, then explore its cash flows, valuation and sensitivities here.",
+        "Markdown is the main research narrative. Use this workbook to inspect and edit detailed assumptions; recalculate in Excel or LibreOffice, save, then import to publish a validated snapshot back to the research memo.",
         styles["text"],
     )
     limitations = data.get("known_limitations", [])
     s.merge_range(
         "A16:H19",
-        "These figures illustrate the supplied assumptions, not a predicted share price. "
-        "The cash chart excludes financing and dividends. Readme explains the limitations and evidence still needed.",
+        "Known limitations: "
+        + (
+            " • ".join(limitations[:2]) + " See Readme for the full limitations register."
+            or "Only supplied assumptions are represented. Review Readme and provenance comments."
+        ),
         styles["note"],
     )
     for chart_index, key in enumerate(("fcf", "illustrative_cash")):
@@ -527,24 +513,21 @@ def write_excel_model(data: dict, path: Path, *, presentation_version: int = 2) 
         )
         chart.set_y_axis({"name": currency, "num_format": '#,##0,,"m"'})
         chart.set_legend({"none": True})
-        chart.set_size({"width": 350, "height": 245})
+        chart.set_size({"width": 540, "height": 300})
         chart.set_chartarea({"border": {"none": True}, "fill": {"color": "#F6F9FB"}})
         chart.set_title({"name": "Attributable free cash flow" if chart_index == 0 else "Illustrative cash — excludes financing", "name_font": {"size": 12, "color": "#142D43"}})
-        s.insert_chart(20, chart_index * 3, chart)
-    s.print_area(0, 0, 32, 8)
+        s.insert_chart(21, chart_index * 4, chart)
+    s.print_area(0, 0, 35, 8)
     s.fit_to_pages(1, 1)
     readme = sheets["Readme"]
-    readme.set_column("A:I", 12)
-    readme.freeze_panes(3, 0)
-    readme.set_zoom(100)
     readme.set_portrait()
     paragraphs = [
-        "START HERE | Read the investment report first. Explore the detailed figures here. After changing blue assumptions, ask Codex to check the calculations and update the report. Earlier editions are retained.",
+        "WORKFLOW | Read the Markdown memo first. Excel is the editable detailed model. Change blue assumptions, recalculate, save and import to create a new validated research snapshot. Existing snapshots remain immutable.",
         "MODEL | One active scenario drives all formulas. Select bear/base/bull in Assumptions!B4. Forecast horizons are fixed by the source model; shorter cases have zero inputs after their final period.",
         "UNITS | Calculations use absolute currency amounts, not millions. Input provenance comments identify unit, source, author and rationale. Historical rows retain original reported units; normalize before using them in assumptions.",
         "OWNERSHIP | Whole-operation cash flow is multiplied by ownership once. Corporate costs and residual value are company-attributable. Cash, debt and other assets are added at company level.",
         "METHOD | Annual end-period discounting; explicit residual only. Positive EBIT tax floor; no deferred tax or loss carryforwards. Cash excludes debt repayment, funding and dividends. This is not an integrated income statement, balance sheet and cash-flow forecast.",
-        "EDITING | Blue inputs are editable. Green formulas link sheets. Black formulas calculate locally. Change blue assumptions only. Explain the evidence behind each change in the investment report, then ask Codex to validate and save a new edition.",
+        "EDITING | Blue inputs are editable. Green formulas link sheets. Black formulas calculate locally. Keep formulas and metadata intact. Synchronization records changed inputs as analyst overrides. Explain their source and rationale in the research memo; formula edits are rejected.",
         "EVIDENCE | A professional workbook layout does not upgrade uncertain evidence. Missing current quotes, mine-life support, payable sales or capital structure remain research gaps. Model values are not recommendations.",
     ]
     for i, paragraph in enumerate(paragraphs):
@@ -554,7 +537,6 @@ def write_excel_model(data: dict, path: Path, *, presentation_version: int = 2) 
     for i, limitation in enumerate(limitations):
         readme.merge_range(start + 2 + i * 4, 0, start + 4 + i * 4, 7, limitation, styles["text"])
     readme.print_area(0, 0, start + 4 + len(limitations) * 4, 7)
-    readme.set_h_pagebreaks([start] + [start + 2 + i * 4 for i in range(8, len(limitations), 8)])
     metadata = sheets["_Model"]
     metadata.write_string(0, 0, MARKER)
     payload = json.dumps(manifest, ensure_ascii=False, allow_nan=False, separators=(",", ":"))

@@ -102,7 +102,7 @@ def read_inputs(path: Path):
             raise ValueError("Excel models support at most 50 explicit annual periods")
         with tempfile.TemporaryDirectory(prefix="invest-excel-contract-") as temp:
             reference = Path(temp) / "reference.xlsx"
-            write_excel_model(baseline, reference)
+            write_excel_model(baseline, reference, presentation_version=declared.get("presentation_version", 1))
             expected_book = _load(reference)
             try:
                 expected = manifest(expected_book)
