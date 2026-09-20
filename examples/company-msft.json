@@ -1,0 +1,14 @@
+{
+  "id": "nasdaq-msft",
+  "name": "Microsoft Corporation",
+  "exchange": "NASDAQ",
+  "ticker": "MSFT",
+  "currency": "USD",
+  "reporting_currency": "USD",
+  "sector": "software",
+  "aliases": ["Microsoft"],
+  "queries": ["\"Microsoft\" \"earnings\"", "$MSFT"],
+  "sources": ["https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q4/press-release-webcast", "https://www.microsoft.com/investor/reports/ar25/index.html"],
+  "website": "https://www.microsoft.com/",
+  "gaps": ["Verify latest filing period and capture three annual periods and eight quarters where available."]
+}

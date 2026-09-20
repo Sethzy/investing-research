@@ -1,0 +1,31 @@
+{
+  "id": "asx-mlx",
+  "name": "Metals X Limited",
+  "exchange": "ASX",
+  "ticker": "MLX",
+  "currency": "AUD",
+  "reporting_currency": "AUD",
+  "sector": "tin mining",
+  "aliases": [
+    "Metals X",
+    "Renison",
+    "Bluestone Mines Tasmania"
+  ],
+  "queries": [
+    "\"Metals X\"",
+    "$MLX",
+    "\"MLX\" \"ASX\"",
+    "\"Renison\" (\"tin\" OR \"mine\" OR \"Metals X\")",
+    "\"Bluestone Mines Tasmania\"",
+    "\"tin\" (\"LME\" OR \"smelter\" OR \"Myanmar\")"
+  ],
+  "sources": [
+    "https://www.metalsx.com.au/asx-announcements-2/",
+    "https://www.metalsx.com.au/quarterly-reports/"
+  ],
+  "website": "https://www.metalsx.com.au/",
+  "gaps": [
+    "Find and capture three annual periods and eight quarterly periods where available.",
+    "Verify current ownership, attributable reporting basis, operating assumptions, quote and FX before valuation."
+  ]
+}

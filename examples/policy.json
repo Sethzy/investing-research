@@ -1,0 +1,8 @@
+{
+  "max_position_weight": 0.25,
+  "max_sector_weights": {
+    "mining": 0.4
+  },
+  "minimum_cash_weight": 0.1,
+  "excluded_instruments": []
+}

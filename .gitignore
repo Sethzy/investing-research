@@ -24,3 +24,7 @@ node_modules/
 __pycache__/
 .cache/
 .DS_Store
+dist/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
